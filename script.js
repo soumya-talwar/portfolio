@@ -32,7 +32,7 @@ function setup() {
 }
 
 function draw() {
-  background(255);
+  background("#F5F5F5");
   drag(0, mouseX, mouseY);
   for (let i = 0; i < x.length - 1; i++) {
     drag(i + 1, x[i], y[i]);
