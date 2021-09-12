@@ -9,6 +9,8 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js" integrity="sha512-N4kV7GkNv7QR7RX9YF/olywyIgIwNvfEe2nZtfyj73HdjCUkAfOBDbcuJ/cTaN04JKRnw1YG1wnUyNKMsNgg3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -20,12 +22,16 @@
   </head>
 
   <body>
+    <audio id="music" loop>
+      <source src="audio/bourree.mp3" type="audio/mp3">
+    </audio>
+
     <div class="container-fluid" id="menu">
       <div class="fixed-top d-flex p-5 gap-5">
         <a class="me-auto text-decoration-underline" href="#">soumya talwar</a>
         <div class="d-flex flex-column text-center">
           <a class="pages" id="projects">list of works</a>
-          <div class="d-flex flex-column p-2 gap-2 bg-white d-none" id="list">
+          <div class="d-flex flex-column p-2 gap-2 d-none" id="list">
             <a class="project small" href="/grays">grays</a>
             <a class="project small" href="/grays">philippa</a>
             <a class="project small" href="/grays">death</a>
@@ -35,10 +41,11 @@
             <a class="project small" href="/grays">taegificbot</a>
           </div>
         </div>
-        <a class="pages" href="">writing</a>
-        <a class="pages" href="">about</a>
-        <a class="pages" href="">contact</a>
+        <a class="page" href="">writing</a>
+        <a class="page" href="">about</a>
+        <a class="page" href="">contact</a>
         <i class="far fa-moon" id="mode"></i>
+        <i class="fas fa-play" id="play"></i>
       </div>
     </div>
 
@@ -55,13 +62,11 @@
       </div>
     </div>
 
-    <div class="container-fluid d-none" id="works">
+    <div class="container-fluid position-absolute top-0 end-0 d-none" id="works">
       <div class="row slide">
-        <div class="col-6 offset-3 d-flex flex-column align-items-center justify-content-end">
+        <div class="col-6 offset-3 d-flex flex-column align-items-center justify-content-end pb-4">
           <image class="photo" src="images/philippa 1.jpg"></image>
-          <p class="label py-4">
-            <a href="/philippa" class="border-bottom border-dark">philippa</a> : teaching a machine moral values
-          </p>
+          <p class="label border-bottom border-dark pt-4">philippa : teaching a machine moral values &nbsp; &middot; &nbsp; 1/10</p>
         </div>
       </div>
     </div>

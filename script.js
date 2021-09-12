@@ -1,18 +1,91 @@
+var dark = false;
+var play = false;
+var bg = 255;
+var trail = 0;
+
+$(document).ready(() => {
+  $("#projects, #list").hover(() => {
+    $("#list").toggleClass("d-none");
+  });
+
+  $("#mode").hover(function() {
+    $(this).toggleClass(["far", "fas"]);
+  });
+
+  $("#mode").click(() => {
+    if (!dark) {
+      bg = 0;
+      trail = 255;
+      $("#landing, #menu").animate({
+        "color": "#FFF"
+      }, 400);
+    }
+    else {
+      bg = 255;
+      trail = 0;
+      $("#landing, #menu").animate({
+        "color": "#000"
+      }, 400);
+    }
+    $("#mode").toggleClass(["fa-moon", "fa-sun"]);
+    dark = !dark;
+  });
+
+  let audio = document.getElementById("music");
+  $("#play").click(() => {
+    if (!play)
+      audio.play();
+    else
+      audio.pause();
+    play = !play;
+    $("#play").toggleClass(["fa-play", "fa-pause"]);
+  });
+
+  $("#open").click(() => {
+    $("#works").removeClass("d-none");
+    $("#works").animate({
+      "width": "100vw"
+    }, 1000, function() {
+      $(".slide").animate({
+        opacity: 1
+      }, 700);
+    });
+  });
+
+  $("#works").mousemove(function() {
+    if (mouseX < windowWidth/2) {
+      $(this).css({
+        "cursor": "w-resize"
+      });
+    }
+    else {
+      $(this).css({
+        "cursor": "e-resize"
+      });
+    }
+  });
+
+  // $("#works").click(function() {
+  //   if (mouseX < windowWidth/2) {
+  //
+  //   }
+  //   else {
+  //
+  //   }
+  // });
+});
+
 var x = [], y = [];
 var num = 30;
 var length = 5;
 
-for (let i = 0; i < num; i++) {
-  x[i] = 0;
-  y[i] = 0;
-}
-
 function setup() {
   var canvas = createCanvas(windowWidth, windowHeight);
   canvas.parent("landing");
-  strokeWeight(7);
-  stroke(0);
-
+  for (let i = 0; i < num; i++) {
+    x[i] = 0;
+    y[i] = 0;
+  }
   let phrases = [
     "PROGRAMMER",
     "DESIGNER",
@@ -29,29 +102,10 @@ function setup() {
     counter = (counter + 1) % phrases.length;
   }
   next();
-
-  $("#projects").click(() => {
-    $("#list").toggleClass("d-none");
-  });
-
-  $("#mode").hover(function() {
-    $(this).toggleClass(["far", "fas"]);
-  });
-
-  $("#open").click(() => {
-    $("#works").removeClass("d-none");
-    $("#works").animate({
-      "width": "100vw"
-    }, 1000, function() {
-      $(".slide").animate({
-        opacity: 1
-      }, 1000);
-    });
-  });
 }
 
 function draw() {
-  background(255);
+  background(color(bg) || 255);
   drag(0, mouseX, mouseY);
   for (let i = 0; i < x.length - 1; i++) {
     drag(i + 1, x[i], y[i]);
@@ -64,13 +118,11 @@ function drag(i, xin, yin) {
   const angle = atan2(dy, dx);
   x[i] = xin - cos(angle) * length;
   y[i] = yin - sin(angle) * length;
-  segment(x[i], y[i], angle);
-}
-
-function segment(x, y, a) {
   push();
-  translate(x, y);
-  rotate(a);
+  translate(x[i], y[i]);
+  rotate(angle);
+  strokeWeight(7);
+  stroke(color(trail) || 0);
   line(0, 0, length, 0);
   pop();
 }

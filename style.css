@@ -13,7 +13,7 @@
   text-underline-offset: 0.5rem;
 }
 
-.pages:hover {
+.page:hover, .project:hover {
   text-decoration: underline;
   cursor: pointer;
 }
@@ -52,14 +52,11 @@ span {
   color: #757575;
 }
 
-#open {
+#open, #mode, #projects, #play {
   cursor: pointer;
 }
 
 #works {
-  position: absolute;
-  top: 0;
-  right: 0;
   height: 100vh;
   width: 0px;
   background: #F5F5F5;
@@ -74,8 +71,7 @@ span {
   width: 100%;
 }
 
-.label a, .label {
-  letter-spacing: 1.5px;
-  font-size: .8rem;
-  line-height: 2.5rem;
+.label {
+  font-size: 0.7rem;
+  letter-spacing: 1px;
 }
