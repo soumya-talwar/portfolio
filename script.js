@@ -10,7 +10,7 @@ for (let i = 0; i < num; i++) {
 function setup() {
   var canvas = createCanvas(windowWidth, windowHeight);
   canvas.parent("landing");
-  strokeWeight(9);
+  strokeWeight(7);
   stroke(0);
 
   let phrases = [
@@ -34,10 +34,18 @@ function setup() {
     $("#list").toggleClass("d-none");
   });
 
+  $("#mode").hover(function() {
+    $(this).toggleClass(["far", "fas"]);
+  });
+
   $("#open").click(() => {
     $("#works").removeClass("d-none");
     $("#works").animate({
-      width: "100vw"
+      "width": "100vw"
+    }, 1000, function() {
+      $(".slide").animate({
+        opacity: 1
+      }, 1000);
     });
   });
 }
