@@ -29,10 +29,16 @@ function setup() {
     counter = (counter + 1) % phrases.length;
   }
   next();
+
+  $("#open").click(() => {
+    $("#works").animate({
+      width: "100vw"
+    });
+  });
 }
 
 function draw() {
-  background("#F5F5F5");
+  background(255);
   drag(0, mouseX, mouseY);
   for (let i = 0; i < x.length - 1; i++) {
     drag(i + 1, x[i], y[i]);
