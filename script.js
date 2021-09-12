@@ -10,7 +10,7 @@ for (let i = 0; i < num; i++) {
 function setup() {
   var canvas = createCanvas(windowWidth, windowHeight);
   canvas.parent("landing");
-  strokeWeight(7);
+  strokeWeight(9);
   stroke(0);
 
   let phrases = [
@@ -30,7 +30,12 @@ function setup() {
   }
   next();
 
+  $("#projects").click(() => {
+    $("#list").toggleClass("d-none");
+  });
+
   $("#open").click(() => {
+    $("#works").removeClass("d-none");
     $("#works").animate({
       width: "100vw"
     });

@@ -8,6 +8,15 @@
   z-index: 2;
 }
 
+#menu a, #menu i {
+  line-height: 2rem;
+  text-underline-offset: 0.5rem;
+}
+
+.pages:hover {
+  text-decoration: underline;
+}
+
 canvas {
   position: absolute;
   top: 0;
@@ -28,7 +37,7 @@ h2 {
   font-size: 3.5rem;
 }
 
-a {
+a, a:hover {
   color: inherit;
   text-decoration: inherit;
 }
@@ -51,7 +60,7 @@ span {
   top: 0;
   right: 0;
   height: 100vh;
-  width: 10px;
-  background: white;
+  width: 0px;
+  background: #F5F5F5;
   transition: .3s;
 }
