@@ -15,7 +15,12 @@
 
 .page:hover, .project:hover {
   text-decoration: underline;
+  text-underline-offset: 0.5rem;
   cursor: pointer;
+}
+
+.small:hover {
+  font-size: 0.8rem;
 }
 
 canvas {
@@ -39,6 +44,7 @@ h2 {
 }
 
 a, a:hover {
+  font-size: inherit;
   color: inherit;
   text-decoration: inherit;
 }
@@ -59,19 +65,10 @@ span {
 #works {
   height: 100vh;
   width: 0px;
-  background: #F5F5F5;
+  background: #FFF;
 }
 
-.slide {
+#list2 {
   height: 100vh;
   opacity: 0;
-}
-
-.photo {
-  width: 100%;
-}
-
-.label {
-  font-size: 0.7rem;
-  letter-spacing: 1px;
 }

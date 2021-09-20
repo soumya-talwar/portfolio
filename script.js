@@ -16,15 +16,21 @@ $(document).ready(() => {
     if (!dark) {
       bg = 0;
       trail = 255;
-      $("#landing, #menu").animate({
+      $("#landing, #menu, #works").animate({
         "color": "#FFF"
+      }, 400);
+      $("#works").animate({
+        "background-color": "#000"
       }, 400);
     }
     else {
       bg = 255;
       trail = 0;
-      $("#landing, #menu").animate({
+      $("#landing, #menu, #works").animate({
         "color": "#000"
+      }, 400);
+      $("#works").animate({
+        "background-color": "#FFF"
       }, 400);
     }
     $("#mode").toggleClass(["fa-moon", "fa-sun"]);
@@ -46,33 +52,11 @@ $(document).ready(() => {
     $("#works").animate({
       "width": "100vw"
     }, 1000, function() {
-      $(".slide").animate({
+      $("#list2").animate({
         opacity: 1
       }, 700);
     });
   });
-
-  $("#works").mousemove(function() {
-    if (mouseX < windowWidth/2) {
-      $(this).css({
-        "cursor": "w-resize"
-      });
-    }
-    else {
-      $(this).css({
-        "cursor": "e-resize"
-      });
-    }
-  });
-
-  // $("#works").click(function() {
-  //   if (mouseX < windowWidth/2) {
-  //
-  //   }
-  //   else {
-  //
-  //   }
-  // });
 });
 
 var x = [], y = [];
