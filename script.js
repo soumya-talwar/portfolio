@@ -16,23 +16,18 @@ $(document).ready(() => {
     if (!dark) {
       bg = 0;
       trail = 255;
-      $("#landing, #menu, #works").animate({
+      $("#landing, #menu").animate({
         "color": "#FFF"
-      }, 400);
-      $("#works").animate({
-        "background-color": "#000"
       }, 400);
     }
     else {
       bg = 255;
       trail = 0;
-      $("#landing, #menu, #works").animate({
+      $("#landing, #menu").animate({
         "color": "#000"
       }, 400);
-      $("#works").animate({
-        "background-color": "#FFF"
-      }, 400);
     }
+    $("#black-arrow, #white-arrow").toggleClass("d-none");
     $("#mode").toggleClass(["fa-moon", "fa-sun"]);
     dark = !dark;
   });
@@ -48,14 +43,7 @@ $(document).ready(() => {
   });
 
   $("#open").click(() => {
-    $("#works").removeClass("d-none");
-    $("#works").animate({
-      "width": "100vw"
-    }, 1000, function() {
-      $("#list2").animate({
-        opacity: 1
-      }, 700);
-    });
+
   });
 });
 
