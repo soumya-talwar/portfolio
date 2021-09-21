@@ -19,11 +19,19 @@ $(document).ready(() => {
       $("#landing, #menu").animate({
         "color": "#FFF"
       }, 400);
+      $("#contact").animate({
+        "color": "#FFF",
+        "background-color": "#000"
+      }, 400);
     } else {
       bg = 255;
       trail = 0;
       $("#landing, #menu").animate({
         "color": "#000"
+      }, 400);
+      $("#contact").animate({
+        "color": "#000",
+        "background-color": "#FFF"
       }, 400);
     }
     $("#black-arrow, #white-arrow").toggleClass("d-none");
@@ -44,8 +52,7 @@ $(document).ready(() => {
   $(".marquee").marquee({
     duplicated: true,
     direction: "left",
-    duration: 8000,
-    gap: 40,
+    duration: 22000,
     pauseOnHover: true,
     startVisible: true
   });
