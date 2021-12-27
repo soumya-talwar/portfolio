@@ -16,7 +16,7 @@ $(document).ready(() => {
     if (!dark) {
       bg = 0;
       trail = 255;
-      $("#landing, #menu").animate({
+      $("#landing, #menu, #pagination").animate({
         "color": "#FFF"
       }, 400);
       $("#contact").animate({
@@ -26,7 +26,7 @@ $(document).ready(() => {
     } else {
       bg = 255;
       trail = 0;
-      $("#landing, #menu").animate({
+      $("#landing, #menu, #pagination").animate({
         "color": "#000"
       }, 400);
       $("#contact").animate({
@@ -47,6 +47,11 @@ $(document).ready(() => {
       audio.pause();
     play = !play;
     $("#play").toggleClass(["fa-play", "fa-pause"]);
+  });
+
+  $("#landing").on("slid.bs.carousel", () => {
+    let index = $(".carousel-item").siblings(".active").index();
+    $("#page").html(index);
   });
 
   $(".marquee").marquee({

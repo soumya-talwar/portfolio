@@ -1,5 +1,5 @@
-var x = [],
-  y = [];
+var x = [];
+var y = [];
 var num = 30;
 var length = 5;
 
