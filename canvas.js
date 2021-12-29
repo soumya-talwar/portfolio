@@ -29,7 +29,7 @@ function setup() {
 }
 
 function draw() {
-  background(color(bg) || 255);
+  background(255);
   drag(0, mouseX, mouseY);
   for (let i = 0; i < x.length - 1; i++) {
     drag(i + 1, x[i], y[i]);
@@ -48,7 +48,7 @@ function drag(i, xin, yin) {
   strokeWeight(7);
   if (i == 0 || i == num - 1)
     strokeCap(SQUARE);
-  stroke(color(trail) || 0);
+  stroke(0);
   line(0, 0, length, 0);
   pop();
 }

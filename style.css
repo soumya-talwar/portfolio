@@ -82,7 +82,7 @@ span {
   color: #757575;
 }
 
-#mode, #projects, #play, #draw {
+#projects, #play, #draw {
   cursor: pointer;
 }
 
