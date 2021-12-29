@@ -1,11 +1,11 @@
+body {
+  opacity: 0;
+}
+
 * {
   font-family: "Inter", sans-serif;
   font-size: 0.9rem;
   letter-spacing: 2px;
-}
-
-#menu {
-  z-index: 1;
 }
 
 #menu a, #menu i {
@@ -54,16 +54,11 @@ h2 {
   font-size: 3.5rem;
 }
 
-a, a:hover {
+a, a:hover, span {
   font-family: inherit;
   font-size: inherit;
   color: inherit;
   text-decoration: inherit;
-}
-
-span {
-  font-size: inherit;
-  letter-spacing: inherit;
 }
 
 .dud {
@@ -72,4 +67,12 @@ span {
 
 #projects, #play, #draw {
   cursor: pointer;
+}
+
+#transition {
+  opacity: 0;
+}
+
+.kaomoji {
+  font-size: 10rem;
 }

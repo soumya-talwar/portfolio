@@ -1,6 +1,10 @@
 var play = false;
 
 $(document).ready(() => {
+  $("body").animate({
+    opacity: 1
+  }, 1000);
+
   $("#projects, #list").hover(() => {
     $("#list").toggleClass("d-none");
   });
@@ -15,7 +19,6 @@ $(document).ready(() => {
     $("#play").toggleClass(["fa-play", "fa-pause"]);
   });
 
-  let targets = document.querySelectorAll(".main");
   let observer = new IntersectionObserver(entries => {
     entries.map(entry => {
       if (entry.isIntersecting)
@@ -24,15 +27,24 @@ $(document).ready(() => {
   }, {
     threshold: 0.5
   });
-  targets.forEach((target) => {
-    observer.observe(target);
+  $(".main").each((index, target) => observer.observe(target));
+
+  $("a").each((index, link) => {
+    $(link).click(event => {
+      event.preventDefault();
+      $("#transition").removeClass("d-none");
+      $("#transition").animate({
+        opacity: "1"
+      }, 500);
+      setTimeout(() => window.location.href = $(link).attr("href"), 1000);
+    });
   });
 
-  // $(".marquee").marquee({
-  //   duplicated: true,
-  //   direction: "left",
-  //   duration: 22000,
-  //   pauseOnHover: true,
-  //   startVisible: true
-  // });
+  $(".marquee").marquee({
+    duplicated: true,
+    direction: "left",
+    duration: 22000,
+    pauseOnHover: true,
+    startVisible: true
+  });
 });
