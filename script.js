@@ -15,11 +15,24 @@ $(document).ready(() => {
     $("#play").toggleClass(["fa-play", "fa-pause"]);
   });
 
-  $(".marquee").marquee({
-    duplicated: true,
-    direction: "left",
-    duration: 22000,
-    pauseOnHover: true,
-    startVisible: true
+  let targets = document.querySelectorAll(".main");
+  let observer = new IntersectionObserver(entries => {
+    entries.map(entry => {
+      if (entry.isIntersecting)
+        $("#page").html($(entry.target).index());
+    });
+  }, {
+    threshold: 0.5
   });
+  targets.forEach((target) => {
+    observer.observe(target);
+  });
+
+  // $(".marquee").marquee({
+  //   duplicated: true,
+  //   direction: "left",
+  //   duration: 22000,
+  //   pauseOnHover: true,
+  //   startVisible: true
+  // });
 });
