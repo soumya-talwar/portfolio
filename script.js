@@ -15,11 +15,6 @@ $(document).ready(() => {
     $("#play").toggleClass(["fa-play", "fa-pause"]);
   });
 
-  $("#landing").on("slid.bs.carousel", () => {
-    let index = $(".carousel-item").siblings(".active").index();
-    $("#page").html(index);
-  });
-
   $(".marquee").marquee({
     duplicated: true,
     direction: "left",

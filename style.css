@@ -4,12 +4,6 @@
   letter-spacing: 2px;
 }
 
-canvas {
-  position: absolute;
-  top: 0;
-  z-index: -1;
-}
-
 #menu {
   z-index: 1;
 }
@@ -28,42 +22,36 @@ canvas {
   font-size: 0.8rem;
 }
 
+canvas {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+#landing {
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
 .main {
   height: 100vh;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
 }
 
-.space {
-  margin-top: 10%;
-}
-
-h1, h2, h3, h4 {
+h1, h2 {
   font-family: "Cera Pro", sans-serif;
   font-size: 4.3rem;
   letter-spacing: 4px;
 }
 
-h1 a:hover, h2 a:hover {
+h1 a:hover {
   text-decoration: underline;
-}
-
-h1.heading {
-  font-size: 6rem;
 }
 
 h2 {
   font-size: 3.5rem;
-}
-
-h3 {
-  font-size: 2rem;
-  letter-spacing: 1.5px;
-  line-height: 3rem;
-}
-
-h4 {
-  font-size: 1.5rem;
-  letter-spacing: 1px;
-  line-height: 2.5rem;
 }
 
 a, a:hover {
@@ -84,13 +72,4 @@ span {
 
 #projects, #play, #draw {
   cursor: pointer;
-}
-
-#black-arrow {
-  filter: invert(100%);
-  opacity: 1;
-}
-
-#white-arrow {
-  opacity: 1;
 }
