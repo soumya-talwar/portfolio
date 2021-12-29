@@ -32,19 +32,22 @@ canvas {
   height: 100vh;
 }
 
-h1, h2, h3 {
+.space {
+  margin-top: 10%;
+}
+
+h1, h2, h3, h4 {
   font-family: "Cera Pro", sans-serif;
   font-size: 4.3rem;
   letter-spacing: 4px;
 }
 
-h1 a:hover, a h2:hover {
+h1 a:hover, h2 a:hover {
   text-decoration: underline;
 }
 
 h1.heading {
   font-size: 6rem;
-  margin-top: 15%;
 }
 
 h2 {
@@ -57,7 +60,14 @@ h3 {
   line-height: 3rem;
 }
 
+h4 {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  line-height: 2.5rem;
+}
+
 a, a:hover {
+  font-family: inherit;
   font-size: inherit;
   color: inherit;
   text-decoration: inherit;
@@ -66,11 +76,6 @@ a, a:hover {
 span {
   font-size: inherit;
   letter-spacing: inherit;
-}
-
-p {
-  letter-spacing: 1px;
-  line-height: 2rem;
 }
 
 .dud {
