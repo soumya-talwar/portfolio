@@ -30,14 +30,17 @@ $(document).ready(() => {
   $(".main").each((index, target) => observer.observe(target));
 
   $("a").each((index, link) => {
-    $(link).click(event => {
-      event.preventDefault();
-      $("#transition").removeClass("d-none");
-      $("#transition").animate({
-        opacity: "1"
-      }, 500);
-      setTimeout(() => window.location.href = $(link).attr("href"), 1000);
-    });
+    let href = $(link).attr("href");
+    if ((/html$/).test(href)) {
+      $(link).click(event => {
+        event.preventDefault();
+        $("#transition").removeClass("d-none");
+        $("#transition").animate({
+          opacity: "1"
+        }, 500);
+        setTimeout(() => window.location.href = href, 1000);
+      });
+    }
   });
 
   $(".marquee").marquee({

@@ -13,7 +13,7 @@ body {
   text-underline-offset: 0.5rem;
 }
 
-.page:hover, .project:hover, #draw:hover {
+.page:hover, .project:hover, #draw:hover, .link:hover {
   text-decoration: underline;
   text-underline-offset: 0.5rem;
 }
@@ -54,6 +54,25 @@ h2 {
   font-size: 3.5rem;
 }
 
+h3 {
+  font-family: "Cera Pro", sans-serif;
+  font-size: 2rem;
+  line-height: 3rem;
+  letter-spacing: 1px;
+  margin-top: 20%;
+}
+
+h4 {
+  font-family: "Cera Pro", sans-serif;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  letter-spacing: 1px;
+}
+
+h4:last-of-type {
+  margin-bottom: 20%;
+}
+
 a, a:hover, span {
   font-family: inherit;
   font-size: inherit;
@@ -73,6 +92,6 @@ a, a:hover, span {
   opacity: 0;
 }
 
-.kaomoji {
+#kaomoji {
   font-size: 10rem;
 }
