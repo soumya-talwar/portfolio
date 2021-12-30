@@ -43,6 +43,17 @@ $(document).ready(() => {
     }
   });
 
+  $(".extra").each((index, text) => {
+    $(text).hover(() => {
+      $("#popup img").attr("src", "../images/grays " + index + ".gif");
+      $("#popup").css({
+        top: mouseY + 10,
+        left: constrain(mouseX + 10, 0, $(window).width() - $("#popup img").width() - 20)
+      });
+      $("#popup").toggleClass("d-none");
+    });
+  });
+
   $(".marquee").marquee({
     duplicated: true,
     direction: "left",
