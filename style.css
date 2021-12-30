@@ -1,5 +1,6 @@
 body {
   opacity: 0;
+  overflow-x: hidden;
 }
 
 * {
@@ -90,13 +91,14 @@ a, a:hover, span {
 img {
   width: 40vw;
   height: auto;
+  box-shadow: -5px 5px 20px #E8E8E8;
 }
 
 .dud {
   color: #757575;
 }
 
-#projects, #play, #draw {
+#projects, #play, #draw, #copy {
   cursor: pointer;
 }
 

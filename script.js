@@ -57,8 +57,15 @@ $(document).ready(() => {
   $(".marquee").marquee({
     duplicated: true,
     direction: "left",
-    duration: 22000,
+    duration: 20000,
     pauseOnHover: true,
     startVisible: true
   });
+
+  $("#copy").click(() => {
+    $("#copy").html("[copied!]");
+    setTimeout(() => $("#copy").html("[copy email]"), 1000);
+    navigator.clipboard.writeText("soumya.talwar97@gmail.com");
+  });
+
 });
