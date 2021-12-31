@@ -9,18 +9,14 @@ body {
   letter-spacing: 2px;
 }
 
-#menu a, #menu i {
+#menu a, #menu i, .social {
   line-height: 2rem;
   text-underline-offset: 0.5rem;
 }
 
-.page:hover, .project:hover, #draw:hover, #link:hover {
+.page:hover, .project:hover, #link:hover, #draw:hover, .social:hover {
   text-decoration: underline;
   text-underline-offset: 0.5rem;
-}
-
-.small:hover {
-  font-size: 0.8rem;
 }
 
 canvas {
@@ -59,7 +55,7 @@ h2 {
   font-size: 3.5rem;
 }
 
-h3 {
+h3, h4 {
   font-family: "Cera Pro", sans-serif;
   font-size: 2rem;
   line-height: 3rem;
@@ -67,10 +63,8 @@ h3 {
 }
 
 h4 {
-  font-family: "Cera Pro", sans-serif;
   font-size: 1.5rem;
   line-height: 2.5rem;
-  letter-spacing: 1px;
 }
 
 h4:last-of-type {
@@ -98,7 +92,7 @@ img {
   color: #757575;
 }
 
-#projects, #play, #draw, #copy {
+#projects, #play, #copy {
   cursor: pointer;
 }
 
