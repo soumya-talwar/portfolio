@@ -45,6 +45,7 @@ $(document).ready(() => {
 
   $(".extra").each((index, text) => {
     $(text).hover(() => {
+      //photo href to change with each project page
       $("#popup img").attr("src", "../images/grays " + index + ".gif");
       $("#popup").css({
         top: mouseY + 10,
@@ -67,5 +68,4 @@ $(document).ready(() => {
     setTimeout(() => $("#copy").html("[copy email]"), 1000);
     navigator.clipboard.writeText("soumya.talwar97@gmail.com");
   });
-
 });

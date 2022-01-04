@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <title>soumya talwar — contact</title>
+    <title>soumya talwar — portfolio</title>
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -15,10 +15,8 @@
 
     <script src="https://kit.fontawesome.com/715dc2f277.js" crossorigin="anonymous"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/jquery.marquee@1.6.0/jquery.marquee.min.js" type="text/javascript"></script>
-
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="canvas.js"></script>
+    <script src="draw.js"></script>
     <script src="script.js"></script>
   </head>
 
@@ -29,7 +27,7 @@
 
     <div class="container-fluid" id="menu">
       <div class="fixed-top d-flex p-5 gap-5">
-        <a class="me-auto text-decoration-underline" href="/index.html">soumya talwar</a>
+        <a class="me-auto text-decoration-underline" href="/">soumya talwar</a>
         <div class="d-flex flex-column text-center">
           <i class="pages fst-normal" id="projects">list of works</i>
           <div class="d-flex flex-column p-2 gap-2 d-none" id="list">
@@ -50,30 +48,11 @@
         <i class="fas fa-play" id="play"></i>
       </div>
     </div>
-
-    <div class="container-fluid" id="canvas">
-      <div class="main d-flex flex-column justify-content-center px-5 gap-3">
-        <h3 class="col-7 py-3">Questions? Compliments? Random trivia about the human evolution and the universe? Interested in working together? Drop me a mail at:</h3>
-        <div class="d-flex flex-column py-3 gap-3">
-          <div class="marquee">
-            <h2>soumya.talwar97@gmail.com &nbsp; soumya.talwar97@gmail.com &nbsp; </h2>
-          </div>
-          <h3><span id="copy">[copy email]</span></h3>
-        </div>
-      </div>
-    </div>
-
+    <div class="container-fluid" id="canvas"></div>
     <div class="container-fluid" id="pagination">
-      <div class="d-flex fixed-bottom justify-content-between align-items-center p-5">
-        <div>
-          <small>or look at my: &nbsp;
-            <a class="social" target="_blank" href="https://twitter.com/soumya_talwar">twitter</a>&nbsp; / &nbsp;
-            <a class="social" target="_blank" href="https://github.com/soumya-talwar">github</a>&nbsp; / &nbsp;
-            <a class="social" target="_blank" href="https://www.linkedin.com/in/soumya-talwar-25596015a/">linkedin</a>&nbsp; / &nbsp;
-            <a class="social" target="_blank" href="">resume</a>
-          </small>
-        </div>
-        <small><a id="draw" href="/draw.html">send me a drawing!</a></small>
+      <div class="d-flex fixed-bottom justify-content-between p-5">
+        <small id="erase">erase everything :&lt;</small>
+        <small><a id="send" href="">email it to me! :D</a></small>
       </div>
     </div>
 

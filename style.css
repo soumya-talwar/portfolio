@@ -14,7 +14,7 @@ body {
   text-underline-offset: 0.5rem;
 }
 
-.page:hover, .project:hover, #link:hover, #draw:hover, .social:hover {
+.page:hover, .project:hover, #link:hover, #draw:hover, .social:hover, #erase:hover, #send:hover {
   text-decoration: underline;
   text-underline-offset: 0.5rem;
 }
@@ -92,7 +92,7 @@ img {
   color: #757575;
 }
 
-#projects, #play, #copy {
+#projects, #play, #copy, #erase {
   cursor: pointer;
 }
 
