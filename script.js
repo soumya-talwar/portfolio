@@ -44,11 +44,11 @@ $(document).ready(() => {
   });
 
   $(".extra").each((index, text) => {
+    let project = window.location.href.match(/[^/]+$/)[0].split('.')[0];
     $(text).hover(() => {
-      //photo href to change with each project page
-      $("#popup img").attr("src", "../images/grays " + index + ".gif");
+      $("#popup img").attr("src", `../images/${project} ${index}.gif`);
       $("#popup").css({
-        top: mouseY + 10,
+        top: constrain(mouseY + 10, 0, $(document).height() - $("#popup img").width() * 0.528 - 20),
         left: constrain(mouseX + 10, 0, $(window).width() - $("#popup img").width() - 20)
       });
       $("#popup").toggleClass("d-none");

@@ -38,7 +38,8 @@ canvas {
 }
 
 .space {
-  margin-top: 15%;
+  padding-top: 10%;
+  padding-bottom: 20%;
 }
 
 h1, h2 {
@@ -83,7 +84,7 @@ a, a:hover, span {
 }
 
 img {
-  width: 40vw;
+  width: 50vw;
   height: auto;
   box-shadow: -5px 5px 20px #E8E8E8;
 }
