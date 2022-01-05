@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>soumya talwar — death</title>
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js" integrity="sha512-N4kV7GkNv7QR7RX9YF/olywyIgIwNvfEe2nZtfyj73HdjCUkAfOBDbcuJ/cTaN04JKRnw1YG1wnUyNKMsNgg3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://kit.fontawesome.com/715dc2f277.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <script src="../canvas.js"></script>
+    <script src="../script.js"></script>
+  </head>
+
+  <body>
+    <audio id="music" loop>
+      <source src="../audio/bourree.mp3" type="audio/mp3">
+    </audio>
+
+    <div class="container-fluid" id="menu">
+      <div class="fixed-top d-flex p-5 gap-5">
+        <a class="me-auto text-decoration-underline" href="/index.html">soumya talwar</a>
+        <div class="d-flex flex-column text-center">
+          <i class="pages fst-normal" id="projects">list of works</i>
+          <div class="d-flex flex-column p-2 gap-2 d-none" id="list">
+            <small><a class="project" href="/projects/grays.html">grays</a></small>
+            <small><a class="project" href="/projects/philippa.html">philippa</a></small>
+            <small><a class="project" href="/projects/death.html">death</a></small>
+            <small><a class="project" href="/projects/slut.html">slut</a></small>
+            <small><a class="project" href="/projects/hominidae.html">hominidae</a></small>
+            <small><a class="project" href="/projects/13.html">13</a></small>
+            <small><a class="project" href="/projects/outlast.html">outlast</a></small>
+            <small><a class="project" href="/projects/dasein.html">dasein</a></small>
+            <small><a class="project" href="/projects/taegificbot.html">taegificbot</a></small>
+          </div>
+        </div>
+        <a class="page" href="/writing.html">writing</a>
+        <a class="page" href="/about.html">about</a>
+        <a class="page" href="/contact.html">contact</a>
+        <i class="fas fa-play" id="play"></i>
+      </div>
+    </div>
+
+    <div class="container-fluid" id="canvas">
+      <div class="row">
+        <div class="col-4 main d-flex flex-column justify-content-center text-center position-fixed">
+          <h1>DEATH</h1>
+          <h4 class="pt-2">[&nbsp;<a id="link" target="_blank" href="https://twitter.com/soumya_dead">visit the twitter bot</a>&nbsp;]</h4>
+        </div>
+        <div class="col-7 offset-4 space">
+          <h3 class="py-3">My inquiry orbited around just one singular question: What would it mean for somebody to survive the death of their body?<br><br>
+            And then—what it would mean to build a <span class="extra">Twitter bot</span> that would exist as me past the death of my body.</h3>
+          <h4 class="py-3">It seems fairly obvious that before we talk about whether or not we can survive our deaths, we must first establish what we are made of, and what exactly we mean by survival. It's also crucial to ask ourselves not whether we survive the death of our bodies, but what is it that we want when we want to survive? For a detailed reading of my research on these questions, take a look at <a class="text-decoration-underline" target="_blank" href="https://drive.google.com/file/d/1I_XpjYDCDgop0-GmaLD2upDx0k16Ut3R/view?usp=sharing">this document</a>.<br><br>
+            The Twitter bot employs an LSTM (Long Short Term Memory) Recurrent Neural Network that is trained on 15,000 of my old tweets in order to generate new tweets and post them on my account. The tone of these tweets varies according to the bot's moods (like excitement and self-doubt). Depending on real-time data collected by the bot, its moods shift—for example, if it rains at the particular longitude and latitude co-ordinates of my residence in Yelahanka, Bangalore, the bot's tweets will grow more negative. Each month, for four days, the bot enters its menstrual cycle and experiences a spike in its self-doubt while its excitement takes a harsh blow. Lastly, whenever a tweet is posted by the twitter account of the K-pop group BTS (@BTS_twt) the bot's excitement shoots up.<br><br>
+            For a thorough documentation of the six weeks I spent building the bot, <a class="text-decoration-underline" target="_blank" href="https://soumya-talwar.notion.site/DEATH-d5918e1de28c44cfaee42e4ac8b04261">look here</a>.
+          </h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-none position-absolute" id="popup">
+      <img src="" />
+    </div>
+
+    <div class="d-none container-fluid fixed-top bg-white" id="transition">
+      <div class="main d-flex flex-column justify-content-center align-items-center">
+        <p id="kaomoji">(*°▽°*)</p>
+      </div>
+    </div>
+  </body>
+
+</html>
