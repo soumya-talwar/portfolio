@@ -14,7 +14,7 @@ body {
   text-underline-offset: 0.5rem;
 }
 
-.page:hover, .project:hover, #draw:hover, .social:hover, #erase:hover, #send:hover {
+.page:hover, .project:hover, .day:hover, #draw:hover, .social:hover, #erase:hover, #send:hover {
   text-decoration: underline;
   text-underline-offset: 0.5rem;
 }
@@ -91,6 +91,11 @@ img {
   width: 50vw;
   height: auto;
   box-shadow: -5px 5px 20px #E8E8E8;
+}
+
+.days {
+  margin-top: 15%;
+  line-height: 5rem;
 }
 
 .dud {

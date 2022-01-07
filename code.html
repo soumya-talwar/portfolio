@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>soumya talwar — 100 days of code</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js" integrity="sha512-N4kV7GkNv7QR7RX9YF/olywyIgIwNvfEe2nZtfyj73HdjCUkAfOBDbcuJ/cTaN04JKRnw1YG1wnUyNKMsNgg3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://kit.fontawesome.com/715dc2f277.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="canvas.js"></script>
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <audio id="music" loop>
+      <source src="audio/bourree.mp3" type="audio/mp3">
+    </audio>
+
+    <div class="container-fluid" id="menu">
+      <div class="fixed-top d-flex p-5 gap-5">
+        <a class="me-auto text-decoration-underline" href="/">soumya talwar</a>
+        <div class="d-flex flex-column text-center">
+          <i class="pages fst-normal" id="projects">list of works</i>
+          <div class="d-flex flex-column p-2 gap-2 d-none" id="list">
+            <small><a class="project" href="/projects/grays.html">grays</a></small>
+            <small><a class="project" href="/projects/philippa.html">philippa</a></small>
+            <small><a class="project" href="/projects/death.html">death</a></small>
+            <small><a class="project" href="/projects/slut.html">slut</a></small>
+            <small><a class="project" href="/projects/hominidae.html">hominidae</a></small>
+            <small><a class="project" href="/projects/13.html">13</a></small>
+            <small><a class="project" href="/projects/outlast.html">outlast</a></small>
+            <small><a class="project" href="/projects/dasein.html">dasein</a></small>
+            <small><a class="project" href="/projects/taegificbot.html">taegificbot</a></small>
+          </div>
+        </div>
+        <a class="page" href="/code.html">100 days of code</a>
+        <a class="page" href="/about.html">about</a>
+        <a class="page" href="/contact.html">contact</a>
+        <i class="fas fa-play" id="play"></i>
+      </div>
+    </div>
+
+    <div class="container-fluid" id="canvas">
+      <h2 class="days px-5">
+        1.<a class="day" target="_blank" href="https://soumya-talwar.github.io/experimental/1.%20snake%20game/">THE SNAKE GAME</a>
+        2.<a class="day" href="">MAZE GENERATOR</a>
+        3.<a class="day" href="">MINESWEEPER</a>
+      </h2>
+    </div>
+
+    <div class="d-none container-fluid fixed-top bg-white" id="transition">
+      <div class="main d-flex flex-column justify-content-center align-items-center">
+        <p id="kaomoji">(*°▽°*)</p>
+      </div>
+    </div>
+  </body>
+
+</html>
