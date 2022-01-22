@@ -93,9 +93,13 @@ img {
   box-shadow: -5px 5px 20px #E8E8E8;
 }
 
-.days {
+#days {
   margin-top: 15%;
   line-height: 5rem;
+}
+
+.day {
+  padding-right: 1.5rem;
 }
 
 .dud {
