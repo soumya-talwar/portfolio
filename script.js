@@ -24,8 +24,13 @@ $(document).ready(() => {
 
   let observer = new IntersectionObserver(entries => {
     entries.map(entry => {
-      if (entry.isIntersecting)
-        $("#page").html($(entry.target).index());
+      if (entry.isIntersecting) {
+        let index = $(entry.target).index();
+        if (index == 0)
+          $("#page").html("scroll down");
+        else
+          $("#page").html(index + " / 7");
+      }
     });
   }, {
     threshold: 0.5
