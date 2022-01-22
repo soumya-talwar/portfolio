@@ -1,4 +1,7 @@
 var play = false;
+var kaomojis = [
+  "ಠ_ಠ"
+];
 
 $(document).ready(() => {
   $("body").animate({
@@ -42,6 +45,8 @@ $(document).ready(() => {
       });
     }
   });
+
+  $("#kaomoji").html(kaomojis[Math.floor(Math.random() * kaomojis.length)]);
 
   $(".extra").each((index, text) => {
     let project = window.location.href.match(/[^/]+$/)[0].split('.')[0];
