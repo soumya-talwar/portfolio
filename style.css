@@ -48,7 +48,7 @@ h1, h2 {
   letter-spacing: 4px;
 }
 
-h1 a:hover {
+h1 a:hover, h2 a:hover {
   text-decoration: underline;
 }
 
