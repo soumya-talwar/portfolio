@@ -4,12 +4,15 @@ var num = 30;
 var length = 5;
 
 function setup() {
-  var canvas = createCanvas(windowWidth, $(document).height());
-  canvas.parent("canvas");
-  for (let i = 0; i < num; i++) {
-    x[i] = 0;
-    y[i] = 0;
-  }
+  if (windowWidth > 992) {
+    var canvas = createCanvas(windowWidth, $(document).height());
+    canvas.parent("canvas");
+    for (let i = 0; i < num; i++) {
+      x[i] = 0;
+      y[i] = 0;
+    }
+  } else
+    noLoop();
 }
 
 function draw() {

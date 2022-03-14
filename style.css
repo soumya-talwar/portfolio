@@ -118,6 +118,23 @@ img {
   font-size: 10rem;
 }
 
+@media (max-width: 991.98px) {
+  h1 {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+    letter-spacing: 2px;
+    line-height: 3rem;
+  }
+
+  #kaomoji {
+    font-size: 5rem;
+  }
+}
+
 @font-face {
   font-family: inter;
   src: url(./fonts/inter.ttf);
