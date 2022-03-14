@@ -11,8 +11,10 @@ function setup() {
       x[i] = 0;
       y[i] = 0;
     }
-  } else
+  } else {
     noLoop();
+    setTimeout(() => background(255), 1000);
+  }
 }
 
 function draw() {

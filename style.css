@@ -130,6 +130,25 @@ img {
     line-height: 3rem;
   }
 
+  h3 {
+    font-size: 1.7rem;
+  }
+
+  h4 {
+    font-size: 1.3rem;
+    line-height: 3rem;
+  }
+
+  .left-relative {
+    position: relative !important;
+  }
+
+  #days {
+    margin-top: 70%;
+    margin-bottom: 40%;
+    line-height: 3.5rem;
+  }
+
   #kaomoji {
     font-size: 5rem;
   }

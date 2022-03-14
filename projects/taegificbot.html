@@ -27,32 +27,32 @@
     </audio>
 
     <div class="container-fluid" id="menu">
-      <div class="fixed-top d-flex p-5 gap-5">
-        <a class="me-auto text-decoration-underline" href="../index.html">soumya talwar</a>
+      <div class="fixed-top d-flex flex-wrap flex-lg-nowrap p-5 gap-5">
+        <a class="me-lg-auto text-decoration-underline" href="../index.html">soumya talwar</a>
         <div class="d-flex flex-column text-center">
           <i class="pages fst-normal" id="projects">list of works</i>
           <div class="d-flex flex-column p-2 gap-2 d-none" id="list">
-            <small><a class="project" href="projects/death.html">death</a></small>
-            <small><a class="project" href="projects/philippa.html">philippa</a></small>
-            <small><a class="project" href="projects/hominidae.html">hominidae</a></small>
-            <small><a class="project" href="projects/13.html">13</a></small>
-            <small><a class="project" href="projects/grays.html">grays</a></small>
-            <small><a class="project" href="projects/taegificbot.html">taegificbot</a></small>
+            <small><a class="project" href="death.html">death</a></small>
+            <small><a class="project" href="philippa.html">philippa</a></small>
+            <small><a class="project" href="hominidae.html">hominidae</a></small>
+            <small><a class="project" href="13.html">13</a></small>
+            <small><a class="project" href="grays.html">grays</a></small>
+            <small><a class="project" href="taegificbot.html">taegificbot</a></small>
           </div>
         </div>
         <a class="page" href="../code.html">100 days of code</a>
         <a class="page" href="../contact.html">contact me</a>
-        <i class="fas fa-play" id="play"></i>
+        <i class="fas fa-play d-none d-lg-block" id="play"></i>
       </div>
     </div>
 
     <div class="container-fluid" id="canvas">
       <div class="row">
-        <div class="col-4 main d-flex flex-column justify-content-center text-center position-fixed">
+        <div class="col-lg-4 main d-flex flex-column justify-content-center text-center position-fixed left-relative">
           <h1>TAEGI<br>FIC BOT</h1>
           <h4 class="pt-2">[&nbsp;<a id="link" target="_blank" href="https://github.com/soumya-talwar/taegificbot">visit github code</a>&nbsp;]</h4>
         </div>
-        <div class="col-7 offset-4 space">
+        <div class="col-lg-7 offset-lg-4 px-5 px-lg-0 space">
           <h3 class="py-3">Nobody knows the struggle of finding good queer fanfiction like me. Which is why I built <span class="extra">@taegificbot</span>, a queer BTS fanfiction recommendation engine that gave instant customised fanfiction recommendations to Twitter users.</h3>
           <h4 class="py-3">It started with a simple tweet wishing for a way to get instant fanfic recommendations instead of scraping all of Archive of Our Own every night and finding nothing. Responses from other despondent Twitter users poured in and they were the encouragement I needed. I was motivated to build a solution and together with two other fanfic enthusiasts, I was able to populate a spreadsheet with thousands of links to fanworks we'd all read and loved in the fandom. Since Archive of Our Own has no API to request data from, I built a web scraper that pulled all the metadata of a story when given its url. All of that data was then stored in a realtime database on Firebase.<br><br>
             Next, I built a Twitter bot that would be triggered each time a user mentioned the bot's username in a tweet and typed "recommend". The bot would then pull links from the database and reply to the user. These recommendations could be customised as well. Users could request for stories with specific word counts, pairings, genres, tropes, completion statuses, warnings, etc. Moreover, they could subscribe to receive daily fanfic recommendations in their inbox.<br><br>
