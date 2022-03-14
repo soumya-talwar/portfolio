@@ -4,15 +4,12 @@ var num = 30;
 var length = 5;
 
 function setup() {
-  if (windowWidth > 992) {
-    var canvas = createCanvas(windowWidth, $(document).height());
-    canvas.parent("canvas");
-    for (let i = 0; i < num; i++) {
-      x[i] = 0;
-      y[i] = 0;
-    }
-  } else
-    noLoop();
+  let canvas = createCanvas(windowWidth, windowHeight);
+  canvas.parent("landing");
+  for (let i = 0; i < num; i++) {
+    x[i] = 0;
+    y[i] = 0;
+  }
   let phrases = [
     "PROGRAMMER",
     "DESIGNER",
@@ -28,9 +25,12 @@ function setup() {
       setTimeout(start, 800);
     });
     counter = (counter + 1) % phrases.length;
-    background(255);
   }
   start();
+  if (windowWidth < 992) {
+    noLoop();
+    setTimeout(() => background(255), 1000);
+  }
 }
 
 function draw() {

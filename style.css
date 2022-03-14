@@ -135,8 +135,8 @@ img {
   }
 
   h4 {
-    font-size: 1.3rem;
-    line-height: 3rem;
+    font-size: 1.2rem;
+    line-height: 2.5rem;
   }
 
   .left-relative {
@@ -144,9 +144,13 @@ img {
   }
 
   #days {
-    margin-top: 70%;
+    margin-top: 60%;
     margin-bottom: 40%;
     line-height: 3.5rem;
+  }
+
+  #contact {
+    margin-top: 30%;
   }
 
   #kaomoji {
