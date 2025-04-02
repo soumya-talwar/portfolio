@@ -1,81 +1,92 @@
 var play = false;
-var kaomojis = [
-  "ಠ_ಠ"
-];
+var kaomojis = ["ಠ_ಠ"];
 
 $(document).ready(() => {
-  $("body").animate({
-    opacity: 1
-  }, 1000);
+	$("body").animate(
+		{
+			opacity: 1,
+		},
+		1000
+	);
 
-  $("#projects, #list").hover(() => {
-    $("#list").toggleClass("d-none");
-  });
+	$("#projects, #list").hover(() => {
+		$("#list").toggleClass("d-none");
+	});
 
-  let audio = document.getElementById("music");
-  $("#play").click(() => {
-    if (!play)
-      audio.play();
-    else
-      audio.pause();
-    play = !play;
-    $("#play").toggleClass(["fa-play", "fa-pause"]);
-  });
+	let audio = document.getElementById("music");
+	$("#play").click(() => {
+		if (!play) audio.play();
+		else audio.pause();
+		play = !play;
+		$("#play").toggleClass(["fa-play", "fa-pause"]);
+	});
 
-  let observer = new IntersectionObserver(entries => {
-    entries.map(entry => {
-      if (entry.isIntersecting) {
-        let index = $(entry.target).index();
-        if (index == 0)
-          $("#page").html("scroll down");
-        else
-          $("#page").html(index + " / 7");
-      }
-    });
-  }, {
-    threshold: 0.5
-  });
-  $(".main").each((index, target) => observer.observe(target));
+	let observer = new IntersectionObserver(
+		(entries) => {
+			entries.map((entry) => {
+				if (entry.isIntersecting) {
+					let index = $(entry.target).index();
+					if (index == 0) $("#page").html("scroll down");
+					else $("#page").html(index + " / 8");
+				}
+			});
+		},
+		{
+			threshold: 0.5,
+		}
+	);
+	$(".main").each((index, target) => observer.observe(target));
 
-  $("a").each((index, link) => {
-    let href = $(link).attr("href");
-    if ((/html$/).test(href)) {
-      $(link).click(event => {
-        event.preventDefault();
-        $("#transition").removeClass("d-none");
-        $("#transition").animate({
-          opacity: "1"
-        }, 500);
-        setTimeout(() => window.location.href = href, 1000);
-      });
-    }
-  });
+	$("a").each((index, link) => {
+		let href = $(link).attr("href");
+		if (/html$/.test(href)) {
+			$(link).click((event) => {
+				event.preventDefault();
+				$("#transition").removeClass("d-none");
+				$("#transition").animate(
+					{
+						opacity: "1",
+					},
+					500
+				);
+				setTimeout(() => (window.location.href = href), 1000);
+			});
+		}
+	});
 
-  $("#kaomoji").html(kaomojis[Math.floor(Math.random() * kaomojis.length)]);
+	$("#kaomoji").html(kaomojis[Math.floor(Math.random() * kaomojis.length)]);
 
-  $(".extra").each((index, text) => {
-    let project = window.location.href.match(/[^/]+$/)[0].split('.')[0];
-    $(text).hover(() => {
-      $("#popup img").attr("src", `../images/${project} ${index}.gif`);
-      $("#popup").css({
-        top: constrain(mouseY + 10, 0, $(document).height() - $("#popup img").width() * 0.528 - 20),
-        left: constrain(mouseX + 10, 0, $(window).width() - $("#popup img").width() - 20)
-      });
-      $("#popup").toggleClass("d-none");
-    });
-  });
+	$(".extra").each((index, text) => {
+		let project = window.location.href.match(/[^/]+$/)[0].split(".")[0];
+		$(text).hover(() => {
+			$("#popup img").attr("src", `../images/${project} ${index}.gif`);
+			$("#popup").css({
+				top: constrain(
+					mouseY + 10,
+					0,
+					$(document).height() - $("#popup img").width() * 0.528 - 20
+				),
+				left: constrain(
+					mouseX + 10,
+					0,
+					$(window).width() - $("#popup img").width() - 20
+				),
+			});
+			$("#popup").toggleClass("d-none");
+		});
+	});
 
-  $(".marquee").marquee({
-    duplicated: true,
-    direction: "left",
-    duration: 20000,
-    pauseOnHover: true,
-    startVisible: true
-  });
+	$(".marquee").marquee({
+		duplicated: true,
+		direction: "left",
+		duration: 20000,
+		pauseOnHover: true,
+		startVisible: true,
+	});
 
-  $("#copy").click(() => {
-    $("#copy").html("[copied!]");
-    setTimeout(() => $("#copy").html("[copy email]"), 1000);
-    navigator.clipboard.writeText("soumya.talwar97@gmail.com");
-  });
+	$("#copy").click(() => {
+		$("#copy").html("[copied!]");
+		setTimeout(() => $("#copy").html("[copy email]"), 1000);
+		navigator.clipboard.writeText("soumya.talwar97@gmail.com");
+	});
 });
