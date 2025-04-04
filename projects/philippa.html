@@ -1,82 +1,140 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>soumya talwar — philippa</title>
+		<link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <head>
-    <meta charset="utf-8">
-    <title>soumya talwar — philippa</title>
-    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script
+			src="https://code.jquery.com/jquery-3.6.0.min.js"
+			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			crossorigin="anonymous"></script>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+			crossorigin="anonymous" />
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"
+			integrity="sha512-N4kV7GkNv7QR7RX9YF/olywyIgIwNvfEe2nZtfyj73HdjCUkAfOBDbcuJ/cTaN04JKRnw1YG1wnUyNKMsNgg3g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js" integrity="sha512-N4kV7GkNv7QR7RX9YF/olywyIgIwNvfEe2nZtfyj73HdjCUkAfOBDbcuJ/cTaN04JKRnw1YG1wnUyNKMsNgg3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script
+			src="https://kit.fontawesome.com/715dc2f277.js"
+			crossorigin="anonymous"></script>
 
-    <script src="https://kit.fontawesome.com/715dc2f277.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" type="text/css" href="../style.css" />
+		<script src="../canvas.js"></script>
+		<script src="../script.js"></script>
+	</head>
 
-    <link rel="stylesheet" type="text/css" href="../style.css">
-    <script src="../canvas.js"></script>
-    <script src="../script.js"></script>
-  </head>
+	<body>
+		<link rel="preload" as="image" href="../images/philippa 0.gif" />
+		<link rel="preload" as="image" href="../images/philippa 1.gif" />
+		<link rel="preload" as="image" href="../images/philippa 2.gif" />
+		<audio id="music" loop>
+			<source src="../audio/bourree.mp3" type="audio/mp3" />
+		</audio>
 
-  <body>
-    <link rel="preload" as="image" href="../images/philippa 0.gif">
-    <link rel="preload" as="image" href="../images/philippa 1.gif">
-    <link rel="preload" as="image" href="../images/philippa 2.gif">
-    <audio id="music" loop>
-      <source src="../audio/bourree.mp3" type="audio/mp3">
-    </audio>
+		<div class="container-fluid" id="menu">
+			<div class="fixed-top d-flex flex-wrap flex-lg-nowrap p-5 gap-5">
+				<a class="me-lg-auto text-decoration-underline" href="../index.html"
+					>soumya talwar</a
+				>
+				<div class="d-flex flex-column text-center">
+					<i class="pages fst-normal" id="projects">list of works</i>
+					<div class="d-flex flex-column p-2 gap-2 d-none" id="list">
+						<small><a class="project" href="dokidoki.html">doki doki</a></small>
+						<small><a class="project" href="jimin.html">jimin</a></small>
+						<small><a class="project" href="death.html">death</a></small>
+						<small><a class="project" href="philippa.html">philippa</a></small>
+						<small
+							><a class="project" href="hominidae.html">hominidae</a></small
+						>
+						<small><a class="project" href="13.html">13</a></small>
+						<small><a class="project" href="grays.html">grays</a></small>
+						<small
+							><a class="project" href="taegificbot.html">taegificbot</a></small
+						>
+					</div>
+				</div>
+				<a class="page" href="../code.html">100 days of code</a>
+				<a class="page" href="../contact.html">(don't) contact me</a>
+				<i class="fas fa-play d-none d-lg-block" id="play"></i>
+			</div>
+		</div>
 
-    <div class="container-fluid" id="menu">
-      <div class="fixed-top d-flex flex-wrap flex-lg-nowrap p-5 gap-5">
-        <a class="me-lg-auto text-decoration-underline" href="../index.html">soumya talwar</a>
-        <div class="d-flex flex-column text-center">
-          <i class="pages fst-normal" id="projects">list of works</i>
-          <div class="d-flex flex-column p-2 gap-2 d-none" id="list">
-            <small><a class="project" href="jimin.html">jimin</a></small>
-            <small><a class="project" href="death.html">death</a></small>
-            <small><a class="project" href="philippa.html">philippa</a></small>
-            <small><a class="project" href="hominidae.html">hominidae</a></small>
-            <small><a class="project" href="13.html">13</a></small>
-            <small><a class="project" href="grays.html">grays</a></small>
-            <small><a class="project" href="taegificbot.html">taegificbot</a></small>
-          </div>
-        </div>
-        <a class="page" href="../code.html">100 days of code</a>
-        <a class="page" href="../contact.html">(don't) contact me</a>
-        <i class="fas fa-play d-none d-lg-block" id="play"></i>
-      </div>
-    </div>
+		<div class="container-fluid" id="canvas">
+			<div class="row">
+				<div
+					class="col-lg-4 main d-flex flex-column justify-content-center text-center position-fixed left-relative">
+					<h1>PHILIPPA</h1>
+					<h4 class="pt-2">
+						[&nbsp;<a
+							id="link"
+							target="_blank"
+							href="https://soumya-talwar.github.io/philippa/"
+							>meet the neural network</a
+						>&nbsp;]
+					</h4>
+				</div>
+				<div class="col-lg-7 offset-lg-4 px-5 px-lg-0 space">
+					<h3 class="py-3">
+						I attempted to teach moral values to a neural network I call
+						<span class="extra">Philippa</span> by training her on a dataset
+						containing people's responses to five kinds of moral dilemmas.
+					</h3>
+					<h4 class="py-3">
+						Imagine you're a driver of a trolley car that is hurtling down the
+						track at sixty miles per hour. You notice that there are five
+						workers working towards the end of the track. The brakes are faulty,
+						and you feel desperate because you know that if the trolley crashes
+						into these people, they will surely die.<br /><br />
+						But then you notice a sidetrack off to the right. There is one
+						worker working on that track. Your steering wheel works. You can
+						steer the trolley car, if you want to, onto this sidetrack—killing
+						the one worker, but sparing five.<br /><br />
+						Which is the more ethical option? To do nothing and kill the five
+						workers working on the track, or to steer the trolley car onto the
+						sidetrack and kill the one singular worker?<br /><br />
+						Now, imagine you’re a transplant surgeon. Five patients have come to
+						your clinic, each in dire need of an organ. One needs a lung, two a
+						kidney, one a heart, and one a liver. There are no donors, and these
+						patients are going to die. All of a sudden, a healthy patient walks
+						into your clinic for a regular checkup and he’s seated in another
+						room. You could, if you wanted to, cut up the healthy patient, yank
+						out his organs and save the other five patients, effectively killing
+						the one healthy patient.<br /><br />
+						Despite the two situations bearing the same conflict between their
+						consequences, our moral intuition will tell us that they are all
+						inherently different from one another. That is because there are
+						more moral variables at play than just the number of lives.<br /><br />
+						A machine understands arithmatic comparisions. 5 will always be
+						greater than 1, yet Philippa works on a framework that accounts for
+						other moral variables like: desire, intent, and duty. It was trained
+						on people's responses to five thought experiments, all of which
+						weigh 5 lives against 1. The
+						<span class="extra">responses were collected</span> from over 350
+						people at <span class="extra">several popular spots</span> in New
+						Delhi like Hauz Khas, Cannaught Place, and the Khan Market.
+					</h4>
+				</div>
+			</div>
+		</div>
 
-    <div class="container-fluid" id="canvas">
-      <div class="row">
-        <div class="col-lg-4 main d-flex flex-column justify-content-center text-center position-fixed left-relative">
-          <h1>PHILIPPA</h1>
-          <h4 class="pt-2">[&nbsp;<a id="link" target="_blank" href="https://soumya-talwar.github.io/philippa/">visit the neural network</a>&nbsp;]</h4>
-        </div>
-        <div class="col-lg-7 offset-lg-4 px-5 px-lg-0 space">
-          <h3 class="py-3">I attempted to teach moral values to a neural network I call <span class="extra">Philippa</span> by training her on a dataset containing people's responses to five kinds of moral dilemmas.</h3>
-          <h4 class="py-3">Imagine you're a driver of a trolley car that is hurtling down the track at sixty miles per hour. You notice that there are five workers working towards the end of the track. The brakes are faulty, and you feel desperate because you know that if the trolley crashes into these people, they will surely die.<br><br>
-            But then you notice a sidetrack off to the right. There is one worker working on that track. Your steering wheel works. You can steer the trolley car, if you want to, onto this sidetrack—killing the one worker, but sparing five.<br><br>
-            Which is the more ethical option? To do nothing and kill the five workers working on the track, or to steer the trolley car onto the sidetrack and kill the one singular worker?<br><br>
-            Now, imagine you’re a transplant surgeon. Five patients have come to your clinic, each in dire need of an organ. One needs a lung, two a kidney, one a heart, and one a liver. There are no donors, and these patients are going to die. All of a sudden, a healthy patient walks into your clinic for a regular checkup and he’s seated in another room. You could, if you wanted to, cut up the healthy patient, yank out his organs and save the other five patients, effectively killing the one healthy patient.<br><br>
-            Despite the two situations bearing the same conflict between their consequences, our moral intuition will tell us that they are all inherently different from one another. That is because there are more moral variables at play than just the number of lives.<br><br>
-            A machine understands arithmatic comparisions. 5 will always be greater than 1, yet Philippa works on a framework that accounts for other moral variables like: desire, intent, and duty. It was trained on people's responses to five thought experiments, all of which weigh 5 lives against 1. The <span class="extra">responses were collected</span> from over 350 people at <span class="extra">several popular spots</span> in New Delhi like Hauz Khas, Cannaught Place, and the Khan Market.
-          </h4>
-        </div>
-      </div>
-    </div>
+		<div class="d-none position-absolute" id="popup">
+			<img src="" />
+		</div>
 
-    <div class="d-none position-absolute" id="popup">
-      <img src="" />
-    </div>
-
-    <div class="d-none container-fluid fixed-top bg-white" id="transition">
-      <div class="main d-flex flex-column justify-content-center align-items-center">
-        <p id="kaomoji"></p>
-      </div>
-    </div>
-  </body>
-
+		<div class="d-none container-fluid fixed-top bg-white" id="transition">
+			<div
+				class="main d-flex flex-column justify-content-center align-items-center">
+				<p id="kaomoji"></p>
+			</div>
+		</div>
+	</body>
 </html>

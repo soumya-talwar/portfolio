@@ -1,85 +1,192 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>soumya talwar — hominidae</title>
+		<link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <head>
-    <meta charset="utf-8">
-    <title>soumya talwar — hominidae</title>
-    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script
+			src="https://code.jquery.com/jquery-3.6.0.min.js"
+			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			crossorigin="anonymous"></script>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+			crossorigin="anonymous" />
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"
+			integrity="sha512-N4kV7GkNv7QR7RX9YF/olywyIgIwNvfEe2nZtfyj73HdjCUkAfOBDbcuJ/cTaN04JKRnw1YG1wnUyNKMsNgg3g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js" integrity="sha512-N4kV7GkNv7QR7RX9YF/olywyIgIwNvfEe2nZtfyj73HdjCUkAfOBDbcuJ/cTaN04JKRnw1YG1wnUyNKMsNgg3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script
+			src="https://kit.fontawesome.com/715dc2f277.js"
+			crossorigin="anonymous"></script>
 
-    <script src="https://kit.fontawesome.com/715dc2f277.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" type="text/css" href="../style.css" />
+		<script src="../canvas.js"></script>
+		<script src="../script.js"></script>
+	</head>
 
-    <link rel="stylesheet" type="text/css" href="../style.css">
-    <script src="../canvas.js"></script>
-    <script src="../script.js"></script>
-  </head>
+	<body>
+		<link rel="preload" as="image" href="../images/hominidae 0.gif" />
+		<link rel="preload" as="image" href="../images/hominidae 1.gif" />
+		<link rel="preload" as="image" href="../images/hominidae 2.gif" />
+		<audio id="music" loop>
+			<source src="../audio/bourree.mp3" type="audio/mp3" />
+		</audio>
 
-  <body>
-    <link rel="preload" as="image" href="../images/hominidae 0.gif">
-    <link rel="preload" as="image" href="../images/hominidae 1.gif">
-    <link rel="preload" as="image" href="../images/hominidae 2.gif">
-    <audio id="music" loop>
-      <source src="../audio/bourree.mp3" type="audio/mp3">
-    </audio>
+		<div class="container-fluid" id="menu">
+			<div class="fixed-top d-flex flex-wrap flex-lg-nowrap p-5 gap-5">
+				<a class="me-lg-auto text-decoration-underline" href="../index.html"
+					>soumya talwar</a
+				>
+				<div class="d-flex flex-column text-center">
+					<i class="pages fst-normal" id="projects">list of works</i>
+					<div class="d-flex flex-column p-2 gap-2 d-none" id="list">
+						<small><a class="project" href="dokidoki.html">doki doki</a></small>
+						<small><a class="project" href="jimin.html">jimin</a></small>
+						<small><a class="project" href="death.html">death</a></small>
+						<small><a class="project" href="philippa.html">philippa</a></small>
+						<small
+							><a class="project" href="hominidae.html">hominidae</a></small
+						>
+						<small><a class="project" href="13.html">13</a></small>
+						<small><a class="project" href="grays.html">grays</a></small>
+						<small
+							><a class="project" href="taegificbot.html">taegificbot</a></small
+						>
+					</div>
+				</div>
+				<a class="page" href="../code.html">100 days of code</a>
+				<a class="page" href="../contact.html">(don't) contact me</a>
+				<i class="fas fa-play d-none d-lg-block" id="play"></i>
+			</div>
+		</div>
 
-    <div class="container-fluid" id="menu">
-      <div class="fixed-top d-flex flex-wrap flex-lg-nowrap p-5 gap-5">
-        <a class="me-lg-auto text-decoration-underline" href="../index.html">soumya talwar</a>
-        <div class="d-flex flex-column text-center">
-          <i class="pages fst-normal" id="projects">list of works</i>
-          <div class="d-flex flex-column p-2 gap-2 d-none" id="list">
-            <small><a class="project" href="jimin.html">jimin</a></small>
-            <small><a class="project" href="death.html">death</a></small>
-            <small><a class="project" href="philippa.html">philippa</a></small>
-            <small><a class="project" href="hominidae.html">hominidae</a></small>
-            <small><a class="project" href="13.html">13</a></small>
-            <small><a class="project" href="grays.html">grays</a></small>
-            <small><a class="project" href="taegificbot.html">taegificbot</a></small>
-          </div>
-        </div>
-        <a class="page" href="../code.html">100 days of code</a>
-        <a class="page" href="../contact.html">(don't) contact me</a>
-        <i class="fas fa-play d-none d-lg-block" id="play"></i>
-      </div>
-    </div>
+		<div class="container-fluid" id="canvas">
+			<div class="row">
+				<div
+					class="col-lg-4 main d-flex flex-column justify-content-center text-center position-fixed left-relative">
+					<h2>HOMINIDAE</h2>
+					<h4 class="pt-2">
+						[&nbsp;<a
+							id="link"
+							target="_blank"
+							href="https://soumya-talwar.github.io/hominidae/pongo/"
+							>look at pongo</a
+						>&nbsp;]
+					</h4>
+					<h4 class="pt-2">
+						[&nbsp;<a
+							id="link"
+							target="_blank"
+							href="https://soumya-talwar.github.io/hominidae/gorilla/"
+							>look at gorilla</a
+						>&nbsp;]
+					</h4>
+					<h4 class="pt-2">
+						[&nbsp;<a
+							id="link"
+							target="_blank"
+							href="https://soumya-talwar.github.io/hominidae/pan/"
+							>look at pan</a
+						>&nbsp;]
+					</h4>
+				</div>
+				<div class="col-lg-7 offset-lg-4 px-5 px-lg-0 space">
+					<h3 class="py-3">
+						Hominidae is a series of interactive autonomous artworks that
+						illustrate sexual violence and aggression seen in non-human species
+						of the Great Apes family i.e.
+						<span class="extra">Orangutans (Pongo)</span>,
+						<span class="extra">Gorillas</span>, and
+						<span class="extra">Chimpanzees (Pan)</span>.
+					</h3>
+					<h4 class="py-3">
+						At no point during this project do I try to justify sexual violence
+						as “good” or “correct” simply because similar behaviour is seen in
+						non-human animals and is therefore “natural.” Like historian David
+						Hume states in his is-ought problem, it is fallacious to assume that
+						just because something is a certain way, it ought to remain the same
+						way. The fact of the matter is that sex and reproduction is
+						blatantly unfair. It wasn’t always the case. The first ever
+						organisms to evolve were in the sea, stuck down on the bottom or
+						floating around, unable to move. They’d spew out millions of gametes
+						into the ocean with the hope that they’d meet. It was hardly an
+						efficient mechanism of reproduction, and eventually evolution
+						separated the two sexes. The female built an egg with sufficient
+						nutrients in it and the male worked to go find that egg.<br /><br />
+						But once evolution proceeds, the whole animal can walk over and find
+						a mate and they can do some sort of insemination in very close
+						quarters. If the eggs are already laid, the male simply needs to lay
+						the sperms right on top of them, an act that hardly requires the
+						amount of energy the female is putting into her eggs. That’s where
+						we start seeing an inequality between the two sexes. Females make a
+						few eggs, and her eggs are very expensive and rare, but males still
+						make many, many sperms, and his sperms are plentiful and cheap. Once
+						they take these two different evolutionary routes, different
+						reproductive strategies come into play for the both of them.<br /><br />
+						Males have two basic strategies: sperm competition and physical
+						competition. The sexual system in a species that engages in sperm
+						competition will be promiscuous; females will mate with many males
+						and the sperms will compete with each other. The second strategy is
+						where males compete with each other for dominance and use that
+						dominant status to mate with the female.<br /><br />
+						The females also have two basic strategies. One is to get the males
+						to provide resources other than the sperm, and those resources allow
+						her to build big healthy eggs. The second strategy is for them to
+						try to find the male with the best genes, and in species where males
+						fight for dominance, females choose the winners. The male that wins
+						possesses some genes which allow him to win these fights—he's big
+						and strong and has sharp teeth—and the female will choose the most
+						violent male to father her children because then her offsprings will
+						also become these big, strong and violent males.<br /><br />
+						What happens then is that both the male and female reproductive
+						strategy colludes in increasing the violence a little bit in every
+						generation. If the males are fighting each other, and reproductive
+						success depends on winning these fights, then the males will tend to
+						get larger. It also opens up a second strategy for reproductive
+						success, and that is that the male is now bigger than the female and
+						he can start coercing her. He doesn’t need to fight the other males;
+						he can just coerce the smaller female. If that trait enters a
+						species, the females begin to choose a male who is the most
+						successful at coercing females, because again, her children will
+						then inherit those genes which will allow them to successfully
+						coerce females and have more offspring. Thus we see that both male
+						and female reproductive strategies cooperate in increasing the
+						male-on-female violence.<br /><br />
+						Of the five species of primates in which sexual violence has been
+						observed, four of those are Great Apes. The purpose of this project
+						was to build a series of works that mathematically and
+						computationally simulate the behaviour of these apes in an attempt
+						to illustrate their sexual behaviour and violence.<br /><br />
+						For a more thorough explanation of the apes and their behaviours, as
+						well as the code employed to simulate it,
+						<a
+							class="text-decoration-underline"
+							target="_blank"
+							href="https://soumya-talwar.notion.site/Hominidae-2021-9c285638db1a431c87077c7c570a2372"
+							>take a look here</a
+						>.
+					</h4>
+				</div>
+			</div>
+		</div>
 
-    <div class="container-fluid" id="canvas">
-      <div class="row">
-        <div class="col-lg-4 main d-flex flex-column justify-content-center text-center position-fixed left-relative">
-          <h2>HOMINIDAE</h2>
-          <h4 class="pt-2">[&nbsp;<a id="link" target="_blank" href="https://soumya-talwar.github.io/hominidae/pongo/">visit pongo</a>&nbsp;]</h4>
-          <h4 class="pt-2">[&nbsp;<a id="link" target="_blank" href="https://soumya-talwar.github.io/hominidae/gorilla/">visit gorilla</a>&nbsp;]</h4>
-          <h4 class="pt-2">[&nbsp;<a id="link" target="_blank" href="https://soumya-talwar.github.io/hominidae/pan/">visit pan</a>&nbsp;]</h4>
-        </div>
-        <div class="col-lg-7 offset-lg-4 px-5 px-lg-0 space">
-          <h3 class="py-3">Hominidae is a series of interactive autonomous artworks that illustrate sexual violence and aggression seen in non-human species of the Great Apes family i.e. <span class="extra">Orangutans (Pongo)</span>, <span class="extra">Gorillas</span>, and <span class="extra">Chimpanzees (Pan)</span>.</h3>
-          <h4 class="py-3">At no point during this project do I try to justify sexual violence as “good” or “correct” simply because similar behaviour is seen in non-human animals and is therefore “natural.” Like historian David Hume states in his is-ought problem, it is fallacious to assume that just because something is a certain way, it ought to remain the same way. The fact of the matter is that sex and reproduction is blatantly unfair. It wasn’t always the case. The first ever organisms to evolve were in the sea, stuck down on the bottom or floating around, unable to move. They’d spew out millions of gametes into the ocean with the hope that they’d meet. It was hardly an efficient mechanism of reproduction, and eventually evolution separated the two sexes. The female built an egg with sufficient nutrients in it and the male worked to go find that egg.<br><br>
-            But once evolution proceeds, the whole animal can walk over and find a mate and they can do some sort of insemination in very close quarters. If the eggs are already laid, the male simply needs to lay the sperms right on top of them, an act that hardly requires the amount of energy the female is putting into her eggs. That’s where we start seeing an inequality between the two sexes. Females make a few eggs, and her eggs are very expensive and rare, but males still make many, many sperms, and his sperms are plentiful and cheap. Once they take these two different evolutionary routes, different reproductive strategies come into play for the both of them.<br><br>
-            Males have two basic strategies: sperm competition and physical competition. The sexual system in a species that engages in sperm competition will be promiscuous; females will mate with many males and the sperms will compete with each other. The second strategy is where males compete with each other for dominance and use that dominant status to mate with the female.<br><br>
-            The females also have two basic strategies. One is to get the males to provide resources other than the sperm, and those resources allow her to build big healthy eggs. The second strategy is for them to try to find the male with the best genes, and in species where males fight for dominance, females choose the winners. The male that wins possesses some genes which allow him to win these fights—he's big and strong and has sharp teeth—and the female will choose the most violent male to father her children because then her offsprings will also become these big, strong and violent males.<br><br>
-            What happens then is that both the male and female reproductive strategy colludes in increasing the violence a little bit in every generation. If the males are fighting each other, and reproductive success depends on winning these fights, then the males will tend to get larger. It also opens up a second strategy for reproductive success, and that is that the male is now bigger than the female and he can start coercing her. He doesn’t need to fight the other males; he can just coerce the smaller female. If that trait enters a species, the females begin to choose a male who is the most successful at coercing females, because again, her children will then inherit those genes which will allow them to successfully coerce females and have more offspring. Thus we see that both male and female reproductive strategies cooperate in increasing the male-on-female violence.<br><br>
-            Of the five species of primates in which sexual violence has been observed, four of those are Great Apes. The purpose of this project was to build a series of works that mathematically and computationally simulate the behaviour of these apes in an attempt to illustrate their sexual behaviour and violence.<br><br>
-            For a more thorough explanation of the apes and their behaviours, as well as the code employed to simulate it, <a class="text-decoration-underline" target="_blank" href="https://soumya-talwar.notion.site/Hominidae-2021-9c285638db1a431c87077c7c570a2372">take a look here</a>.
-          </h4>
-        </div>
-      </div>
-    </div>
+		<div class="d-none position-absolute" id="popup">
+			<img src="" />
+		</div>
 
-    <div class="d-none position-absolute" id="popup">
-      <img src="" />
-    </div>
-
-    <div class="d-none container-fluid fixed-top bg-white" id="transition">
-      <div class="main d-flex flex-column justify-content-center align-items-center">
-        <p id="kaomoji"></p>
-      </div>
-    </div>
-  </body>
-
+		<div class="d-none container-fluid fixed-top bg-white" id="transition">
+			<div
+				class="main d-flex flex-column justify-content-center align-items-center">
+				<p id="kaomoji"></p>
+			</div>
+		</div>
+	</body>
 </html>
