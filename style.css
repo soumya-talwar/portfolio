@@ -1,169 +1,185 @@
 body {
-  opacity: 0;
-  overflow-x: hidden;
+	opacity: 0;
+	overflow-x: hidden;
 }
 
 * {
-  font-family: inter, sans-serif;
-  font-size: 0.9rem;
-  letter-spacing: 2px;
+	font-family: inter, sans-serif;
+	font-size: 0.9rem;
+	letter-spacing: 2px;
 }
 
-#menu a, #menu i, .social {
-  line-height: 2rem;
-  text-underline-offset: 0.5rem;
+#menu a,
+#menu i,
+.social {
+	line-height: 2rem;
+	text-underline-offset: 0.5rem;
 }
 
-.page:hover, .project:hover, .day:hover, #draw:hover, .social:hover, #erase:hover, #send:hover {
-  text-decoration: underline;
-  text-underline-offset: 0.5rem;
+.page:hover,
+.project:hover,
+.day:hover,
+#draw:hover,
+.social:hover,
+#erase:hover,
+#send:hover {
+	text-decoration: underline;
+	text-underline-offset: 0.5rem;
 }
 
 canvas {
-  position: absolute;
-  top: 0;
-  z-index: -1;
+	position: absolute;
+	top: 0;
+	z-index: -1;
 }
 
 #landing {
-  height: 100vh;
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
+	height: 100vh;
+	scroll-snap-type: y mandatory;
+	overflow-y: scroll;
 }
 
 .main {
-  height: 100vh;
-  scroll-snap-align: center;
-  scroll-snap-stop: always;
+	height: 100vh;
+	scroll-snap-align: center;
+	scroll-snap-stop: always;
 }
 
 .space {
-  padding-top: 10%;
-  padding-bottom: 20%;
+	padding-top: 10%;
+	padding-bottom: 20%;
 }
 
-h1, h2 {
-  font-family: cera, sans-serif;
-  font-size: 4.3rem;
-  letter-spacing: 4px;
+h1,
+h2 {
+	font-family: cera, sans-serif;
+	font-size: 4.3rem;
+	letter-spacing: 4px;
 }
 
-h1 a:hover, h2 a:hover {
-  text-decoration: underline;
+h1 a:hover,
+h2 a:hover {
+	text-decoration: underline;
 }
 
 h2 {
-  font-size: 3.5rem;
+	font-size: 3.5rem;
 }
 
-h3, h4 {
-  font-family: cera, sans-serif;
-  font-size: 2rem;
-  line-height: 3rem;
-  letter-spacing: 1px;
+h3,
+h4 {
+	font-family: cera, sans-serif;
+	font-size: 2rem;
+	line-height: 3rem;
+	letter-spacing: 1px;
 }
 
 h4 {
-  font-size: 1.5rem;
-  line-height: 2.5rem;
+	font-size: 1.5rem;
+	line-height: 2.5rem;
 }
 
 h4:last-of-type {
-  margin-bottom: 20%;
+	margin-bottom: 20%;
 }
 
 #link:hover {
-  border-bottom: 3px solid #000;
+	border-bottom: 3px solid #000;
 }
 
-a, a:hover, span {
-  font-family: inherit;
-  font-size: inherit;
-  color: inherit;
-  text-decoration: inherit;
+a,
+a:hover,
+span {
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	text-decoration: inherit;
 }
 
 .extra {
-  border-bottom: 2px dashed #000;
+	border-bottom: 2px dashed #000;
 }
 
 img {
-  width: 50vw;
-  height: auto;
-  box-shadow: -5px 5px 20px #E8E8E8;
+	width: 50vw;
+	height: auto;
+	box-shadow: -5px 5px 20px #e8e8e8;
 }
 
 #days {
-  margin-top: 15%;
-  line-height: 5rem;
+	margin-top: 15%;
+	line-height: 5rem;
 }
 
 .day {
-  padding-right: 1.5rem;
+	padding-right: 1.5rem;
 }
 
 .dud {
-  color: #757575;
+	color: #757575;
 }
 
-#projects, #play, #copy, #erase {
-  cursor: pointer;
+#projects,
+#play,
+#copy,
+#erase {
+	cursor: pointer;
 }
 
 #transition {
-  opacity: 0;
+	opacity: 0;
 }
 
 #kaomoji {
-  font-size: 10rem;
+	font-size: 10rem;
 }
 
 @media (max-width: 991.98px) {
-  h1 {
-    font-size: 2rem;
-    line-height: 3rem;
-  }
+	h1 {
+		font-size: 2rem;
+		line-height: 3rem;
+	}
 
-  h2 {
-    font-size: 1.7rem;
-    letter-spacing: 2px;
-    line-height: 3rem;
-  }
+	h2 {
+		font-size: 1.7rem;
+		letter-spacing: 2px;
+		line-height: 3rem;
+	}
 
-  h3 {
-    font-size: 1.5rem;
-  }
+	h3 {
+		font-size: 1.5rem;
+	}
 
-  h4 {
-    font-size: 1rem;
-    line-height: 2.5rem;
-  }
+	h4 {
+		font-size: 1rem;
+		line-height: 2.5rem;
+	}
 
-  .left-relative {
-    position: relative !important;
-  }
+	.left-relative {
+		position: relative !important;
+	}
 
-  #days {
-    margin-top: 60%;
-    margin-bottom: 40%;
-    line-height: 3.5rem;
-  }
+	#days {
+		margin-top: 60%;
+		margin-bottom: 40%;
+		line-height: 3.5rem;
+	}
 
-  #contact {
-    margin-top: 60%;
-  }
+	#contact {
+		margin-top: 60%;
+	}
 
-  #kaomoji {
-    font-size: 5rem;
-  }
+	#kaomoji {
+		font-size: 5rem;
+	}
 }
 
 @font-face {
-  font-family: inter;
-  src: url(./fonts/inter.ttf);
+	font-family: inter;
+	src: url(./fonts/inter.ttf);
 }
 
 @font-face {
-  font-family: cera;
-  src: local("cera-pro"), url(./fonts/cera-pro.otf);
+	font-family: cera;
+	src: local("cera-pro"), url(./fonts/cera-pro.otf);
 }

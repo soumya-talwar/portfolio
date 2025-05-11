@@ -27,7 +27,7 @@ $(document).ready(() => {
 				if (entry.isIntersecting) {
 					let index = $(entry.target).index();
 					if (index == 0) $("#page").html("scroll down");
-					else $("#page").html(index + " / 8");
+					else $("#page").html(index + " / 9");
 				}
 			});
 		},
@@ -60,7 +60,7 @@ $(document).ready(() => {
 		let project = window.location.href.match(/[^/]+$/)[0].split(".")[0];
 		$(text).hover(() => {
 			$("#popup img").attr("src", `../images/${project} ${index}.gif`);
-			if (project == "dokidoki") {
+			if (project == "dokidoki" || project == "11may") {
 				$("#popup img").css({
 					height: "70vh",
 					width: "auto",
