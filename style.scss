@@ -73,7 +73,7 @@ canvas {
 	z-index: -1;
 }
 
-#landing {
+#canvas {
 	width: 100vw;
 	height: 100vh;
 	display: flex;
@@ -164,7 +164,7 @@ canvas {
 	font-weight: 550;
 }
 
-#me {
+#main {
 	width: 80%;
 	height: 100%;
 	display: flex;
@@ -209,6 +209,10 @@ canvas {
 
 #games {
 	line-height: 5rem;
+}
+
+#instruction {
+	text-align: center;
 }
 
 .extra {

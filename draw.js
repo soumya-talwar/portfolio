@@ -1,11 +1,15 @@
 function setup() {
-  var canvas = createCanvas(windowWidth, $(document).height());
-  canvas.parent("canvas");
-  $("#erase").click(() => clear());
+	$("#main").mousedown(() => {
+		$("#instruction").addClass("d-none");
+		var canvas = createCanvas(windowWidth, $(document).height());
+		canvas.parent("main");
+		$("#erase").click(() => clear());
+		$("#main").off("mousedown");
+	});
 }
 
 function mouseDragged() {
-  fill(0);
-  strokeWeight(8);
-  line(mouseX, mouseY, pmouseX, pmouseY);
+	fill(0);
+	strokeWeight(8);
+	line(mouseX, mouseY, pmouseX, pmouseY);
 }

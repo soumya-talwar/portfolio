@@ -5,7 +5,7 @@ var length = 5;
 
 function setup() {
 	var canvas = createCanvas(windowWidth, $(document).height());
-	canvas.parent("landing");
+	canvas.parent("canvas");
 	for (let i = 0; i < num; i++) {
 		x[i] = 0;
 		y[i] = 0;
