@@ -199,6 +199,10 @@ canvas {
   font-size: 10rem;
 }
 
+#games {
+  line-height: 5rem;
+}
+
 .extra {
   border-bottom: 2px dashed #000;
 }

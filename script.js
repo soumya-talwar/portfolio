@@ -23,6 +23,23 @@ $(document).ready(() => {
 		$("#list").toggleClass("d-none");
 	});
 
+	$("a").each((index, link) => {
+		let href = $(link).attr("href");
+		if (/html$/.test(href)) {
+			$(link).click((event) => {
+				event.preventDefault();
+				$("#transition").removeClass("d-none");
+				$("#transition").animate(
+					{
+						opacity: "1",
+					},
+					500
+				);
+				setTimeout(() => (window.location.href = href), 1000);
+			});
+		}
+	});
+
 	$(".project").each((index, link) => {
 		$(link).click((event) => {
 			$("#transition").removeClass("d-none");
