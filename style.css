@@ -13,7 +13,6 @@
 }
 body {
   opacity: 0;
-  overflow-x: hidden;
 }
 
 * {
@@ -74,47 +73,37 @@ canvas {
   width: 100vw;
   height: 100vh;
   display: flex;
-  overflow-y: none;
 }
 
 #menu {
   width: 20%;
   height: 100%;
-  padding: 3rem 3rem 5rem 3rem;
-  overflow-y: scroll;
-}
-
-::-webkit-scrollbar {
-  display: none;
-}
-
-#home {
-  text-decoration: underline;
-  text-underline-offset: 0.5rem;
-}
-
-#navigation {
-  padding-top: 8rem;
+  padding: 0 3rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 3.5rem;
 }
-#navigation span,
-#navigation a {
+#menu span,
+#menu a {
   line-height: 1.5rem;
   text-underline-offset: 0.5rem;
   cursor: pointer;
 }
-#navigation span:hover,
-#navigation a:hover {
+#menu span:hover,
+#menu a:hover {
   text-decoration: underline;
   text-underline-offset: 0.5rem;
 }
-#navigation #ques {
+#menu #ques {
   text-decoration: none !important;
   font-weight: 550;
   padding: 0;
   cursor: default;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 .link {
@@ -126,37 +115,6 @@ canvas {
   font-weight: 100;
 }
 
-#list {
-  display: flex;
-  flex-direction: column;
-  gap: 3.5rem;
-}
-
-.project {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  line-height: 1.5rem;
-  text-underline-offset: 0.5rem;
-  padding-left: 3rem;
-  cursor: pointer;
-}
-
-#collapse {
-  text-underline-offset: 0.5rem;
-  padding-left: 3rem;
-  cursor: pointer;
-}
-
-.project:hover,
-#collapse:hover {
-  text-decoration: underline;
-}
-
-.title {
-  font-weight: 550;
-}
-
 #main {
   width: 80%;
   height: 100%;
@@ -164,6 +122,20 @@ canvas {
   flex-direction: column;
   justify-content: center;
   padding: 0 2rem;
+}
+
+#main2 {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+#main2 > div {
+  display: flex;
+  flex-direction: column;
 }
 
 #name {
@@ -197,6 +169,20 @@ canvas {
 
 #kaomoji {
   font-size: 10rem;
+}
+
+.slide {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
+
+.space {
+  padding-top: 10%;
+  padding-bottom: 20%;
 }
 
 #games {
