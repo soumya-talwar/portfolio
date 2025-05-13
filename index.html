@@ -1,5 +1,3 @@
-<!-- older version (prior to revamp) -->
-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -25,145 +23,96 @@
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer"></script>
 
-		<script
-			src="https://kit.fontawesome.com/715dc2f277.js"
-			crossorigin="anonymous"></script>
-
 		<link rel="stylesheet" type="text/css" href="style.css" />
 		<script src="landing.js"></script>
 		<script src="script.js"></script>
 	</head>
 
 	<body>
-		<audio id="music" loop>
-			<source src="audio/bourree.mp3" type="audio/mp3" />
-		</audio>
-
-		<div class="container-fluid" id="menu">
-			<div class="fixed-top d-flex flex-wrap flex-lg-nowrap p-5 gap-5">
-				<a class="me-lg-auto text-decoration-underline" href=""
-					>soumya talwar</a
-				>
-				<div class="d-flex flex-column text-center">
-					<i class="pages fst-normal" id="projects">list of works</i>
-					<div class="d-flex flex-column p-2 gap-2 d-none" id="list">
-						<small
-							><a class="project" href="projects/jimin.html">jimin</a></small
-						>
-						<small
-							><a class="project" href="projects/dokidoki.html"
-								>doki doki</a
-							></small
-						>
-						<small
-							><a class="project" href="projects/11may.html">11 may</a></small
-						>
-						<small
-							><a class="project" href="projects/death.html">death</a></small
-						>
-						<small
-							><a class="project" href="projects/philippa.html"
-								>philippa</a
-							></small
-						>
-						<small
-							><a class="project" href="projects/hominidae.html"
-								>hominidae</a
-							></small
-						>
-						<small><a class="project" href="projects/13.html">13</a></small>
-						<small
-							><a class="project" href="projects/grays.html">grays</a></small
-						>
-						<small
-							><a class="project" href="projects/taegificbot.html"
-								>taegificbot</a
-							></small
-						>
+		<div id="landing">
+			<div id="menu">
+				<span id="home">soumya talwar</span>
+				<div id="navigation">
+					<span id="ques">WHAT DO YOU WANT TO DO HERE?</span>
+					<div class="link">
+						<span class="bullet">–</span>
+						<span id="projects">look at projects</span>
+					</div>
+					<div class="d-none" id="list">
+						<div class="project">
+							<span class="title">JIMIN</span>
+							<span>i build myself an ideal husband</span>
+						</div>
+						<div class="project">
+							<span class="title">DOKI-DOKI</span>
+							<span>a game to win a date with me</span>
+						</div>
+						<div class="project">
+							<span class="title">11-MAY</span>
+							<span
+								>a whatsapp bot to compliment me every hour on my birthday</span
+							>
+						</div>
+						<div class="project">
+							<span class="title">DEATH</span>
+							<span>a twitter bot to live on as me post my death</span>
+						</div>
+						<div class="project">
+							<span class="title">PHILIPPA</span>
+							<span>teaching a machine moral values</span>
+						</div>
+						<div class="project">
+							<span class="title">HOMINIDAE</span>
+							<span>artworks of sexual violence among the great apes</span>
+						</div>
+						<div class="project">
+							<span class="title">13</span>
+							<span>when i was thirteen and thought i was pregnant</span>
+						</div>
+						<div class="project">
+							<span class="title">GRAYS</span>
+							<span>an advocacy of 128 non-binary genders</span>
+						</div>
+						<div class="project">
+							<span class="title">TAEGI FIC BOT</span>
+							<span>a queer fanfiction recomenndation engine</span>
+						</div>
+						<span id="collapse">collapse</span>
+					</div>
+					<div class="link">
+						<span class="bullet">–</span>
+						<a id="games">play some games</a>
+					</div>
+					<div class="link">
+						<span class="bullet">–</span>
+						<a id="games">draw me a doodle</a>
+					</div>
+					<div class="link">
+						<span class="bullet">–</span>
+						<a id="games">listen to an ai-generated song about me</a>
+					</div>
+					<div class="link">
+						<span class="bullet">–</span>
+						<a id="games">reach out to me</a>
 					</div>
 				</div>
-				<a class="page" href="code.html">100 days of code</a>
-				<a class="page" href="contact.html">contact me</a>
-				<i class="fas fa-play d-none d-lg-block" id="play"></i>
+			</div>
+			<div id="me">
+				<h1>
+					<span id="name">SOUMYA TALWAR</span>
+					<br class="d-block d-lg-none" />
+					[ <span id="role"></span> ]
+				</h1>
+				<h2>
+					SHE/HER, b.1997, BASED IN
+					<span id="locations">SAHARANPUR, DEHRADUN, NEW DELHI,</span>
+					BANGALORE, INDIA
+				</h2>
 			</div>
 		</div>
 
-		<div class="container-fluid" id="landing">
-			<div class="d-flex flex-column">
-				<div class="main d-flex flex-column justify-content-center px-5">
-					<h1>
-						<span class="text-decoration-underline">SOUMYA TALWAR</span>
-						<br class="d-block d-lg-none" />
-						[ <span id="text"></span> ]
-					</h1>
-					<h2 class="d-none d-lg-block pt-2">
-						SHE/HER, b.1997, BASED IN
-						<span class="text-decoration-line-through"
-							>SAHARANPUR, DEHRADUN, NEW DELHI,</span
-						>
-						BANGALORE, INDIA
-					</h2>
-				</div>
-
-				<div class="main d-flex flex-column justify-content-center px-5">
-					<h1>[ <a href="projects/jimin.html">JIMIN</a> ] — 2022</h1>
-					<h2 class="pt-2">I BUILD MYSELF MY IDEAL KIND OF HUSBAND</h2>
-				</div>
-
-				<div class="main d-flex flex-column justify-content-center px-5">
-					<h1>[ <a href="projects/dokidoki.html">DOKI-DOKI</a> ] — 2025</h1>
-					<h2 class="pt-2">A GAME TO WIN A DATE WITH ME</h2>
-				</div>
-
-				<div class="main d-flex flex-column justify-content-center px-5">
-					<h1>[ <a href="projects/11may.html">11-MAY</a> ] — 2025</h1>
-					<h2 class="pt-2">A WHATSAPP BOT TO COMPLIMENT ME EVERY HOUR</h2>
-				</div>
-
-				<div class="main d-flex flex-column justify-content-center px-5">
-					<h1>[ <a href="projects/death.html">DEATH</a> ] — 2021</h1>
-					<h2 class="pt-2">A TWITTER BOT TO LIVE ON AS ME POST MY DEATH</h2>
-				</div>
-
-				<div class="main d-flex flex-column justify-content-center px-5">
-					<h1>[ <a href="projects/philippa.html">PHILIPPA</a> ] — 2019</h1>
-					<h2 class="pt-2">TEACHING A MACHINE MORAL VALUES</h2>
-				</div>
-
-				<div class="main d-flex flex-column justify-content-center px-5">
-					<h1>[ <a href="projects/hominidae.html">HOMINIDAE</a> ] — 2020</h1>
-					<h2 class="pt-2">ARTWORKS OF SEXUAL VIOLENCE AMONG GREAT APES</h2>
-				</div>
-
-				<div class="main d-flex flex-column justify-content-center px-5">
-					<h1>[ <a href="projects/13.html">13</a> ] — 2021</h1>
-					<h2 class="pt-2">WHEN I WAS THIRTEEN AND THOUGHT I WAS PREGNANT</h2>
-				</div>
-
-				<div class="main d-flex flex-column justify-content-center px-5">
-					<h1>[ <a href="projects/grays.html">GRAYS</a> ] — 2018</h1>
-					<h2 class="pt-2">AN ADVOCACY OF 128 NON-BINARY GENDERS</h2>
-				</div>
-
-				<div class="main d-flex flex-column justify-content-center px-5">
-					<h1>
-						[ <a href="projects/taegificbot.html">TAEGI FIC BOT</a> ] — 2020
-					</h1>
-					<h2 class="pt-2">A QUEER FANFICTION RECOMMENDATION ENGINE</h2>
-				</div>
-			</div>
-		</div>
-
-		<div class="container-fluid" id="pagination">
-			<div class="d-flex fixed-bottom justify-content-between p-5">
-				<small id="page">scroll down</small>
-				<small><a id="draw" href="draw.html">send me a drawing!</a></small>
-			</div>
-		</div>
-
-		<div class="d-none container-fluid fixed-top bg-white" id="transition">
-			<div
-				class="main d-flex flex-column justify-content-center align-items-center">
+		<div class="d-none" id="transition">
+			<div>
 				<p id="kaomoji"></p>
 			</div>
 		</div>

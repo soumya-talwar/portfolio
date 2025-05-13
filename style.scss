@@ -1,0 +1,218 @@
+@font-face {
+	font-family: "inter";
+	src: url(fonts/inter.ttf) format("truetype-variations");
+	font-weight: 1 999;
+}
+
+@font-face {
+	font-family: cera;
+	src: local("cera-pro"), url(./fonts/cera-pro.otf);
+}
+
+@font-face {
+	font-family: "circular";
+	src: url("fonts/circular std 1.ttf");
+}
+
+body {
+	opacity: 0;
+	overflow-x: hidden;
+}
+
+* {
+	font-family: inter, sans-serif;
+	font-size: 0.9rem;
+	letter-spacing: 2px;
+}
+
+h1,
+h2 {
+	font-family: cera, sans-serif;
+	font-size: 3.6rem;
+	letter-spacing: 4px;
+}
+
+h1 a:hover,
+h2 a:hover {
+	text-decoration: underline;
+}
+
+h2 {
+	font-size: 3rem;
+}
+
+h3,
+h4 {
+	font-family: cera, sans-serif;
+	font-size: 2rem;
+	line-height: 3rem;
+	letter-spacing: 1px;
+}
+
+h4 {
+	font-size: 1.5rem;
+	line-height: 2.5rem;
+}
+
+h4:last-of-type {
+	margin-bottom: 20%;
+}
+
+a,
+a:hover,
+span {
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	text-decoration: inherit;
+}
+
+canvas {
+	position: absolute;
+	top: 0;
+	z-index: -1;
+}
+
+#landing {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	overflow-y: none;
+}
+
+#menu {
+	width: 20%;
+	height: 100%;
+	padding: 3rem 3rem 5rem 3rem;
+	overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+#home {
+	text-decoration: underline;
+	text-underline-offset: 0.5rem;
+}
+
+#navigation {
+	padding-top: 8rem;
+	display: flex;
+	flex-direction: column;
+	gap: 3.5rem;
+
+	span,
+	a {
+		line-height: 1.5rem;
+		text-underline-offset: 0.5rem;
+		cursor: pointer;
+	}
+
+	span:hover,
+	a:hover {
+		text-decoration: underline;
+		text-underline-offset: 0.5rem;
+	}
+
+	#ques {
+		text-decoration: none !important;
+		font-weight: 550;
+		padding: 0;
+		cursor: default;
+	}
+}
+
+.link {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+
+	.bullet {
+		font-weight: 100;
+	}
+}
+
+#list {
+	display: flex;
+	flex-direction: column;
+	gap: 3.5rem;
+}
+
+.project {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	line-height: 1.5rem;
+	text-underline-offset: 0.5rem;
+	padding-left: 3rem;
+	cursor: pointer;
+}
+
+#collapse {
+	text-underline-offset: 0.5rem;
+	padding-left: 3rem;
+	cursor: pointer;
+}
+
+.project:hover,
+#collapse:hover {
+	text-decoration: underline;
+}
+
+.title {
+	font-weight: 550;
+}
+
+#me {
+	width: 80%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 0 2rem;
+}
+
+#name {
+	text-decoration: underline;
+}
+
+.dud {
+	color: #757575;
+}
+
+#locations {
+	text-decoration: line-through;
+}
+
+#transition {
+	opacity: 0;
+	height: 100vh;
+	width: 100vw;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: white;
+
+	> div {
+		height: 100%;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+#kaomoji {
+	font-size: 10rem;
+}
+
+.extra {
+	border-bottom: 2px dashed #000;
+}
+
+img {
+	width: 50vw;
+	height: auto;
+	box-shadow: -5px 5px 20px #e8e8e8;
+}

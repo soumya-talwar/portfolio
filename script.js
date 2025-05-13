@@ -1,4 +1,14 @@
-var play = false;
+var projects = [
+	"jimin",
+	"dokidoki",
+	"11may",
+	"death",
+	"philippa",
+	"hominidae",
+	"13",
+	"grays",
+	"taegificbot",
+];
 var kaomojis = ["ಠ_ಠ"];
 
 $(document).ready(() => {
@@ -9,49 +19,24 @@ $(document).ready(() => {
 		1000
 	);
 
-	$("#projects, #list").hover(() => {
+	$("#projects, #collapse").click(() => {
 		$("#list").toggleClass("d-none");
 	});
 
-	let audio = document.getElementById("music");
-	$("#play").click(() => {
-		if (!play) audio.play();
-		else audio.pause();
-		play = !play;
-		$("#play").toggleClass(["fa-play", "fa-pause"]);
-	});
-
-	let observer = new IntersectionObserver(
-		(entries) => {
-			entries.map((entry) => {
-				if (entry.isIntersecting) {
-					let index = $(entry.target).index();
-					if (index == 0) $("#page").html("scroll down");
-					else $("#page").html(index + " / 9");
-				}
-			});
-		},
-		{
-			threshold: 0.5,
-		}
-	);
-	$(".main").each((index, target) => observer.observe(target));
-
-	$("a").each((index, link) => {
-		let href = $(link).attr("href");
-		if (/html$/.test(href)) {
-			$(link).click((event) => {
-				event.preventDefault();
-				$("#transition").removeClass("d-none");
-				$("#transition").animate(
-					{
-						opacity: "1",
-					},
-					500
-				);
-				setTimeout(() => (window.location.href = href), 1000);
-			});
-		}
+	$(".project").each((index, link) => {
+		$(link).click((event) => {
+			$("#transition").removeClass("d-none");
+			$("#transition").animate(
+				{
+					opacity: "1",
+				},
+				500
+			);
+			setTimeout(
+				() => (window.location.href = `projects/${projects[index]}.html`),
+				1000
+			);
+		});
 	});
 
 	$("#kaomoji").html(kaomojis[Math.floor(Math.random() * kaomojis.length)]);
@@ -95,17 +80,9 @@ $(document).ready(() => {
 		});
 	});
 
-	$(".marquee").marquee({
-		duplicated: true,
-		direction: "left",
-		duration: 20000,
-		pauseOnHover: true,
-		startVisible: true,
-	});
-
-	$("#copy").click(() => {
-		$("#copy").html("[copied!]");
-		setTimeout(() => $("#copy").html("[copy email]"), 1000);
-		navigator.clipboard.writeText("soumya.talwar97@gmail.com");
-	});
+	// $("#copy").click(() => {
+	// 	$("#copy").html("[copied!]");
+	// 	setTimeout(() => $("#copy").html("[copy email]"), 1000);
+	// 	navigator.clipboard.writeText("soumya.talwar97@gmail.com");
+	// });
 });
