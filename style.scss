@@ -53,9 +53,9 @@ h4 {
 	line-height: 2.5rem;
 }
 
-h4:last-of-type {
-	margin-bottom: 20%;
-}
+// h4:last-of-type {
+// 	margin-bottom: 20%;
+// }
 
 a,
 a:hover,
@@ -200,6 +200,15 @@ canvas {
 
 #instruction {
 	text-align: center;
+}
+
+#lyrics {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .extra {
