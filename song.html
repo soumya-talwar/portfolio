@@ -25,13 +25,21 @@
 
 		<link rel="stylesheet" type="text/css" href="style.css" />
 		<script src="canvas.js"></script>
+		<script src="music.js"></script>
 		<script src="script.js"></script>
 	</head>
 
 	<body>
+		<audio id="music" loop>
+			<source src="audio/js.mp3" type="audio/mp3" />
+		</audio>
 		<div id="canvas">
 			<div id="menu">
 				<span id="ques">WHAT DO YOU WANT TO DO HERE?</span>
+				<div class="link">
+					<span class="bullet">–</span>
+					<span id="control">play song</span>
+				</div>
 				<div class="link">
 					<span class="bullet">–</span>
 					<a id="projects" href="/works.html">see my work</a>
@@ -51,20 +59,36 @@
 			</div>
 			<div id="main">
 				<div id="lyrics">
-					<h4>
-						Started with a blank file, no one by my side<br />
-						Taught myself to code, now I’m on that JS ride<br />
-						No semicolon’s gonna hold me back<br />
-						Wrote my own script, got my own stack<br /><br />
-						Used to Google every line I wrote<br />
-						Now I refactor like I’m writing notes<br />
-						No tutorial could ever define<br />
-						The rhythm I built in every line<br /><br />
-						Console.log my heart, I’m in control<br />
-						Loopin’ through life, writing my own role<br />
-						Arrow to the sky, functions that fly<br />
-						Just a girl with code and stars in her eye
-					</h4>
+					<h1>
+						<span class="invisible"
+							>Started with a blank file, no one by my side</span
+						><span class="visible"></span><br /><br />
+						<span class="invisible"
+							>Taught myself to code, now I’m on that JS ride</span
+						><span class="visible"></span><br /><br />
+						<span class="invisible">No semicolon’s gonna hold me back</span
+						><span class="visible"></span><br /><br />
+						<span class="invisible">Wrote my own script, got my own stack</span
+						><span class="visible"></span><br /><br /><br />
+						<span class="invisible">Used to Google every line I wrote</span
+						><span class="visible"></span><br /><br />
+						<span class="invisible">Now I refactor like I’m writing notes</span
+						><span class="visible"></span><br /><br />
+						<span class="invisible">No tutorial could ever define</span
+						><span class="visible"></span><br /><br />
+						<span class="invisible">The rhythm I built in every line</span
+						><span class="visible"></span><br /><br /><br />
+						<span class="invisible">Console.log my heart, I’m in control</span
+						><span class="visible"></span><br /><br />
+						<span class="invisible"
+							>Loopin’ through life, writing my own role</span
+						><span class="visible"></span><br /><br />
+						<span class="invisible">Arrow to the sky, functions that fly</span
+						><span class="visible"></span><br /><br />
+						<span class="invisible"
+							>Just a girl with code and stars in her eye</span
+						><span class="visible"></span>
+					</h1>
 				</div>
 			</div>
 		</div>

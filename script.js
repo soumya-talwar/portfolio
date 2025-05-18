@@ -19,10 +19,6 @@ $(document).ready(() => {
 		1000
 	);
 
-	// $("#projects, #collapse").click(() => {
-	// 	$("#list").toggleClass("d-none");
-	// });
-
 	$("a").each((index, link) => {
 		let href = $(link).attr("href");
 		if (/html$/.test(href)) {
@@ -39,38 +35,6 @@ $(document).ready(() => {
 			});
 		}
 	});
-
-	// $(".project").each((index, link) => {
-	// 	$(link).click((event) => {
-	// 		$("#transition").removeClass("d-none");
-	// 		$("#transition").animate(
-	// 			{
-	// 				opacity: "1",
-	// 			},
-	// 			500
-	// 		);
-	// 		setTimeout(
-	// 			() => (window.location.href = `projects/${projects[index]}.html`),
-	// 			1000
-	// 		);
-	// 	});
-	// });
-
-	// let observer = new IntersectionObserver(
-	// 	(entries) => {
-	// 		entries.map((entry) => {
-	// 			if (entry.isIntersecting) {
-	// 				let index = $(entry.target).index();
-	// 				if (index == 0) $("#page").html("scroll down");
-	// 				else $("#page").html(index + " / 9");
-	// 			}
-	// 		});
-	// 	},
-	// 	{
-	// 		threshold: 0.5,
-	// 	}
-	// );
-	// $(".main").each((index, target) => observer.observe(target));
 
 	$("#kaomoji").html(kaomojis[Math.floor(Math.random() * kaomojis.length)]);
 

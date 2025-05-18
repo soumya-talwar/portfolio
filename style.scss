@@ -53,10 +53,6 @@ h4 {
 	line-height: 2.5rem;
 }
 
-// h4:last-of-type {
-// 	margin-bottom: 20%;
-// }
-
 a,
 a:hover,
 span {
@@ -129,6 +125,7 @@ canvas {
 	flex-direction: column;
 	justify-content: center;
 	padding: 0 2rem;
+	overflow-y: scroll;
 }
 
 #main2 {
@@ -187,11 +184,10 @@ canvas {
 	justify-content: center;
 	scroll-snap-align: center;
 	scroll-snap-stop: always;
-}
 
-.space {
-	padding-top: 10%;
-	padding-bottom: 20%;
+	> h2 {
+		padding-top: 1rem;
+	}
 }
 
 #games {
@@ -203,12 +199,24 @@ canvas {
 }
 
 #lyrics {
+	text-transform: uppercase;
+	padding: 10rem 10rem 20rem 5rem;
 	height: 100%;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+
+	.invisible {
+		display: none;
+	}
+
+	.visible {
+		opacity: 1;
+	}
+
+	.visible:last-of-type {
+		padding-bottom: 20rem;
+	}
 }
 
 .extra {

@@ -118,6 +118,7 @@ canvas {
   flex-direction: column;
   justify-content: center;
   padding: 0 2rem;
+  overflow-y: scroll;
 }
 
 #main2 {
@@ -175,10 +176,8 @@ canvas {
   scroll-snap-align: center;
   scroll-snap-stop: always;
 }
-
-.space {
-  padding-top: 10%;
-  padding-bottom: 20%;
+.slide > h2 {
+  padding-top: 1rem;
 }
 
 #games {
@@ -190,12 +189,21 @@ canvas {
 }
 
 #lyrics {
+  text-transform: uppercase;
+  padding: 10rem 10rem 20rem 5rem;
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+}
+#lyrics .invisible {
+  display: none;
+}
+#lyrics .visible {
+  opacity: 1;
+}
+#lyrics .visible:last-of-type {
+  padding-bottom: 20rem;
 }
 
 .extra {
