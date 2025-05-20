@@ -24,7 +24,7 @@ body {
 h1,
 h2 {
   font-family: cera, sans-serif;
-  font-size: 3.6rem;
+  font-size: 4rem;
   letter-spacing: 4px;
 }
 
@@ -34,14 +34,15 @@ h2 a:hover {
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 2.9rem;
+  line-height: 4rem;
 }
 
 h3,
 h4 {
   font-family: cera, sans-serif;
-  font-size: 2rem;
-  line-height: 3rem;
+  font-size: 3rem;
+  line-height: 4rem;
   letter-spacing: 1px;
 }
 
@@ -143,10 +144,6 @@ canvas {
   color: #757575;
 }
 
-#locations {
-  text-decoration: line-through;
-}
-
 #transition {
   opacity: 0;
   height: 100vh;
@@ -181,7 +178,7 @@ canvas {
 }
 
 #games {
-  line-height: 5rem;
+  line-height: 4.5rem;
 }
 
 #instruction {
