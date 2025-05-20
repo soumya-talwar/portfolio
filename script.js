@@ -76,10 +76,4 @@ $(document).ready(() => {
 			$("#popup").toggleClass("d-none");
 		});
 	});
-
-	// $("#copy").click(() => {
-	// 	$("#copy").html("[copied!]");
-	// 	setTimeout(() => $("#copy").html("[copy email]"), 1000);
-	// 	navigator.clipboard.writeText("soumya.talwar97@gmail.com");
-	// });
 });
