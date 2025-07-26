@@ -37,16 +37,16 @@ h2 a:hover {
 }
 
 h2 {
-	font-size: 2.9rem;
+	font-size: 2.7rem;
 	line-height: 4rem;
 }
 
 h3,
 h4 {
 	font-family: cera, sans-serif;
-	font-size: 2.5rem;
+	font-size: 2.2rem;
 	line-height: 3.5rem;
-	letter-spacing: 1px;
+	letter-spacing: 3px;
 }
 
 h4 {
@@ -152,6 +152,10 @@ canvas {
 	color: #757575;
 }
 
+#about {
+	padding: 0.5rem 3rem 0 0;
+}
+
 #transition {
 	opacity: 0;
 	height: 100vh;
@@ -179,13 +183,14 @@ canvas {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	gap: 1rem;
 	scroll-snap-align: center;
 	scroll-snap-stop: always;
-
-	> h2 {
-		padding-top: 1rem;
-	}
 }
+
+// .counter {
+// 	color: #ccc;
+// }
 
 #games {
 	line-height: 4.5rem;
@@ -197,7 +202,7 @@ canvas {
 
 #lyrics {
 	text-transform: uppercase;
-	padding: 10rem 10rem 20rem 5rem;
+	padding: 10rem 20rem 20rem 5rem;
 	height: 100%;
 	width: 100%;
 	display: flex;
