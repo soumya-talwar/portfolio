@@ -67,7 +67,7 @@ $(document).ready(() => {
 					500
 				);
 				setTimeout(() => {
-					window.location.href = "contact.html";
+					window.location.href = "/portfolio/contact.html";
 				}, 1000);
 			}
 		} else $("#error").html("");
