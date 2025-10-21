@@ -1,8 +1,6 @@
 var data;
 async function load() {
-	data = await fetch("../data/lexicon.json").then((response) =>
-		response.json()
-	);
+	data = await fetch("data/lexicon.json").then((response) => response.json());
 }
 var errors = [
 	"You call that a compliment? Try again.",
