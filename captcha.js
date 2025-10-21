@@ -1,7 +1,7 @@
 var data;
 async function load() {
 	// For prod
-	data = await fetch("portfolio/data/lexicon.json").then((response) =>
+	data = await fetch("/portfolio/data/lexicon.json").then((response) =>
 		response.json()
 	);
 	// For dev
