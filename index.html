@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>soumya talwar — portfolio</title>
-		<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+		<link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<script
@@ -23,55 +23,226 @@
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer"></script>
 
+		<script
+			type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+		<script type="text/javascript">
+			(function () {
+				emailjs.init({
+					publicKey: "36uTK-X3XMDFUCENb",
+				});
+			})();
+		</script>
+
 		<link rel="stylesheet" type="text/css" href="style.css" />
-		<script src="index.js"></script>
+		<script src="landing.js"></script>
 		<script src="script.js"></script>
+		<script src="captcha.js"></script>
 	</head>
 
 	<body>
-		<div id="canvas">
-			<div id="menu">
-				<span id="ques">WHAT DO YOU WANT TO DO HERE?</span>
-				<div class="link">
-					<span class="bullet">–</span>
-					<a id="projects" href="/works.html">see my work</a>
-				</div>
-				<div class="link">
-					<span class="bullet">–</span>
-					<a id="play" href="/games.html">play games</a>
-				</div>
-				<div class="link">
-					<span class="bullet">–</span>
-					<a id="doodle" href="/doodle.html">draw me a doodle</a>
-				</div>
-				<div class="link">
-					<span class="bullet">–</span>
-					<a id="song" href="/song.html"
-						>listen to an ai-generated song about me</a
+		<div id="large">
+			<div id="canvas">
+				<div id="menu">
+					<a id="home" href="/" style="text-decoration: underline"
+						>soumya talwar</a
 					>
+					<span id="works">i made these, be impressed</span>
+					/
+					<span id="games">some experiments</span>
+					/
+					<span id="contact">let's be friends</span>
 				</div>
-				<div class="link">
-					<span class="bullet">–</span>
-					<a id="contact" href="/contact.html">reach out to me</a>
+				<div id="pagination">
+					<span id="count"></span>
+				</div>
+				<div id="snapper">
+					<div>
+						<div class="snap" id="landing">
+							<h1>
+								<span id="name">SOUMYA TALWAR</span>
+								<br class="d-block d-lg-none" />
+								[ <span id="role"></span> ]
+							</h1>
+							<h2 id="bio">
+								> TALKING PLANTS, GAMES TO WIN A DATE WITH ME, AUTOMATED
+								WHATSAPP COMPLIMENTS—I BUILD
+								<span style="text-decoration: line-through"
+									>OVERENGINEEREED</span
+								>
+								JAVASCRIPT JOKES.
+								<span id="scroll">SCROLL DOWN<span id="cursor">_</span></span>
+							</h2>
+						</div>
+
+						<div class="snap">
+							<h1>[ <a href="projects/jimin.html">JIMIN</a> ] — 2022</h1>
+							<h2>I BUILT MYSELF MY IDEAL KIND OF HUSBAND</h2>
+						</div>
+
+						<div class="snap">
+							<h1>[ <a href="projects/dokidoki.html">DOKI-DOKI</a> ] — 2025</h1>
+							<h2>WIN THIS GAME TO WIN A DATE WITH ME</h2>
+						</div>
+
+						<div class="snap">
+							<h1>
+								[ <a href="projects/taegificbot.html">@TAEGIFICBOT</a> ] — 2020
+							</h1>
+							<h2>
+								I RELEASED A BTS FANFICTION RECOMMENDATION ENGINE ON TWITTER
+							</h2>
+						</div>
+
+						<div class="snap">
+							<h1>[ <a href="projects/11may.html">11-MAY</a> ] — 2025</h1>
+							<h2>A WHATSAPP BOT TO COMPLIMENT ME EVERY HOUR ON MY BIRTHDAY</h2>
+						</div>
+
+						<div class="snap">
+							<h1>[ <a href="projects/11may.html">FAIRY</a> ] — 2025</h1>
+							<h2>A FAIRY DUST SOUND PLAYS WHEN MY MANAGER IS NEAR</h2>
+						</div>
+
+						<div class="snap">
+							<h1>[ <a href="projects/zombie.html">ZOMBIE</a> ] — 2021</h1>
+							<h2>
+								MY TWITTER ACCOUNT WILL KEEP TWEETING EVEN AFTER I AM DEAD
+							</h2>
+						</div>
+
+						<div class="snap">
+							<h1>[ <a href="projects/grays.html">GRAYS</a> ] — 2018</h1>
+							<h2>AN ADVOCACY OF 128 NON-BINARY GENDERS</h2>
+						</div>
+
+						<div class="snap">
+							<h1>
+								[ <a href="projects/hominidae.html">HOMINIDAE</a> ] — 2020
+							</h1>
+							<h2>EXPLORING SEXUAL VIOLENCE AMONG GREAT APES WITH ART</h2>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div id="main">
-				<h1>
-					<span id="name">SOUMYA TALWAR</span>
-					<br class="d-block d-lg-none" />
-					[ <span id="role"></span> ]
-				</h1>
-				<h2 id="about">
-					TALKING PLANTS, ZOMBIE TWITTER BOTS, AUTOMATED COMPLIMENTS—I MAKE
-					OVERENGINEERED JAVASCRIPT JOKES.
-				</h2>
+
+			<div id="screen" class="d-none"></div>
+			<div id="projects" class="wrapper d-none">
+				<div class="dialog">
+					<div class="close"><h3>x</h3></div>
+					<div class="folders">
+						<div class="column">
+							<p>FRIENDS</p>
+							<div class="folder" href="/projects/jimin.html">
+								<img src="/images/misc/folder-1.png" />
+								<small>Jimin</small>
+							</div>
+							<div class="folder" id="duckling">
+								<img src="/images/misc/folder-1.png" />
+								<small>Duckling</small>
+							</div>
+						</div>
+						<div class="column">
+							<p>GAMES</p>
+							<div class="folder" href="/projects/dokidoki.html">
+								<img src="/images/misc/folder-1.png" />
+								<small>Doki-doki</small>
+							</div>
+							<div class="folder" href="/projects/fairy.html">
+								<img src="/images/misc/folder-1.png" />
+								<small>Fairy</small>
+							</div>
+						</div>
+						<div class="column">
+							<p>BOTS</p>
+							<div class="folder" href="/projects/taegificbot.html">
+								<img src="/images/misc/folder-1.png" />
+								<small>@Taegificbot</small>
+							</div>
+							<div class="folder" href="/projects/11may.html">
+								<img src="/images/misc/folder-1.png" />
+								<small>11-may</small>
+							</div>
+							<div class="folder" href="/projects/zombie.html">
+								<img src="/images/misc/folder-1.png" />
+								<small>Zombie</small>
+							</div>
+						</div>
+						<div class="column">
+							<p>STORIES</p>
+							<div class="folder" href="/projects/grays.html">
+								<img src="/images/misc/folder-1.png" />
+								<small>Grays</small>
+							</div>
+							<div class="folder" href="/projects/hominidae.html">
+								<img src="/images/misc/folder-1.png" />
+								<small>Hominidae</small>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="experiments" class="wrapper d-none">
+				<div class="dialog">
+					<div class="close"><h3>x</h3></div>
+					<div class="folders">
+						<div class="column">
+							<div
+								class="folder"
+								target="_blank"
+								href="https://soumya-talwar.github.io/experimental/13.%20tax%20evasion/">
+								<img src="/images/misc/folder-1.png" />
+								<small>Tax runner</small>
+							</div>
+						</div>
+						<div class="column">
+							<div
+								class="folder"
+								target="_blank"
+								href="https://soumya-talwar.github.io/experimental/11.%20clappy%20bird/">
+								<img src="/images/misc/folder-1.png" />
+								<small>Sad flap</small>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="captcha" class="wrapper d-none">
+				<div class="dialog">
+					<div class="close"><h3>x</h3></div>
+					<h2>COMPLIMENT ME TO CONTINUE</h2>
+					<small>
+						Captcha, but instead of proving you’re human, prove you’re kind.
+						<span style="color: #999999"
+							>(And yes, my code will check if the compliment is any
+							good.)</span
+						>
+						Press enter to send.
+					</small>
+					<input type="text" id="compliment" placeholder="say something nice" />
+					<small id="error"></small>
+				</div>
+			</div>
+
+			<div class="d-none" id="tooltip">
+				<span></span>
+			</div>
+
+			<div class="d-none" id="transition">
+				<div>
+					<p id="kaomoji"></p>
+				</div>
 			</div>
 		</div>
 
-		<div class="d-none" id="transition">
-			<div>
-				<p id="kaomoji"></p>
-			</div>
+		<div id="small">
+			<h4>
+				Tiny screen detected! This site only performs on the big stage (i.e
+				desktop)
+			</h4>
+			<img src="/images/misc/dino.png" />
 		</div>
 	</body>
 </html>

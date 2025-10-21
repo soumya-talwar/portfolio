@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>soumya talwar — 11 may</title>
-		<link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+		<link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<script
@@ -23,99 +23,194 @@
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer"></script>
 
-		<script
-			src="https://kit.fontawesome.com/715dc2f277.js"
-			crossorigin="anonymous"></script>
-
-		<link rel="stylesheet" type="text/css" href="../style.css" />
-
-		<script src="../canvas.js"></script>
-		<script src="../script.js"></script>
+		<link rel="stylesheet" type="text/css" href="/style.css" />
+		<link rel="preload" as="image" href="/images/11may/1.webp" />
+		<link rel="preload" as="image" href="/images/11may/2.webp" />
+		<script src="/canvas.js"></script>
+		<script src="/script.js"></script>
+		<script src="/captcha.js"></script>
 	</head>
 
 	<body>
-		<link rel="preload" as="image" href="../images/11may 0.gif" />
-		<audio id="music" loop>
-			<source src="../audio/bourree.mp3" type="audio/mp3" />
-		</audio>
+		<div id="large">
+			<div id="canvas">
+				<div id="menu">
+					<a id="home" href="/">soumya talwar</a>
+					<span id="works">i made these, be impressed</span>
+					/
+					<span id="games">some experiments</span>
+					/
+					<span id="contact">let's be friends</span>
+				</div>
 
-		<div class="container-fluid" id="menu">
-			<div class="fixed-top d-flex flex-wrap flex-lg-nowrap p-5 gap-5">
-				<a class="me-lg-auto text-decoration-underline" href="../index.html"
-					>soumya talwar</a
-				>
-				<div class="d-flex flex-column text-center">
-					<i class="pages fst-normal" id="projects">list of works</i>
-					<div class="d-flex flex-column p-2 gap-2 d-none" id="list">
-						<small><a class="project" href="jimin.html">jimin</a></small>
-						<small><a class="project" href="dokidoki.html">doki doki</a></small>
-						<small><a class="project" href="11may.html">11 may</a></small>
-						<small><a class="project" href="death.html">death</a></small>
-						<small><a class="project" href="philippa.html">philippa</a></small>
-						<small
-							><a class="project" href="hominidae.html">hominidae</a></small
-						>
-						<small><a class="project" href="13.html">13</a></small>
-						<small><a class="project" href="grays.html">grays</a></small>
-						<small
-							><a class="project" href="taegificbot.html">taegificbot</a></small
-						>
+				<div id="main">
+					<div id="hook">
+						<h2 id="title">[ 11 MAY ]</h2>
+						<h3>SAY HI TO THIS CUTE BOT THAT WON'T STOP COMPLIMENTING ME</h3>
+						<small id="tools"> Node.JS / Twilio API / OpenAI API</small>
+						<small id="date">Built in 2025</small>
+						<div id="audio">
+							<div id="playback">
+								<img id="play" src="/images/misc/play.png" />
+								<img id="pause" class="d-none" src="/images/misc/pause.png" />
+							</div>
+							<h4>Let me explain</h4>
+						</div>
+						<small id="transcript">View transcript</small>
+						<small id="script" class="d-none">
+							Birthdays are usually a sad affair for me. But this year, a day
+							before my birthday, I decided to program a WhatsApp bot that would
+							send me a compliment every hour on the day itself. Because nothing
+							quite says “emotionally intelligent” like automating yourself some
+							self-love.<br /><br />
+							I built this bot using the OpenAI API and Twilio, running on a
+							Node.js environment. Basically, my code would ping ChatGPT every
+							hour and deliver whatever compliment ChatGPT generates straight
+							into my WhatsApp.<br /><br />
+							To make it a little more personal, I spent some time reflecting on
+							past wins and moments that I was proud of—and paired those with a
+							few photographs. And with that context, ChatGPT started sending
+							compliments that felt surprisingly sincere... and only mildly,
+							suspiciously specific.<br /><br />
+							If you’re curious, the code is up on my GitHub—feel free to build
+							your own birthday bot with it.
+						</small>
+					</div>
+					<div id="gallery">
+						<img src="/images/11may/1.webp" />
+						<img src="/images/11may/2.webp" />
+					</div>
+					<div id="links">
+						<div class="folder" href="https://github.com/soumya-talwar/11may">
+							<img src="/images/misc/folder-1.png" />
+							<small>Github repo</small>
+						</div>
 					</div>
 				</div>
-				<a class="page" href="../code.html">100 days of code</a>
-				<a class="page" href="../contact.html">contact me</a>
-				<i class="fas fa-play d-none d-lg-block" id="play"></i>
 			</div>
-		</div>
 
-		<div class="container-fluid" id="canvas">
-			<div class="row">
-				<div
-					class="col-lg-4 main d-flex flex-column justify-content-center text-center position-fixed left-relative">
-					<h1>11-MAY</h1>
-					<h4 class="pt-2">
-						[&nbsp;<a
-							id="link"
-							target="_blank"
-							href="https://github.com/soumya-talwar/11may"
-							>visit the whatsapp bot</a
-						>&nbsp;]
-					</h4>
+			<div id="screen" class="d-none"></div>
+			<div id="projects" class="wrapper d-none">
+				<div class="dialog">
+					<div class="close"><h3>x</h3></div>
+					<div class="folders">
+						<div class="column">
+							<p>FRIENDS</p>
+							<div class="folder" href="/projects/jimin.html">
+								<img src="/images/misc/folder-1.png" />
+								<small>Jimin</small>
+							</div>
+							<div class="folder" id="duckling">
+								<img src="/images/misc/folder-1.png" />
+								<small>Duckling</small>
+							</div>
+						</div>
+						<div class="column">
+							<p>GAMES</p>
+							<div class="folder" href="/projects/dokidoki.html">
+								<img src="/images/misc/folder-1.png" />
+								<small>Doki-doki</small>
+							</div>
+							<div class="folder" href="/projects/fairy.html">
+								<img src="/images/misc/folder-1.png" />
+								<small>Fairy</small>
+							</div>
+						</div>
+						<div class="column">
+							<p>BOTS</p>
+							<div class="folder" href="/projects/taegificbot.html">
+								<img src="/images/misc/folder-1.png" />
+								<small>@Taegificbot</small>
+							</div>
+							<div class="folder" href="/projects/11may.html">
+								<img src="/images/misc/folder-1.png" />
+								<small>11-may</small>
+							</div>
+							<div class="folder" href="/projects/zombie.html">
+								<img src="/images/misc/folder-1.png" />
+								<small>Zombie</small>
+							</div>
+						</div>
+						<div class="column">
+							<p>STORIES</p>
+							<div class="folder" href="/projects/grays.html">
+								<img src="/images/misc/folder-1.png" />
+								<small>Grays</small>
+							</div>
+							<div class="folder" href="/projects/hominidae.html">
+								<img src="/images/misc/folder-1.png" />
+								<small>Hominidae</small>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="col-lg-7 offset-lg-4 px-5 px-lg-0 space">
-					<h3 class="py-3">
-						The day before my birthday, I decided to program a
-						<span class="extra">Whatsapp bot</span> to send me a compliment
-						every hour throughout the day. Because nothing quite says
-						"emotionally intelligent" like automating yourself some self-love.
-					</h3>
-					<h4 class="py-3">
-						ChatGPT is the most eloquent flatterer on the internet so obviously,
-						I used the OpenAI API with a Twilio setup to build a bot that
-						prompts ChatGPT every hour and delivers the generated compliment to
-						my Whatsapp.
-						<br /><br />
-						To make it meaningful, I spent some time reflecting on past wins &
-						accomplishments, and paired them with a few photos. With those
-						inputs, ChatGPT could generate compliments that were relevant,
-						sincere, and only mildly suspiciously specific.
-						<br /><br />
-						If you're curious, reach out to me or check out the code on my
-						GitHub to build yourself your own hype bot.
-					</h4>
+			</div>
+
+			<div id="experiments" class="wrapper d-none">
+				<div class="dialog">
+					<div class="close"><h3>x</h3></div>
+					<div class="folders">
+						<div class="column">
+							<div
+								class="folder"
+								target="_blank"
+								href="https://soumya-talwar.github.io/experimental/13.%20tax%20evasion/">
+								<img src="/images/misc/folder-1.png" />
+								<small>Tax runner</small>
+							</div>
+						</div>
+						<div class="column">
+							<div
+								class="folder"
+								target="_blank"
+								href="https://soumya-talwar.github.io/experimental/11.%20clappy%20bird/">
+								<img src="/images/misc/folder-1.png" />
+								<small>Sad flap</small>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="captcha" class="wrapper d-none">
+				<div class="dialog">
+					<div class="close"><h3>x</h3></div>
+					<h2>COMPLIMENT ME TO CONTINUE</h2>
+					<small>
+						Captcha, but instead of proving you’re human, prove you’re kind.
+						<span style="color: #999999"
+							>(And yes, my code will check if the compliment is any
+							good.)</span
+						>
+						Press enter to send.
+					</small>
+					<input type="text" id="compliment" placeholder="say something nice" />
+					<small id="error"></small>
+				</div>
+			</div>
+
+			<div class="d-none" id="tooltip">
+				<span></span>
+			</div>
+
+			<div class="d-none" id="transition">
+				<div>
+					<p id="kaomoji"></p>
 				</div>
 			</div>
 		</div>
 
-		<div class="d-none position-absolute" id="popup">
-			<img src="" />
+		<div id="small">
+			<h4>
+				Tiny screen detected! This site only performs on the big stage (i.e
+				desktop)
+			</h4>
+			<img src="/images/misc/dino.png" />
 		</div>
 
-		<div class="d-none container-fluid fixed-top bg-white" id="transition">
-			<div
-				class="main d-flex flex-column justify-content-center align-items-center">
-				<p id="kaomoji"></p>
-			</div>
-		</div>
+		<audio id="description" preload="auto">
+			<source src="/audio/11may.ogg" type="audio/ogg" />
+			<source src="/audio/11may.mp3" type="audio/mpeg" />
+		</audio>
 	</body>
 </html>

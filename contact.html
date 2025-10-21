@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>soumya talwar — contact</title>
-		<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+		<link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<script
@@ -23,70 +23,184 @@
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer"></script>
 
+		<script
+			type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+		<script type="text/javascript">
+			(function () {
+				emailjs.init({
+					publicKey: "36uTK-X3XMDFUCENb",
+				});
+			})();
+		</script>
+
 		<link rel="stylesheet" type="text/css" href="style.css" />
+		<link rel="preload" as="image" href="/images/misc/me/1.webp" />
+		<link rel="preload" as="image" href="/images/misc/me/2.webp" />
+		<link rel="preload" as="image" href="/images/misc/me/3.webp" />
 		<script src="script.js"></script>
 		<script src="contact.js"></script>
 	</head>
 
 	<body>
-		<div id="canvas">
+		<div id="large">
 			<div id="menu">
-				<span id="ques">WHAT DO YOU WANT TO DO HERE?</span>
-				<div class="link">
-					<span class="bullet">–</span>
-					<a id="copy">copy email</a>
-				</div>
-				<div class="link">
-					<span class="bullet">–</span>
-					<a id="play" target="_blank" href="https://github.com/soumya-talwar"
-						>visit my github</a
-					>
-				</div>
-				<div class="link">
-					<span class="bullet">–</span>
-					<a
-						id="play"
-						target="_blank"
-						href="https://www.linkedin.com/in/soumya-talwar-25596015a/"
-						>visit my linkedin</a
-					>
-				</div>
-				<div class="link">
-					<span class="bullet">–</span>
-					<a id="projects" href="/works.html">see my work</a>
-				</div>
-				<div class="link">
-					<span class="bullet">–</span>
-					<a id="play" href="/games.html">play games</a>
-				</div>
-				<div class="link">
-					<span class="bullet">–</span>
-					<a id="doodle" href="/doodle.html">draw me a doodle</a>
-				</div>
-				<div class="link">
-					<span class="bullet">–</span>
-					<a id="song" href="/song.html"
-						>listen to an ai-generated song about me</a
-					>
-				</div>
+				<a id="home" href="/">soumya talwar</a>
+				<span id="works">i made these, be impressed</span>
+				/
+				<span id="games">some experiments</span>
+				/
+				<span
+					id="contact"
+					style="text-decoration: underline; cursor: default !important"
+					>let's be friends</span
+				>
 			</div>
 			<div id="main">
-				<h1>
-					<span id="me">YOU FOUND ME</span>. I ANSWER EMAILS. AND I LOVE
-					COMPLIMENTS.
-				</h1>
-				<h2>[ ATTACH A PHOTO OF A DONKEY AND I WILL AGREE TO ANYTHING. ]</h2>
+				<div id="social">
+					<h2>
+						<span id="me">YOU FOUND ME</span>. I ANSWER EMAILS AND I LOVE
+						COMPLIMENTS.
+					</h2>
+					<h3>
+						> [<span id="email">COPY EMAIL</span>] OR LOOK AT MY
+						<a href="https://github.com/soumya-talwar" target="_blank"
+							>GITHUB</a
+						>
+						/
+						<a
+							href="https://in.linkedin.com/in/soumya-talwar-25596015a"
+							target="_blank"
+							>LINKEDIN</a
+						>
+					</h3>
+				</div>
+				<div id="draw">
+					<span id="instruction">send me a doodle</span>
+				</div>
+			</div>
+
+			<div id="screen" class="d-none"></div>
+			<div id="projects" class="wrapper d-none">
+				<div class="dialog">
+					<div class="close"><h3>x</h3></div>
+					<div class="folders">
+						<div class="column">
+							<p>FRIENDS</p>
+							<div class="folder" href="/projects/jimin.html">
+								<img src="/images/misc/folder-1.png" />
+								<small>Jimin</small>
+							</div>
+							<div class="folder" id="duckling">
+								<img src="/images/misc/folder-1.png" />
+								<small>Duckling</small>
+							</div>
+						</div>
+						<div class="column">
+							<p>GAMES</p>
+							<div class="folder" href="/projects/dokidoki.html">
+								<img src="/images/misc/folder-1.png" />
+								<small>Doki-doki</small>
+							</div>
+							<div class="folder" href="/projects/fairy.html">
+								<img src="/images/misc/folder-1.png" />
+								<small>Fairy</small>
+							</div>
+						</div>
+						<div class="column">
+							<p>BOTS</p>
+							<div class="folder" href="/projects/taegificbot.html">
+								<img src="/images/misc/folder-1.png" />
+								<small>@Taegificbot</small>
+							</div>
+							<div class="folder" href="/projects/11may.html">
+								<img src="/images/misc/folder-1.png" />
+								<small>11-may</small>
+							</div>
+							<div class="folder" href="/projects/zombie.html">
+								<img src="/images/misc/folder-1.png" />
+								<small>Zombie</small>
+							</div>
+						</div>
+						<div class="column">
+							<p>STORIES</p>
+							<div class="folder" href="/projects/grays.html">
+								<img src="/images/misc/folder-1.png" />
+								<small>Grays</small>
+							</div>
+							<div class="folder" href="/projects/hominidae.html">
+								<img src="/images/misc/folder-1.png" />
+								<small>Hominidae</small>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="experiments" class="wrapper d-none">
+				<div class="dialog">
+					<div class="close"><h3>x</h3></div>
+					<div class="folders">
+						<div class="column">
+							<div
+								class="folder"
+								target="_blank"
+								href="https://soumya-talwar.github.io/experimental/13.%20tax%20evasion/">
+								<img src="/images/misc/folder-1.png" />
+								<small>Tax runner</small>
+							</div>
+						</div>
+						<div class="column">
+							<div
+								class="folder"
+								target="_blank"
+								href="https://soumya-talwar.github.io/experimental/11.%20clappy%20bird/">
+								<img src="/images/misc/folder-1.png" />
+								<small>Sad flap</small>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="d-none" id="tooltip">
+				<span></span>
+			</div>
+
+			<div class="d-none" id="tooltip2">
+				<div id="send">
+					<div id="overlay"></div>
+					<span>email it to me (ෆ˙ᵕ˙ෆ)</span>
+				</div>
+				<div id="erase">
+					<span>erase ( ˶°ㅁ°) !!</span>
+				</div>
+			</div>
+
+			<div class="d-none" id="popup">
+				<img class="d-none" src="/images/misc/me/1.webp" />
+				<img class="d-none" src="/images/misc/me/2.webp" />
+				<img class="d-none" src="/images/misc/me/3.webp" />
+			</div>
+
+			<div class="d-none" id="transition">
+				<div>
+					<p id="kaomoji"></p>
+				</div>
 			</div>
 		</div>
 
-		<div class="d-none" id="popup">
-			<img src="images/me.jpeg" />
+		<div id="small">
+			<h4>
+				Tiny screen detected! This site only performs on the big stage (i.e
+				desktop)
+			</h4>
+			<img src="/images/misc/dino.png" />
 		</div>
 
-		<div class="d-none" id="transition">
-			<div>
-				<p id="kaomoji"></p>
-			</div>
-		</div>
+		<audio id="hello1" src="audio/hello/1.m4a" preload="auto"></audio>
+		<audio id="hello2" src="audio/hello/2.m4a" preload="auto"></audio>
+		<audio id="hello3" src="audio/hello/3.m4a" preload="auto"></audio>
+		<audio id="hello4" src="audio/hello/4.m4a" preload="auto"></audio>
 	</body>
 </html>

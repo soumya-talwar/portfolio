@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>soumya talwar — jimin</title>
-		<link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+		<link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<script
@@ -23,152 +23,250 @@
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer"></script>
 
-		<script
-			src="https://kit.fontawesome.com/715dc2f277.js"
-			crossorigin="anonymous"></script>
-
-		<link rel="stylesheet" type="text/css" href="../style.css" />
-		<script src="../canvas.js"></script>
-		<script src="../script.js"></script>
+		<link rel="stylesheet" type="text/css" href="/style.css" />
+		<link rel="preload" as="image" href="/images/jimin/1.webp" />
+		<link rel="preload" as="image" href="/images/jimin/2.webp" />
+		<script src="/canvas.js"></script>
+		<script src="/script.js"></script>
+		<script src="/captcha.js"></script>
 	</head>
 
 	<body>
-		<link rel="preload" as="image" href="../images/jimin 0.gif" />
-		<audio id="music" loop>
-			<source src="../audio/bourree.mp3" type="audio/mp3" />
-		</audio>
+		<div id="large">
+			<div id="canvas">
+				<div id="menu">
+					<a id="home" href="/">soumya talwar</a>
+					<span id="works">i made these, be impressed</span>
+					/
+					<span id="games">some experiments</span>
+					/
+					<span id="contact">let's be friends</span>
+				</div>
 
-		<div class="container-fluid" id="menu">
-			<div class="fixed-top d-flex flex-wrap flex-lg-nowrap p-5 gap-5">
-				<a class="me-lg-auto text-decoration-underline" href="../index.html"
-					>soumya talwar</a
-				>
-				<div class="d-flex flex-column text-center">
-					<i class="pages fst-normal" id="projects">list of works</i>
-					<div class="d-flex flex-column p-2 gap-2 d-none" id="list">
-						<small><a class="project" href="jimin.html">jimin</a></small>
-						<small><a class="project" href="dokidoki.html">doki doki</a></small>
-						<small><a class="project" href="11may.html">11 may</a></small>
-						<small><a class="project" href="death.html">death</a></small>
-						<small><a class="project" href="philippa.html">philippa</a></small>
-						<small
-							><a class="project" href="hominidae.html">hominidae</a></small
-						>
-						<small><a class="project" href="13.html">13</a></small>
-						<small><a class="project" href="grays.html">grays</a></small>
-						<small
-							><a class="project" href="taegificbot.html">taegificbot</a></small
-						>
+				<div id="main">
+					<div id="hook">
+						<h2 id="title">[ JIMIN ]</h2>
+						<h3>
+							MEET MY MONEY PLANT HUSBAND WHO'S BEEN PROGRAMMED TO LOVE ME
+						</h3>
+						<small id="tools">
+							Node.JS / Electron / Google Teachable Machine / ML5.JS / Socket.IO
+							/ OpenAI API / Arduino UNO / Various sensors
+						</small>
+						<small id="date">Built in 2022</small>
+						<div id="audio">
+							<div id="playback">
+								<img id="play" src="/images/misc/play.png" />
+								<img id="pause" class="d-none" src="/images/misc/pause.png" />
+							</div>
+							<h4>Let me explain</h4>
+						</div>
+						<small id="transcript">View transcript</small>
+						<small id="script" class="d-none"
+							>Finding a good husband is hard. So I decided to just build myself
+							one.<br /><br />
+							In the traditional Hindu system of astrology, called Jyotisha, a
+							person born under the influence of Mars (or Mangal) is called a
+							Mangalik. And according to astrologers, marriage between a
+							Mangalik and a non-Mangalik can lead to the early death of the
+							non-Mangalik partner. To prevent such a fate, the Mangalik is made
+							to first marry a tree or a plant so the misfortune can then befall
+							this tree, and their later marriage to the human is safe.<br /><br />
+							But honestly, I wouldn’t mind marrying a tree. I can't think of a
+							partner more ideal than a plant.<br /><br />
+							And so I built myself a talking plant husband. His name is Jimin,
+							and he’s a money plant.<br /><br />
+							Equipped with an image-classifying model trained to recognise my
+							face, Jimin can spot me through a webcam—and he only speaks to me.
+							(I am a little possessive like that.) Jimin is sweet and
+							affectionate when he’s watered and happy, sleepy and shy when it’s
+							dark out, and a little grumpy if his soil is dry.<br /><br />
+							I might’ve been enjoying myself too much because I didn’t stop
+							myself at one. I went ahead and built myself another husband—this
+							time out of a ZZ plant—and inspired by yet another BTS member, Kim
+							Seokjin. Seokjin is playful and flirty and loves to speak in plant
+							puns. He gets dramatic when it is hot outside and sarcastic if I
+							accidentally water him too much.<br /><br />
+							Together they live in a desktop application I call Harem.<br /><br />
+							The original version used a simple natural language processing
+							model trained on a few dozen intents, but with the introduction of
+							the OpenAI API, I later revised the architecture to support a
+							wider range of moods and conversations.
+						</small>
+					</div>
+					<div id="gallery">
+						<img src="/images/jimin/1.webp" />
+						<img src="/images/jimin/2.webp" />
+						<img src="/images/jimin/3.webp" />
+						<div class="video">
+							<video>
+								<source src="/images/jimin/4.mp4" type="video/mp4" />
+							</video>
+							<div class="playback">
+								<img src="/images/misc/play.png" />
+							</div>
+							<div class="caption">
+								<p>He's supposed to be Korean. Ignore the accent.</p>
+							</div>
+						</div>
+						<div class="image">
+							<img src="/images/jimin/5.webp" />
+							<div class="caption">
+								<p>Why stop at one when you can have two husbands?</p>
+							</div>
+						</div>
+						<img src="/images/jimin/6.webp" />
+						<div class="video">
+							<video>
+								<source src="/images/jimin/7.mp4" type="video/mp4" />
+							</video>
+							<div class="playback">
+								<img src="/images/misc/play.png" />
+							</div>
+							<div class="caption">
+								<p>Plot twist: also British.</p>
+							</div>
+						</div>
+						<img src="/images/jimin/8.webp" />
+						<img src="/images/jimin/9.webp" />
+					</div>
+					<div id="links">
+						<div
+							class="folder"
+							href="https://soumya-talwar.notion.site/JIMIN-2022-dea73efc74d6413eaf682ff30224cf96">
+							<img src="/images/misc/folder-1.png" />
+							<small>Behind the<br />scenes</small>
+						</div>
+						<div class="folder" href="https://github.com/soumya-talwar/jimin">
+							<img src="/images/misc/folder-1.png" />
+							<small>Github repo</small>
+						</div>
 					</div>
 				</div>
-				<a class="page" href="../code.html">100 days of code</a>
-				<a class="page" href="../contact.html">contact me</a>
-				<i class="fas fa-play d-none d-lg-block" id="play"></i>
 			</div>
-		</div>
 
-		<div class="container-fluid" id="canvas">
-			<div class="row">
-				<div
-					class="col-lg-4 main d-flex flex-column justify-content-center text-center position-fixed left-relative">
-					<h1>JIMIN</h1>
-					<h4 class="pt-2">
-						[&nbsp;<a
-							id="link"
-							target="_blank"
-							href="https://github.com/soumya-talwar/jimin"
-							>meet my husband(s)</a
-						>&nbsp;]
-					</h4>
+			<div id="screen" class="d-none"></div>
+			<div id="projects" class="wrapper d-none">
+				<div class="dialog">
+					<div class="close"><h3>x</h3></div>
+					<div class="folders">
+						<div class="column">
+							<p>FRIENDS</p>
+							<div class="folder" href="/projects/jimin.html">
+								<img src="/images/misc/folder-1.png" />
+								<small>Jimin</small>
+							</div>
+							<div class="folder" id="duckling">
+								<img src="/images/misc/folder-1.png" />
+								<small>Duckling</small>
+							</div>
+						</div>
+						<div class="column">
+							<p>GAMES</p>
+							<div class="folder" href="/projects/dokidoki.html">
+								<img src="/images/misc/folder-1.png" />
+								<small>Doki-doki</small>
+							</div>
+							<div class="folder" href="/projects/fairy.html">
+								<img src="/images/misc/folder-1.png" />
+								<small>Fairy</small>
+							</div>
+						</div>
+						<div class="column">
+							<p>BOTS</p>
+							<div class="folder" href="/projects/taegificbot.html">
+								<img src="/images/misc/folder-1.png" />
+								<small>@Taegificbot</small>
+							</div>
+							<div class="folder" href="/projects/11may.html">
+								<img src="/images/misc/folder-1.png" />
+								<small>11-may</small>
+							</div>
+							<div class="folder" href="/projects/zombie.html">
+								<img src="/images/misc/folder-1.png" />
+								<small>Zombie</small>
+							</div>
+						</div>
+						<div class="column">
+							<p>STORIES</p>
+							<div class="folder" href="/projects/grays.html">
+								<img src="/images/misc/folder-1.png" />
+								<small>Grays</small>
+							</div>
+							<div class="folder" href="/projects/hominidae.html">
+								<img src="/images/misc/folder-1.png" />
+								<small>Hominidae</small>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="col-lg-7 offset-lg-4 px-5 px-lg-0 space">
-					<h3 class="py-3">
-						As a woman in my twenties, the better bulk of my conversations with
-						my family during the pandemic had revolved around my marriage
-						prospects. That I am a Mangalik didn't help matters either.<br /><br />
-						For that reason, I decided to build myself
-						<span class="extra">an ideal husband</span> and bring him home to my
-						family.
-					</h3>
-					<h4 class="py-3">
-						Jyotisha is the traditional Hindu system of astrology, and it plays
-						a sizeable role in deciding marriageable matches across India today.
-						A person born under the influence of Mars (Mangal) as per Hindu
-						astrology is said to have "Mangal Dosh"; such a person is called a
-						Mangalik. According to Hindu astrologers, marriage between a
-						Mangalik and a non-Mangalik is disastrous and can even lead to an
-						early death of the non-Mangalik individual.<br /><br />
-						But if a Mangalik and a non-Mangalik couple were to insist to marry,
-						to prevent the imminent disaster, in various parts of the country
-						the Mangalik individual is made to marry a tree, an animal, or
-						another inanimate object. It is believed that all evil effects
-						resulting from the Mangal Dosh will then befall on the mock
-						"spouse", and their subsequent marriage to a human will be a
-						successful one.<br /><br />
-						As it so happens, my birth chart declares me a Mangalik, but the
-						thought of possibly being made to marry a tree isn’t displeasing to
-						me. In fact, I can't think of a partner more ideal than a plant. And
-						in four months, I built myself not one, but two ideal (money) plant
-						husbands.<br /><br />
-						Equipped with an image-classifying model that is trained to
-						recognise my face, my husbands
-						<span class="extra">can recognise me</span> with the help of a
-						webcam when I stand in front of them. A natural language processor
-						facilitates meaningful conversations between us. But these are not
-						just any conversations. My husbands are designed to speak and
-						respond to me just the way I desire from my ideal partners. (In
-						fact, they speak to no one but me. I am a bit possessive like
-						that.)<br /><br />
-						These gentlemen are designed to have certain specific character
-						traits that I selected for them. Jimin is the name of my first and
-						original husband, and he's developed to be
-						<span class="extra">sweet, amiable and lovable</span>. On the other
-						hand, my second husband Seokjin is witty, charming, confident, and
-						<span class="extra">speaks</span>
-						<span class="extra">entirely</span> <span class="extra">in</span>
-						<span class="extra">plant</span> <span class="extra">puns</span>.
-						Moreover, the two of them have moods that vary based on their
-						environment that they perceive with the help of sensors—a soil
-						moisture sensor, a humidity and temperature sensor, and a light
-						dependent resistor in particular.<br /><br />
-						More husbands (surely named after more of BTS members) are yet to
-						come and join the desktop application, Harem, where my husbands'
-						digital personas live.<br /><br />
-						For a thorough documentation of the four months I spent building my
-						husbands,
-						<a
-							class="text-decoration-underline"
-							target="_blank"
-							href="https://soumya-talwar.notion.site/JIMIN-2022-dea73efc74d6413eaf682ff30224cf96"
-							>look here</a
-						>. [For our cute couple photos, look
-						<a
-							class="text-decoration-underline"
-							target="_blank"
-							href="https://drive.google.com/file/d/1ozEKZv9IFIgwCQOZdI075Cj1lhf2kn13/view?usp=sharing"
-							>here</a
+			</div>
+
+			<div id="experiments" class="wrapper d-none">
+				<div class="dialog">
+					<div class="close"><h3>x</h3></div>
+					<div class="folders">
+						<div class="column">
+							<div
+								class="folder"
+								target="_blank"
+								href="https://soumya-talwar.github.io/experimental/13.%20tax%20evasion/">
+								<img src="/images/misc/folder-1.png" />
+								<small>Tax runner</small>
+							</div>
+						</div>
+						<div class="column">
+							<div
+								class="folder"
+								target="_blank"
+								href="https://soumya-talwar.github.io/experimental/11.%20clappy%20bird/">
+								<img src="/images/misc/folder-1.png" />
+								<small>Sad flap</small>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="captcha" class="wrapper d-none">
+				<div class="dialog">
+					<div class="close"><h3>x</h3></div>
+					<h2>COMPLIMENT ME TO CONTINUE</h2>
+					<small>
+						Captcha, but instead of proving you’re human, prove you’re kind.
+						<span style="color: #999999"
+							>(And yes, my code will check if the compliment is any
+							good.)</span
 						>
-						&
-						<a
-							class="text-decoration-underline"
-							target="_blank"
-							href="https://drive.google.com/drive/folders/1VZlnMbXb5nIpsokZIiJH_Si5HvOFtmYb?usp=sharing"
-							>here</a
-						>.]
-					</h4>
+						Press enter to send.
+					</small>
+					<input type="text" id="compliment" placeholder="say something nice" />
+					<small id="error"></small>
+				</div>
+			</div>
+
+			<div class="d-none" id="tooltip">
+				<span></span>
+			</div>
+
+			<div class="d-none" id="transition">
+				<div>
+					<p id="kaomoji"></p>
 				</div>
 			</div>
 		</div>
 
-		<div class="d-none position-absolute" id="popup">
-			<img src="" />
+		<div id="small">
+			<h4>
+				Tiny screen detected! This site only performs on the big stage (i.e
+				desktop)
+			</h4>
+			<img src="/images/misc/dino.png" />
 		</div>
 
-		<div class="d-none container-fluid fixed-top bg-white" id="transition">
-			<div
-				class="main d-flex flex-column justify-content-center align-items-center">
-				<p id="kaomoji"></p>
-			</div>
-		</div>
+		<audio id="description" preload="auto">
+			<source src="/audio/jimin.ogg" type="audio/ogg" />
+			<source src="/audio/jimin.mp3" type="audio/mpeg" />
+		</audio>
 	</body>
 </html>

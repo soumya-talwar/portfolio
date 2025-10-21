@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>soumya talwar — grays</title>
-		<link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+		<link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<script
@@ -23,123 +23,209 @@
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer"></script>
 
-		<script
-			src="https://kit.fontawesome.com/715dc2f277.js"
-			crossorigin="anonymous"></script>
-
-		<link rel="stylesheet" type="text/css" href="../style.css" />
-		<script src="../canvas.js"></script>
-		<script src="../script.js"></script>
+		<link rel="stylesheet" type="text/css" href="/style.css" />
+		<link rel="preload" as="image" href="/images/grays/1.webp" />
+		<link rel="preload" as="image" href="/images/grays/2.webp" />
+		<script src="/canvas.js"></script>
+		<script src="/script.js"></script>
+		<script src="/captcha.js"></script>
 	</head>
 
 	<body>
-		<link rel="preload" as="image" href="../images/grays 0.gif" />
-		<link rel="preload" as="image" href="../images/grays 1.gif" />
-		<link rel="preload" as="image" href="../images/grays 2.gif" />
-		<audio id="music" loop>
-			<source src="../audio/bourree.mp3" type="audio/mp3" />
-		</audio>
+		<div id="large">
+			<div id="canvas">
+				<div id="menu">
+					<a id="home" href="/">soumya talwar</a>
+					<span id="works">i made these, be impressed</span>
+					/
+					<span id="games">some experiments</span>
+					/
+					<span id="contact">let's be friends</span>
+				</div>
 
-		<div class="container-fluid" id="menu">
-			<div class="fixed-top d-flex flex-wrap flex-lg-nowrap p-5 gap-5">
-				<a class="me-lg-auto text-decoration-underline" href="../index.html"
-					>soumya talwar</a
-				>
-				<div class="d-flex flex-column text-center">
-					<i class="pages fst-normal" id="projects">list of works</i>
-					<div class="d-flex flex-column p-2 gap-2 d-none" id="list">
-						<small><a class="project" href="jimin.html">jimin</a></small>
-						<small><a class="project" href="dokidoki.html">doki doki</a></small>
-						<small><a class="project" href="11may.html">11 may</a></small>
-						<small><a class="project" href="death.html">death</a></small>
-						<small><a class="project" href="philippa.html">philippa</a></small>
-						<small
-							><a class="project" href="hominidae.html">hominidae</a></small
-						>
-						<small><a class="project" href="13.html">13</a></small>
-						<small><a class="project" href="grays.html">grays</a></small>
-						<small
-							><a class="project" href="taegificbot.html">taegificbot</a></small
-						>
+				<div id="main">
+					<div id="hook">
+						<h2 id="title">[ GRAYS ]</h2>
+						<h3>
+							EXPLORE A MATHEMATICAL MODEL THAT PLOTS 128 GENDERS IN A
+							THREE-DIMENSIONAL SPACE
+						</h3>
+						<small id="tools"> HTML / CSS / Javascript / X3dom </small>
+						<small id="date">Built in 2018</small>
+						<div id="audio">
+							<div id="playback">
+								<img id="play" src="/images/misc/play.png" />
+								<img id="pause" class="d-none" src="/images/misc/pause.png" />
+							</div>
+							<h4>Let me explain</h4>
+						</div>
+						<small id="transcript">View transcript</small>
+						<small id="script" class="d-none">
+							I thought it would be an interesting irony to advocate for the
+							existence of non-binary genders by using the most binary system of
+							all—0’s and 1’s—and to prove it all mathematically.<br /><br />
+							Our society isn’t binary: man or woman, male or female, masculine
+							or feminine, no—real variation exists in every measurable
+							attribute used to assign those categories. Facial hair, voice
+							pitch, hormone levels, reproductive organs, external genitalia, as
+							well as people who are intersex all prove that ‘biology’ is not a
+							clear-cut basis for the gender binary. It is imperative to
+							separate a person’s gender from their biological sex.<br /><br />
+							A person’s sex refers to their anatomy—their reproductive system
+							and secondary sex characteristics—but their gender identity is
+							their internal, deeply held sense of their gender. When those two
+							do not align, the person may identify themselves as transgender,
+							non-binary, or gender-nonconforming.<br /><br />
+							During the course of this study, I looked into 128 different
+							kinds of non-binary genders. I gave each one a binary encoding and
+							plotted them in a multi-dimensional space where each gender has a
+							mathematical relationship with another. The resulting
+							visualization suggests that gender is neither binary nor a linear
+							spectrum—but an expansive field of endless identities and
+							expressions.
+						</small>
+					</div>
+					<div id="gallery">
+						<img class="border" src="/images/grays/1.webp" />
+						<img class="border" src="/images/grays/2.webp" />
+						<img class="border" src="/images/grays/3.webp" />
+						<img class="border" src="/images/grays/4.webp" />
+					</div>
+					<div id="links">
+						<div class="folder" href="https://soumya-talwar.github.io/grays/">
+							<img src="/images/misc/folder-1.png" />
+							<small>Visit site</small>
+						</div>
+						<div class="folder" href="https://github.com/soumya-talwar/grays">
+							<img src="/images/misc/folder-1.png" />
+							<small>Github repo</small>
+						</div>
 					</div>
 				</div>
-				<a class="page" href="../code.html">100 days of code</a>
-				<a class="page" href="../contact.html">contact me</a>
-				<i class="fas fa-play d-none d-lg-block" id="play"></i>
 			</div>
-		</div>
 
-		<div class="container-fluid" id="canvas">
-			<div class="row">
-				<div
-					class="col-lg-4 main d-flex flex-column justify-content-center text-center position-fixed left-relative">
-					<h1>GRAYS</h1>
-					<h4 class="pt-2">
-						[&nbsp;<a
-							id="link"
-							target="_blank"
-							href="https://soumya-talwar.github.io/grays/"
-							>visit the site</a
-						>&nbsp;]
-					</h4>
-				</div>
-				<div class="col-lg-7 offset-lg-4 px-5 px-lg-0 space">
-					<h3 class="py-3">
-						<span class="extra">Grays</span> is an advocacy of 128 non-binary
-						genders that acquaints its viewers with the numerous relationships
-						they can have with masculinity and femininity (both and neither),
-						and the many <span class="extra">different ways</span> they can
-						identify and express their gender regardless of the bodies they were
-						born into.
-					</h3>
-					<h4 class="py-3">
-						Gender is a social construct—and by that I mean that the measures by
-						which characteristics, interests, mannerisms and behaviours are
-						deemed “masculine” or “feminine” relies on people creating,
-						believing and reinforcing these divisions.
-					</h4>
-					<h4 class="py-3">
-						Our society isn’t binary: man or woman, male or female, masculine or
-						feminine, no—real variation exists in every measurable attribute
-						used to assign the categories of ‘male’ and ‘female’ to bodies.
-						Facial hair, voice pitch, hormone levels, reproductive organs,
-						external genitalia, as well as people who are intersex all prove
-						that ‘biology’ is not a clear-cut basis for the gender binary.
-					</h4>
-					<h4 class="py-3">
-						It is imperative to separate a person’s gender from their biological
-						sex. A person’s sex refers to their anatomy—their reproductive
-						system and secondary sex characteristics—but their gender identity
-						is their internal, deeply held sense of their gender. And in the
-						circumstances where an individual’s biological sex and their gender
-						identity do not align, the person may identify as transgender,
-						non-binary, or gender-nonconforming.
-					</h4>
-					<h4 class="py-3">
-						As I worked on this project, I studied
-						<span class="extra">128 different kinds</span> of non-binary
-						genders. I gave them all a binary encoding and plotted them in a
-						three-dimensional space where each gender has a mathematical
-						relationship with every other gender in the space. The intent behind
-						this presentation is to illustrate that gender is not a toggle
-						switch between male and female, nor is it a spectrum between
-						masculinity and femininity. It is a multi-dimensional space that
-						gives rise to countless diverse possibilities of identification and
-						expression.
-					</h4>
+			<div id="screen" class="d-none"></div>
+			<div id="projects" class="wrapper d-none">
+				<div class="dialog">
+					<div class="close"><h3>x</h3></div>
+					<div class="folders">
+						<div class="column">
+							<p>FRIENDS</p>
+							<div class="folder" href="/projects/jimin.html">
+								<img src="/images/misc/folder-1.png" />
+								<small>Jimin</small>
+							</div>
+							<div class="folder" id="duckling">
+								<img src="/images/misc/folder-1.png" />
+								<small>Duckling</small>
+							</div>
+						</div>
+						<div class="column">
+							<p>GAMES</p>
+							<div class="folder" href="/projects/dokidoki.html">
+								<img src="/images/misc/folder-1.png" />
+								<small>Doki-doki</small>
+							</div>
+							<div class="folder" href="/projects/fairy.html">
+								<img src="/images/misc/folder-1.png" />
+								<small>Fairy</small>
+							</div>
+						</div>
+						<div class="column">
+							<p>BOTS</p>
+							<div class="folder" href="/projects/taegificbot.html">
+								<img src="/images/misc/folder-1.png" />
+								<small>@Taegificbot</small>
+							</div>
+							<div class="folder" href="/projects/11may.html">
+								<img src="/images/misc/folder-1.png" />
+								<small>11-may</small>
+							</div>
+							<div class="folder" href="/projects/zombie.html">
+								<img src="/images/misc/folder-1.png" />
+								<small>Zombie</small>
+							</div>
+						</div>
+						<div class="column">
+							<p>STORIES</p>
+							<div class="folder" href="/projects/grays.html">
+								<img src="/images/misc/folder-1.png" />
+								<small>Grays</small>
+							</div>
+							<div class="folder" href="/projects/hominidae.html">
+								<img src="/images/misc/folder-1.png" />
+								<small>Hominidae</small>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-		</div>
 
-		<div class="d-none position-absolute" id="popup">
-			<img src="" />
-		</div>
+			<div id="experiments" class="wrapper d-none">
+				<div class="dialog">
+					<div class="close"><h3>x</h3></div>
+					<div class="folders">
+						<div class="column">
+							<div
+								class="folder"
+								target="_blank"
+								href="https://soumya-talwar.github.io/experimental/13.%20tax%20evasion/">
+								<img src="/images/misc/folder-1.png" />
+								<small>Tax runner</small>
+							</div>
+						</div>
+						<div class="column">
+							<div
+								class="folder"
+								target="_blank"
+								href="https://soumya-talwar.github.io/experimental/11.%20clappy%20bird/">
+								<img src="/images/misc/folder-1.png" />
+								<small>Sad flap</small>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
-		<div class="d-none container-fluid fixed-top bg-white" id="transition">
-			<div
-				class="main d-flex flex-column justify-content-center align-items-center">
-				<p id="kaomoji"></p>
+			<div id="captcha" class="wrapper d-none">
+				<div class="dialog">
+					<div class="close"><h3>x</h3></div>
+					<h2>COMPLIMENT ME TO CONTINUE</h2>
+					<small>
+						Captcha, but instead of proving you’re human, prove you’re kind.
+						<span style="color: #999999"
+							>(And yes, my code will check if the compliment is any
+							good.)</span
+						>
+						Press enter to send.
+					</small>
+					<input type="text" id="compliment" placeholder="say something nice" />
+					<small id="error"></small>
+				</div>
+			</div>
+
+			<div class="d-none" id="tooltip">
+				<span></span>
+			</div>
+
+			<div class="d-none" id="transition">
+				<div>
+					<p id="kaomoji"></p>
+				</div>
 			</div>
 		</div>
+
+		<div id="small">
+			<h4>
+				Tiny screen detected! This site only performs on the big stage (i.e
+				desktop)
+			</h4>
+			<img src="/images/misc/dino.png" />
+		</div>
+
+		<audio id="description" preload="auto">
+			<source src="/audio/grays.ogg" type="audio/ogg" />
+			<source src="/audio/grays.mp3" type="audio/mpeg" />
+		</audio>
 	</body>
 </html>
