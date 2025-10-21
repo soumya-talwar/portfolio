@@ -1,11 +1,11 @@
 var data;
 async function load() {
 	// For prod
-	data = await fetch("/portfolio/data/lexicon.json").then((response) =>
-		response.json()
-	);
+	// data = await fetch("/portfolio/data/lexicon.json").then((response) =>
+	// 	response.json()
+	// );
 	// For dev
-	// data = await fetch("/data/lexicon.json").then((response) => response.json());
+	data = await fetch("/data/lexicon.json").then((response) => response.json());
 }
 var errors = [
 	"You call that a compliment? Try again.",
