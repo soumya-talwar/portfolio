@@ -251,26 +251,11 @@ canvas {
 }
 
 .folders {
-	display: flex;
-	justify-content: space-between;
-	padding-bottom: 3rem;
-}
-
-.column {
-	display: flex;
-	flex-direction: column;
-	text-align: center;
-	align-items: center;
-	gap: 2rem;
-
-	p {
-		font-size: 0.8rem;
-		margin: 0;
-	}
-}
-
-.column:last-of-type {
-	margin-right: 2rem;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	row-gap: 3rem;
+	margin-bottom: 3rem;
 }
 
 .folder {
@@ -297,10 +282,6 @@ canvas {
 #projects .dialog {
 	width: 40%;
 	padding-bottom: 1.5rem;
-
-	#duckling img:hover {
-		cursor: default;
-	}
 }
 
 #experiments .dialog {
@@ -308,8 +289,8 @@ canvas {
 	padding-bottom: 1.5rem;
 
 	.folders {
-		justify-content: start;
-		gap: 4rem;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: 1fr;
 	}
 }
 

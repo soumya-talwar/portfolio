@@ -1,10 +1,9 @@
 var descriptions1 = [
 	"I built myself my ideal husband",
-	"(Coming soon) Wherever I go, this tiny duckling robot follows",
 	"Win this game to win a date with me",
-	"A fairy dust sound plays when my manager is near",
 	"I released a BTS fanfiction recommendation engine on Twitter",
 	"A Whatsapp bot to compliment me every hour on my birthday",
+	"A fairy dust sound plays when my manager is near",
 	"My Twitter account will keep tweeting even after I am dead",
 	"An advocacy of 128 non-binary genders",
 	"Exploring sexual violence among great apes with art",
