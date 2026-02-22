@@ -22,7 +22,7 @@ $(document).ready(() => {
 		{
 			opacity: 1,
 		},
-		1000
+		1000,
 	);
 
 	let observer = new IntersectionObserver(
@@ -37,7 +37,7 @@ $(document).ready(() => {
 		},
 		{
 			threshold: 0.5,
-		}
+		},
 	);
 	$(".snap").each((index, target) => observer.observe(target));
 
@@ -47,13 +47,13 @@ $(document).ready(() => {
 			{
 				opacity: "0.8",
 			},
-			500
+			500,
 		);
 		$("#projects").animate(
 			{
 				opacity: "1",
 			},
-			500
+			500,
 		);
 	});
 
@@ -63,13 +63,13 @@ $(document).ready(() => {
 			{
 				opacity: "0.8",
 			},
-			500
+			500,
 		);
 		$("#experiments").animate(
 			{
 				opacity: "1",
 			},
-			500
+			500,
 		);
 	});
 
@@ -82,7 +82,7 @@ $(document).ready(() => {
 			() => {
 				$("#screen, .wrapper").addClass("d-none");
 				$("#error").html("");
-			}
+			},
 		);
 	});
 
@@ -93,7 +93,7 @@ $(document).ready(() => {
 				let attr = $(this).attr("src");
 				$(this).attr("src", attr.replace("folder-1.png", "folder-2.png"));
 				$("#tooltip span").html(
-					descriptions1[$("#projects .folder img").index($(this))]
+					descriptions1[$("#projects .folder img").index($(this))],
 				);
 				$("#tooltip").css({
 					top: $(this).offset().top + $(this).height() + 10,
@@ -105,7 +105,7 @@ $(document).ready(() => {
 				let attr = $(this).attr("src");
 				$(this).attr("src", attr.replace("folder-2.png", "folder-1.png"));
 				$("#tooltip").addClass("d-none");
-			}
+			},
 		);
 
 	$("#duckling img").hover(function (event) {
@@ -122,7 +122,7 @@ $(document).ready(() => {
 			let attr = $(this).attr("src");
 			$(this).attr("src", attr.replace("folder-1.png", "folder-2.png"));
 			$("#tooltip span").html(
-				descriptions2[$("#experiments .folder img").index($(this))]
+				descriptions2[$("#experiments .folder img").index($(this))],
 			);
 			$("#tooltip").css({
 				top: $(this).offset().top + $(this).height() + 10,
@@ -134,7 +134,7 @@ $(document).ready(() => {
 			let attr = $(this).attr("src");
 			$(this).attr("src", attr.replace("folder-2.png", "folder-1.png"));
 			$("#tooltip").addClass("d-none");
-		}
+		},
 	);
 
 	$("#links .folder img").hover(
@@ -145,7 +145,7 @@ $(document).ready(() => {
 		function (event) {
 			let attr = $(this).attr("src");
 			$(this).attr("src", attr.replace("folder-2.png", "folder-1.png"));
-		}
+		},
 	);
 
 	$("#projects .folder img")
@@ -157,7 +157,7 @@ $(document).ready(() => {
 				{
 					opacity: "1",
 				},
-				500
+				500,
 			);
 			setTimeout(() => {
 				window.location.href = href;
