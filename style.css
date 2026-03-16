@@ -13,10 +13,20 @@ body {
   opacity: 0;
 }
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 * {
   font-family: inter, sans-serif;
   font-size: 0.9rem;
   letter-spacing: 1.8px;
+}
+
+#mobile {
+  display: none;
 }
 
 h1,
@@ -86,6 +96,10 @@ canvas {
 #canvas {
   width: 100vw;
   height: 100vh;
+}
+
+#hamburger {
+  display: none;
 }
 
 #menu {
@@ -321,7 +335,8 @@ canvas {
   font-size: 10rem;
 }
 
-#main {
+#main,
+#main2 {
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -572,10 +587,224 @@ canvas {
 }
 
 @media (max-width: 768px) {
-  #large {
+  #mobile {
+    display: flex;
+    opacity: 1;
+  }
+  #canvas,
+  #screen,
+  .wrapper,
+  #main,
+  #main2 {
+    height: 85vh;
+  }
+  #menu {
     display: none;
   }
-  #small {
+  #snapper {
+    padding: 0 1.5rem;
+  }
+  .snap {
+    height: 90vh;
+  }
+  h1 {
+    font-size: 2.5rem;
+    letter-spacing: 4.1px;
+  }
+  #name {
+    font-size: 4rem;
+    line-height: 5rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+  }
+  #bio {
+    margin-top: 1rem;
+  }
+  h1 a {
+    font-size: 2.5rem;
+  }
+  h1 a:hover,
+  h2 a:hover {
+    text-decoration: none;
+  }
+  h3 {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+  small {
+    font-size: 1rem;
+  }
+  #pagination {
+    padding: 4rem 1.5rem;
+  }
+  #hamburger {
+    display: block;
+    width: 100vw;
+    height: 10vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 2rem 1.5rem;
+  }
+  #hamburger svg {
+    width: 2rem;
+    height: auto;
+  }
+  #menu2 {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    background-color: #ffffff;
+    top: 0;
+    left: 0;
+    padding: 4rem 1.5rem;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  #menu2 p,
+  #menu2 a {
+    font-size: 1.1rem;
+  }
+  #menu2 #home2 {
+    margin-top: 3rem;
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+  }
+  .close2 {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    font-size: 2.5rem;
+    font-family: cera, sans-serif;
+  }
+  .wrapper {
+    background-color: #ffffff;
+  }
+  #screen {
+    display: none;
+  }
+  .dialog {
+    background-color: #ffffff;
+    border: 3px solid #000000;
+    border-radius: 25px;
+    width: 90% !important;
+    padding: 1rem 1.5rem 3rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .close {
+    display: flex;
+  }
+  .close h3 {
+    margin-left: auto;
+  }
+  .folders {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  #experiments .folders {
+    grid-template-rows: 1fr;
+  }
+  .folder {
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  .folder img {
+    width: 3rem;
+    height: auto;
+    cursor: pointer;
+  }
+  .folder small {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    line-height: 1rem;
+  }
+  #captcha input {
+    font-size: 1.8rem;
+  }
+  #kaomoji {
+    font-size: 5rem;
+  }
+  #main {
+    display: block;
+    padding: 40% 1.5rem 3rem 1.5rem;
+    overflow: scroll;
+  }
+  #hook {
+    min-width: 100%;
+    max-width: 100%;
+    flex-grow: auto;
+    gap: 1rem;
+    padding: 0;
+  }
+  #hook h2 {
+    font-size: 2.5rem;
+  }
+  #hook h3 {
+    line-height: 2.5rem;
+  }
+  #hook small {
+    font-size: 0.9rem;
+  }
+  #hook #date {
+    display: none;
+  }
+  #gallery {
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    height: -moz-max-content;
+    height: max-content;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    overflow-y: unset;
+  }
+  #links {
+    height: -moz-max-content;
+    height: max-content;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-rows: repeat(1, 1fr);
+    row-gap: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  #main2 {
+    padding: 0;
+  }
+  #social {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1.5rem;
+  }
+  #social #me {
+    border: none;
+  }
+  #social h2 {
+    padding-bottom: 2rem;
+  }
+  #social a {
+    text-decoration: underline;
+  }
+  #draw {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */

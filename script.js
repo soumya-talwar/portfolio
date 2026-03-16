@@ -41,7 +41,29 @@ $(document).ready(() => {
 	);
 	$(".snap").each((index, target) => observer.observe(target));
 
-	$("#works").click(() => {
+	$("#hamburger").click(() => {
+		$("#menu2").removeClass("d-none");
+		$("#menu2").animate(
+			{
+				opacity: "1",
+			},
+			500,
+		);
+	});
+
+	$("#menu2 .close2").click(() => {
+		$("#menu2").animate(
+			{
+				opacity: "0",
+			},
+			500,
+			() => {
+				$("#menu2").addClass("d-none");
+			},
+		);
+	});
+
+	$("#works, #works2").click(() => {
 		$("#screen, #projects").removeClass("d-none");
 		$("#screen").animate(
 			{
@@ -57,7 +79,7 @@ $(document).ready(() => {
 		);
 	});
 
-	$("#games").click(() => {
+	$("#games, #games2").click(() => {
 		$("#screen, #experiments").removeClass("d-none");
 		$("#screen").animate(
 			{
@@ -86,36 +108,25 @@ $(document).ready(() => {
 		);
 	});
 
-	$("#projects .folder img")
-		.not("#duckling img")
-		.hover(
-			function (event) {
-				let attr = $(this).attr("src");
-				$(this).attr("src", attr.replace("folder-1.png", "folder-2.png"));
-				$("#tooltip span").html(
-					descriptions1[$("#projects .folder img").index($(this))],
-				);
-				$("#tooltip").css({
-					top: $(this).offset().top + $(this).height() + 10,
-					left: $(this).offset().left + $(this).width() / 2,
-				});
-				$("#tooltip").removeClass("d-none");
-			},
-			function (event) {
-				let attr = $(this).attr("src");
-				$(this).attr("src", attr.replace("folder-2.png", "folder-1.png"));
-				$("#tooltip").addClass("d-none");
-			},
-		);
-
-	$("#duckling img").hover(function (event) {
-		$("#tooltip span").html(descriptions1[1]);
-		$("#tooltip").css({
-			top: $(this).offset().top + $(this).height() + 10,
-			left: $(this).offset().left + $(this).width() / 2,
-		});
-		$("#tooltip").toggleClass("d-none");
-	});
+	$("#projects .folder img").hover(
+		function (event) {
+			let attr = $(this).attr("src");
+			$(this).attr("src", attr.replace("folder-1.png", "folder-2.png"));
+			$("#tooltip span").html(
+				descriptions1[$("#projects .folder img").index($(this))],
+			);
+			$("#tooltip").css({
+				top: $(this).offset().top + $(this).height() + 10,
+				left: $(this).offset().left + $(this).width() / 2,
+			});
+			$("#tooltip").removeClass("d-none");
+		},
+		function (event) {
+			let attr = $(this).attr("src");
+			$(this).attr("src", attr.replace("folder-2.png", "folder-1.png"));
+			$("#tooltip").addClass("d-none");
+		},
+	);
 
 	$("#experiments .folder img").hover(
 		function (event) {
@@ -148,21 +159,43 @@ $(document).ready(() => {
 		},
 	);
 
-	$("#projects .folder img")
-		.not("#duckling img")
-		.click(function (event) {
-			let href = $(this).parent().attr("href");
-			$("#transition").removeClass("d-none");
-			$("#transition").animate(
-				{
-					opacity: "1",
-				},
-				500,
-			);
-			setTimeout(() => {
-				window.location.href = href;
-			}, 1000);
-		});
+	if (window.innerWidth <= 768) {
+		$("#projects .folder img").off("mouseenter mouseleave");
+		$("#experiments .folder img").off("mouseenter mouseleave");
+		$("#links .folder img").off("mouseenter mouseleave");
+	}
+
+	$("#projects .folder img").click(function (event) {
+		let href = $(this).parent().attr("href");
+		$("#transition").removeClass("d-none");
+		$("#transition").animate(
+			{
+				opacity: "1",
+			},
+			500,
+		);
+		setTimeout(() => {
+			window.location.href = href;
+		}, 1000);
+	});
+
+	$("#home2").click(() => {
+		let href = $(this).parent().attr("href");
+		$("#transition").removeClass("d-none");
+		$("#transition").animate(
+			{
+				opacity: "1",
+			},
+			500,
+			() => {
+				$("#screen, .wrapper").addClass("d-none");
+				$("#error").html("");
+			},
+		);
+		setTimeout(() => {
+			window.location.href = href;
+		}, 1000);
+	});
 
 	$("#experiments .folder img, #links .folder img").click(function (event) {
 		window.open($(this).parent().attr("href"), "_blank");

@@ -2,7 +2,7 @@ var data;
 async function load() {
 	// For prod
 	data = await fetch("/portfolio/data/lexicon.json").then((response) =>
-		response.json()
+		response.json(),
 	);
 	// For dev
 	// data = await fetch("/data/lexicon.json").then((response) => response.json());
@@ -15,20 +15,20 @@ var errors = [
 
 $(document).ready(() => {
 	load();
-	$("#contact").click(() => {
+	$("#contact, #contact2").click(() => {
 		$("#screen, #captcha").removeClass("d-none");
 		$("#screen").animate(
 			{
 				opacity: "0.8",
 			},
-			500
+			500,
 		);
 		$("#captcha").animate(
 			{
 				opacity: "1",
 			},
 			500,
-			() => $("#compliment").focus()
+			() => $("#compliment").focus(),
 		);
 	});
 
@@ -50,21 +50,21 @@ $(document).ready(() => {
 						opacity: "0",
 					},
 					500,
-					() => $("#screen").addClass("d-none")
+					() => $("#screen").addClass("d-none"),
 				);
 				$("#captcha").animate(
 					{
 						opacity: "0",
 					},
 					500,
-					() => $("#captcha").addClass("d-none")
+					() => $("#captcha").addClass("d-none"),
 				);
 				$("#transition").removeClass("d-none");
 				$("#transition").animate(
 					{
 						opacity: "1",
 					},
-					500
+					500,
 				);
 				setTimeout(() => {
 					window.location.href = "/portfolio/contact.html";

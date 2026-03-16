@@ -22,6 +22,12 @@ function setup() {
 	}
 	start();
 	if (windowWidth < 992) {
+		$("#bio").html(`>I BUILD
+		<span style="text-decoration: line-through"
+			>OVERENGINEEREED</span
+		>
+		JAVASCRIPT JOKES.
+		<span id="scroll">SCROLL DOWN<span id="cursor">_</span></span>`);
 		noLoop();
 		setTimeout(() => background(255), 1000);
 	}
