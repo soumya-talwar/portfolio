@@ -185,11 +185,40 @@ canvas {
   position: fixed;
   bottom: 0;
   left: 0;
-  padding: 4rem 4rem;
+  padding: 2rem 4rem;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 #pagination #count {
   font-size: 0.8rem;
+}
+#pagination #recruiter {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+#pagination #recruiter span {
+  font-size: 0.8rem;
+}
+#pagination #recruiter svg {
+  width: 4rem;
+  height: 3.5rem;
+  cursor: pointer;
+}
+
+svg.on .knob {
+  transform: translateX(20px);
+}
+
+.track {
+  fill: #000000;
+  transition: fill 0.3s ease;
+}
+
+.knob {
+  fill: #ffffff;
+  transition: transform 0.3s ease;
 }
 
 #transition {
@@ -281,6 +310,44 @@ canvas {
   margin-top: 0.5rem;
   font-size: 0.7rem;
   line-height: 1rem;
+}
+
+#persona {
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+#persona .dialog {
+  padding: 2rem 3rem 2rem 3rem;
+  text-align: center;
+  gap: 0.5rem;
+}
+#persona .dialog h2 {
+  text-align: center;
+}
+#persona .dialog svg {
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+}
+#persona .dialog svg.on .knob {
+  transform: translateX(20px);
+}
+#persona .dialog .track {
+  fill: #000000;
+  transition: fill 0.3s ease;
+}
+#persona .dialog .knob {
+  fill: #ffffff;
+  transition: transform 0.3s ease;
+}
+#persona .dialog a {
+  color: #999999;
+}
+#persona #continue {
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
 }
 
 #projects .dialog {

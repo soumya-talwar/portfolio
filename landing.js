@@ -4,6 +4,7 @@ var num = 30;
 var length = 5;
 
 function setup() {
+	let persona = localStorage.getItem(STORAGE_KEY);
 	let canvas = createCanvas(windowWidth, windowHeight);
 	canvas.parent("canvas");
 	for (let i = 0; i < num; i++) {
