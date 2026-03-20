@@ -14,10 +14,10 @@ var errors = [
 ];
 
 $(document).ready(() => {
-	let persona = getMode();
-	if (persona == "friend") {
-		load();
-		$("#contact, #contact2").click(() => {
+	load();
+	$("#contact, #contact2").click(() => {
+		let persona = getMode();
+		if (persona === "friend") {
 			$("#screen, #captcha").removeClass("d-none");
 			$("#screen").animate(
 				{
@@ -32,49 +32,7 @@ $(document).ready(() => {
 				500,
 				() => $("#compliment").focus(),
 			);
-		});
-		$("#compliment").keyup(function (event) {
-			if (event.which == 13) {
-				let compliment = $(this).val();
-				let result = compliment
-					.split(/\W+/)
-					.reduce((sum, word) => sum + (Number(data[word]) || 0), 0);
-				console.log(result);
-				if (result < 3)
-					$("#error").html(errors[Math.floor(Math.random() * errors.length)]);
-				else {
-					emailjs.send("service_skuixqg", "template_mb14sa5", {
-						compliment: compliment,
-					});
-					$("#screen").animate(
-						{
-							opacity: "0",
-						},
-						500,
-						() => $("#screen").addClass("d-none"),
-					);
-					$("#captcha").animate(
-						{
-							opacity: "0",
-						},
-						500,
-						() => $("#captcha").addClass("d-none"),
-					);
-					$("#transition").removeClass("d-none");
-					$("#transition").animate(
-						{
-							opacity: "1",
-						},
-						500,
-					);
-					setTimeout(() => {
-						window.location.href = "/portfolio/contact.html";
-					}, 1000);
-				}
-			} else $("#error").html("");
-		});
-	} else {
-		$("#contact, #contact2").click(() => {
+		} else {
 			$("#transition").removeClass("d-none");
 			$("#transition").animate(
 				{
@@ -85,6 +43,46 @@ $(document).ready(() => {
 			setTimeout(() => {
 				window.location.href = "/portfolio/contact.html";
 			}, 1000);
-		});
-	}
+		}
+	});
+	$("#compliment").keyup(function (event) {
+		if (event.which == 13) {
+			let compliment = $(this).val();
+			let result = compliment
+				.split(/\W+/)
+				.reduce((sum, word) => sum + (Number(data[word]) || 0), 0);
+			console.log(result);
+			if (result < 3)
+				$("#error").html(errors[Math.floor(Math.random() * errors.length)]);
+			else {
+				emailjs.send("service_skuixqg", "template_mb14sa5", {
+					compliment: compliment,
+				});
+				$("#screen").animate(
+					{
+						opacity: "0",
+					},
+					500,
+					() => $("#screen").addClass("d-none"),
+				);
+				$("#captcha").animate(
+					{
+						opacity: "0",
+					},
+					500,
+					() => $("#captcha").addClass("d-none"),
+				);
+				$("#transition").removeClass("d-none");
+				$("#transition").animate(
+					{
+						opacity: "1",
+					},
+					500,
+				);
+				setTimeout(() => {
+					window.location.href = "/portfolio/contact.html";
+				}, 1000);
+			}
+		} else $("#error").html("");
+	});
 });
