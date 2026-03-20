@@ -187,12 +187,13 @@ canvas {
 	}
 }
 
-#pagination {
+#pagination,
+#footer {
 	width: 100%;
 	position: fixed;
 	bottom: 0;
 	left: 0;
-	padding: 2rem 4rem;
+	padding: 2rem 3rem 2rem 4rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -216,6 +217,10 @@ canvas {
 			cursor: pointer;
 		}
 	}
+}
+
+#footer {
+	justify-content: flex-end;
 }
 
 svg.on .knob {

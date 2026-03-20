@@ -180,31 +180,40 @@ canvas {
     opacity: 0;
   }
 }
-#pagination {
+#pagination,
+#footer {
   width: 100%;
   position: fixed;
   bottom: 0;
   left: 0;
-  padding: 2rem 4rem;
+  padding: 2rem 3rem 2rem 4rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-#pagination #count {
+#pagination #count,
+#footer #count {
   font-size: 0.8rem;
 }
-#pagination #recruiter {
+#pagination #recruiter,
+#footer #recruiter {
   display: flex;
   gap: 1rem;
   align-items: center;
 }
-#pagination #recruiter span {
+#pagination #recruiter span,
+#footer #recruiter span {
   font-size: 0.8rem;
 }
-#pagination #recruiter svg {
+#pagination #recruiter svg,
+#footer #recruiter svg {
   width: 4rem;
   height: 3.5rem;
   cursor: pointer;
+}
+
+#footer {
+  justify-content: flex-end;
 }
 
 svg.on .knob {

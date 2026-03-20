@@ -165,8 +165,9 @@ $(document).ready(() => {
 		$("#links .folder img").off("mouseenter mouseleave");
 	}
 
-	$("#projects .folder img").click(function (event) {
-		let href = $(this).parent().attr("href");
+	$("#projects .folder img, .snap a").click(function (event) {
+		event.preventDefault();
+		let href = $(this).parent().attr("href") || $(this).attr("href");
 		$("#transition").removeClass("d-none");
 		$("#transition").animate(
 			{
