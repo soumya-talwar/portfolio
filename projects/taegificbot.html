@@ -100,14 +100,12 @@
 				<div id="main">
 					<div id="hook">
 						<h2 id="title">[ @TAEGIFICBOT ]</h2>
-						<h3>
-							TAG MY BOT ON TWITTER & IT REPLIES WITH CUSTOM BTS FANFICTION RECS
-						</h3>
+						<h3>GET SMART FANFICTION RECOMMENDATIONS FROM MY API</h3>
 						<small id="tools">
-							Node.JS / Twitter API / Google Sheets / Axios / Cheerio /
-							Firestore Database / Heroku</small
+							Node.JS / Supabase / Pgvector / Gemini Embeddings / Puppeteer /
+							Cheerio / Vercel</small
 						>
-						<small id="date">Built in 2020</small>
+						<small id="date">Built in 2020 / Reengeneered in 2026</small>
 						<div id="audio">
 							<div id="playback">
 								<img id="play" src="../images/misc/play.png" />
@@ -117,40 +115,65 @@
 						</div>
 						<small id="transcript">View transcript</small>
 						<small id="script" class="d-none">
-							At some point I felt that I spent more time looking for good queer
-							BTS fanfiction than actually reading it. Which is why I
-							built @taegificbot, a BTS fanfiction recommendation engine that
-							could give instant recommendations to Twitter users.<br /><br />
-							It all started when I tweeted complaining about how long it took
-							to dig out good stories from the depths of Archive Of Our Own. For
-							context, Archive of Our Own—or AO3—is a massive online fanfiction
-							repository. Other Twitter users replied to my tweet in agreement,
-							and I thought that if nobody’s building anything, I should
-							probably do it myself. And with the help of two other fanfic
-							enthusiasts, I was able to populate a spreadsheet with thousands
-							of links to stories we'd all read and loved in the fandom. Since
-							Archive of Our Own has no API to request data from, I built a web
-							scraper that pulled the metadata of a story when given its url.
-							All of that data was then stored in a realtime database on
-							Firebase.<br /><br />
-							Next, I built a Twitter bot that would be triggered each time a
-							user tagged it in a tweet. The bot would then pull links from the
-							database and reply to the user. Users could request for stories
-							with specific lengths, genres, pairings, tropes, completion
-							statuses—they could even avoid stories with certain trigger
-							warnings if they wanted to. They could also subscribe to receive
-							daily fanfic recommendations in their inbox.<br /><br />
-							The bot’s no longer active. I eventually took it down when I
-							stepped away from social media for personal reasons—but the code
-							is still available on my Github. Feel free to check it out.
+							At some point, I realized that I was spending more time searching
+							for good queer BTS fanfiction than actually reading it. So I built
+							a solution. I started by collaborating with a couple of other
+							fanfic readers to put together a large subset of stories that we
+							loved. For context, Archive of Our Own—or AO3—is a massive online
+							fanfiction repository but since it doesn’t have a public API, I
+							wrote a scraper to extract metadata from each fanfiction—things
+							like tags, word counts, warnings, and summaries—and stored
+							everything inside a database.<br /><br />
+							On top of that, I built a Twitter bot. You could tag this bot in a
+							tweet and mention what you were looking for—specific tropes,
+							lengths, or pairings—and it would reply with recommendations. It
+							worked really well, but I eventually took it down when I stepped
+							away from social media for personal reasons.<br /><br />In 2026, I
+							revisited the project with a different goal. Instead of tying it
+							to a platform, I wanted to rebuild it as a standalone system that
+							anyone could use or build on top of. So I re-engineered it as an
+							API.<br /><br />The core idea was to move beyond simple filters
+							and build something that could understand natural language
+							queries. I generated embeddings for each story using Gemini,
+							stored them in a vector database using pgvector on Supabase, and
+							implemented semantic search to retrieve the most relevant results.
+							On top of that, I added a custom ranking layer that combines
+							vector similarity with structured metadata like tags, length, and
+							completion status—so the results feel more intentional and
+							tailored.<br /><br />The final system lets you send a natural
+							language query and get back a curated set of fanfiction
+							recommendations. Even though the original bot no longer exists,
+							this version makes the underlying system reusable—and opens it up
+							for other interfaces or experiments in the future.
 						</small>
 					</div>
 					<div id="gallery">
-						<img class="border" src="../images/taegificbot/1.webp" />
+						<div class="video">
+							<video class="border">
+								<source src="../images/taegificbot/1.webm" type="video/webm" />
+								<source src="../images/taegificbot/1.mp4" type="video/mp4" />
+							</video>
+							<div class="playback">
+								<img src="../images/misc/play.png" />
+							</div>
+						</div>
 						<img class="border" src="../images/taegificbot/2.webp" />
 						<img class="border" src="../images/taegificbot/3.webp" />
+						<div class="image border">
+							<img src="../images/taegificbot/4.webp" />
+							<div class="caption">
+								<p>The older Twitter bot</p>
+							</div>
+						</div>
+						<img class="border" src="../images/taegificbot/5.webp" />
 					</div>
 					<div id="links">
+						<div
+							class="folder"
+							href="https://taegificbot.vercel.app/api/recommend?query=long angsty slow burn">
+							<img src="../images/misc/folder-1.png" />
+							<small>API demo</small>
+						</div>
 						<div
 							class="folder"
 							href="https://github.com/soumya-talwar/taegificbot">
