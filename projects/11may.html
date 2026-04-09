@@ -112,22 +112,21 @@
 						</div>
 						<small id="transcript">View transcript</small>
 						<small id="script" class="d-none">
-							Birthdays are usually a sad affair for me. But this year, a day
-							before my birthday, I decided to program a WhatsApp bot that would
-							send me a compliment every hour on the day itself. Because nothing
-							quite says “emotionally intelligent” like automating yourself some
-							self-love.<br /><br />
-							I built this bot using the OpenAI API and Twilio, running on a
-							Node.js environment. Basically, my code would ping ChatGPT every
-							hour and deliver whatever compliment ChatGPT generates straight
-							into my WhatsApp.<br /><br />
-							To make it a little more personal, I spent some time reflecting on
-							past wins and moments that I was proud of—and paired those with a
-							few photographs. And with that context, ChatGPT started sending
-							compliments that felt surprisingly sincere... and only mildly,
-							suspiciously specific.<br /><br />
-							If you’re curious, the code is up on my GitHub—feel free to build
-							your own birthday bot with it.
+							A day before my birthday, I decided to build a WhatsApp bot that
+							would send me a compliment every hour on the day.
+							<br /><br />
+							I built this using a Node.js script, scheduled with GitHub Actions
+							to run every hour. Each run picks a random entry from a list of
+							personal achievements I put together and sends it to the Gemini
+							API to generate a compliment. The compliment is then delivered it
+							to me via WhatsApp using Twilio.
+							<br /><br />
+							To make it more amusing, I paired some of the achievements with
+							images, so I’d get a message that included both the compliment and
+							a photo tied to that moment.
+							<br /><br />
+							If you’re curious to build one of your own, the code is up on my
+							GitHub.
 						</small>
 					</div>
 					<div id="gallery">
