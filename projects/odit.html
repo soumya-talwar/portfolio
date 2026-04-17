@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>soumya talwar — odit</title>
+		<link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<script
+			src="https://code.jquery.com/jquery-3.6.0.min.js"
+			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			crossorigin="anonymous"></script>
+
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+			crossorigin="anonymous" />
+
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"
+			integrity="sha512-N4kV7GkNv7QR7RX9YF/olywyIgIwNvfEe2nZtfyj73HdjCUkAfOBDbcuJ/cTaN04JKRnw1YG1wnUyNKMsNgg3g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"></script>
+
+		<script
+			type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+		<script type="text/javascript">
+			(function () {
+				emailjs.init({
+					publicKey: "36uTK-X3XMDFUCENb",
+				});
+			})();
+		</script>
+
+		<link rel="stylesheet" type="text/css" href="../style.css" />
+		<link rel="preload" as="image" href="../images/odit/1.webp" />
+		<link rel="preload" as="image" href="../images/odit/4.webp" />
+		<script src="../persona.js"></script>
+		<script src="../canvas.js"></script>
+		<script src="../script.js"></script>
+		<script src="../captcha.js"></script>
+	</head>
+
+	<body>
+		<div id="large">
+			<div id="canvas">
+				<div id="menu">
+					<a id="home" href="../main.html">soumya talwar</a>
+					<span id="works">i made these, be impressed</span>
+					/
+					<span id="games">some experiments</span>
+					/
+					<span id="contact">let's be friends</span>
+				</div>
+
+				<div id="hamburger">
+					<svg>
+						<path
+							d="M1.5 1.5H21.5"
+							stroke="black"
+							stroke-width="3"
+							stroke-linecap="square" />
+						<path
+							d="M1.5 10.5H21.5"
+							stroke="black"
+							stroke-width="3"
+							stroke-linecap="square" />
+						<path
+							d="M1.5 19.5H21.5"
+							stroke="black"
+							stroke-width="3"
+							stroke-linecap="square" />
+					</svg>
+				</div>
+				<div id="menu2" class="d-none">
+					<span class="close2">x</span>
+					<p id="works2">i made these, be impressed</p>
+					<p id="games2">some experiments</p>
+					<p id="contact2">let's be friends</p>
+					<a id="home2" href="../main.html">< back to main</a>
+				</div>
+				<div id="footer">
+					<div id="recruiter">
+						<span>recruiter mode</span>
+						<svg>
+							<rect
+								x="4"
+								y="14.5"
+								width="42"
+								height="21"
+								rx="10.5"
+								class="track" />
+							<circle cx="15" cy="25" r="6" class="knob" />
+						</svg>
+					</div>
+				</div>
+
+				<div id="main">
+					<div id="hook">
+						<h2 id="title">[ ODIT ]</h2>
+						<h3>MEET MY EXPENSE TRACKER THAT TAKES ISSUE WITH MY EXPENSES</h3>
+						<small id="tools"
+							>Apple Shortcuts / Node.js / Gemini API / Google Sheets / Google
+							Sheets API / Resend / Vercel</small
+						>
+						<small id="date">Built in 2026</small>
+						<div id="audio">
+							<div id="playback">
+								<img id="play" src="../images/misc/play.png" />
+								<img id="pause" class="d-none" src="../images/misc/pause.png" />
+							</div>
+							<h4>Let me explain</h4>
+						</div>
+						<small id="transcript">View transcript</small>
+						<small id="script" class="d-none">
+							I built an expense tracker that insults me every time I spend
+							money. The idea was simple — I wanted to build something very
+							customized that actually made me more aware of my behavior.<br /><br />
+
+							I built a voice-interface system using Apple Shortcuts. I can just
+							say something like “I spent 400 on lunch,” and that speech input
+							goes through my Node.js API running on Vercel. It is sent to
+							Gemini, which classifies the expense into a category and
+							subcategory based on a taxonomy that I’ve predefined because I
+							want my expenses to be categorized in a particular way that would
+							help generate insights that are relevant for me.<br /><br />
+
+							Once that’s done, the expense gets logged into Google Sheets,
+							which acts as both the database and the analytics layer. I’ve set
+							up a separate sheet to compute totals, and another one that
+							functions as a full dashboard with metrics and visualizations.<br /><br />
+
+							After logging the expense, I pass the updated totals back into
+							Gemini again — but this time to generate a response. That’s where
+							the personality comes in. It gives me a short and sarcastic remark
+							based on my spending patterns, which is then read out loud through
+							text-to-speech on the Apple shortcut.<br /><br />
+
+							There’s also an approval flow, where I can ask if I should spend
+							money on something, and it gives me a judgmental yes or no based
+							on my current financial state.<br /><br />
+
+							And finally, there’s a weekly summary that gets sent to my email,
+							highlighting patterns in my spending along with an observation, a
+							verdict, and a piece of advice.<br /><br />
+
+							The whole system is lightweight, but it brings together voice
+							interaction, AI decision-making, and structured data tracking in a
+							way that feels a lot more personal than a typical expense
+							tracker.<br /><br />
+
+							It started as a small idea, but it ended up becoming a full system
+							that I actually use day to day.
+						</small>
+					</div>
+					<div id="gallery">
+						<img src="../images/odit/1.webp" />
+						<div class="video">
+							<video class="border">
+								<source src="../images/odit/2.webm" type="video/webm" />
+								<source src="../images/odit/2.mp4" type="video/mp4" />
+							</video>
+							<div class="playback">
+								<img src="../images/misc/play.png" />
+							</div>
+						</div>
+						<div class="video">
+							<video class="border" muted>
+								<source src="../images/odit/3.webm" type="video/webm" />
+								<source src="../images/odit/3.mp4" type="video/mp4" />
+							</video>
+							<div class="playback">
+								<img src="../images/misc/play.png" />
+							</div>
+						</div>
+						<img src="../images/odit/4.webp" />
+						<div class="video">
+							<video class="border">
+								<source src="../images/odit/5.webm" type="video/webm" />
+								<source src="../images/odit/5.mp4" type="video/mp4" />
+							</video>
+							<div class="playback">
+								<img src="../images/misc/play.png" />
+							</div>
+						</div>
+						<div class="video">
+							<video class="border">
+								<source src="../images/odit/6.webm" type="video/webm" />
+								<source src="../images/odit/6.mp4" type="video/mp4" />
+							</video>
+							<div class="playback">
+								<img src="../images/misc/play.png" />
+							</div>
+						</div>
+					</div>
+					<div id="links">
+						<div class="folder" href="https://github.com/soumya-talwar/odit">
+							<img src="../images/misc/folder-1.png" />
+							<small>Github repo</small>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="screen" class="d-none"></div>
+			<div id="projects" class="wrapper d-none">
+				<div class="dialog">
+					<div class="close"><h3>x</h3></div>
+					<div class="folders">
+						<div class="folder" href="../projects/jimin.html">
+							<img src="../images/misc/folder-1.png" />
+							<small>Jimin</small>
+						</div>
+						<div class="folder" href="../projects/dokidoki.html">
+							<img src="../images/misc/folder-1.png" />
+							<small>Doki-doki</small>
+						</div>
+						<div class="folder" href="../projects/odit.html">
+							<img src="../images/misc/folder-1.png" />
+							<small>Odit</small>
+						</div>
+						<div class="folder" href="../projects/11may.html">
+							<img src="../images/misc/folder-1.png" />
+							<small>11-may</small>
+						</div>
+						<div class="folder" href="../projects/taegificbot.html">
+							<img src="../images/misc/folder-1.png" />
+							<small>@Taegificbot</small>
+						</div>
+						<div class="folder" href="../projects/fairy.html">
+							<img src="../images/misc/folder-1.png" />
+							<small>Fairy</small>
+						</div>
+						<div class="folder" href="../projects/grays.html">
+							<img src="../images/misc/folder-1.png" />
+							<small>Grays</small>
+						</div>
+						<div class="folder" href="../projects/hominidae.html">
+							<img src="../images/misc/folder-1.png" />
+							<small>Hominidae</small>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="experiments" class="wrapper d-none">
+				<div class="dialog">
+					<div class="close"><h3>x</h3></div>
+					<div class="folders">
+						<div
+							class="folder"
+							target="_blank"
+							href="https://soumya-talwar.github.io/experimental/13.%20tax%20runner/">
+							<img src="../images/misc/folder-1.png" />
+							<small>Tax runner</small>
+						</div>
+						<div
+							class="folder"
+							target="_blank"
+							href="https://soumya-talwar.github.io/experimental/11.%20sad%20flap/">
+							<img src="../images/misc/folder-1.png" />
+							<small>Sad flap</small>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="captcha" class="wrapper d-none">
+				<div class="dialog">
+					<div class="close"><h3>x</h3></div>
+					<h2>COMPLIMENT ME TO CONTINUE</h2>
+					<small>
+						Captcha, but instead of proving you’re human, prove you’re kind.
+						<span style="color: #999999"
+							>(And yes, my code will check if the compliment is any
+							good.)</span
+						>
+						Press enter to send.
+					</small>
+					<input type="text" id="compliment" placeholder="say something nice" />
+					<small id="error"></small>
+				</div>
+			</div>
+
+			<div class="d-none" id="tooltip">
+				<span></span>
+			</div>
+
+			<div class="d-none" id="transition">
+				<div>
+					<p id="kaomoji"></p>
+				</div>
+			</div>
+		</div>
+
+		<!-- <div id="small">
+			<h4>
+				Tiny screen detected! This site only performs on the big stage (i.e
+				desktop)
+			</h4>
+			<img src="../images/misc/dino.png" />
+		</div> -->
+
+		<audio id="description" preload="auto">
+			<source src="../audio/odit.ogg" type="audio/ogg" />
+			<source src="../audio/odit.mp3" type="audio/mpeg" />
+		</audio>
+		<audio id="toggle1" src="../audio/toggle/friend.m4a" preload="auto"></audio>
+		<audio
+			id="toggle2"
+			src="../audio/toggle/recruiter.m4a"
+			preload="auto"></audio>
+	</body>
+</html>

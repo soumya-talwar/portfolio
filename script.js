@@ -1,10 +1,10 @@
 var descriptions1 = [
 	"I built myself my ideal husband",
 	"Win this game to win a date with me",
-	"I released a BTS fanfiction recommendation engine on Twitter",
+	"An expense tracker that insults me when I spend money",
 	"A Whatsapp bot to compliment me every hour on my birthday",
+	"I released a BTS fanfiction recommendation API",
 	"A fairy dust sound plays when my manager is near",
-	"My Twitter account will keep tweeting even after I am dead",
 	"An advocacy of 128 non-binary genders",
 	"Exploring sexual violence among great apes with art",
 ];
