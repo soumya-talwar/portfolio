@@ -1,0 +1,11 @@
+:root {
+	--font-heading: "Cera";
+	--font-body: "Inter";
+
+	--font-size-regular: 0.75rem;
+	--line-height-regular: 1.5rem;
+	--letter-spacing-regular: 1.8px;
+
+	--color-background: #ffffff;
+	--color-text: #000000;
+}

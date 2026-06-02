@@ -1,5 +1,11 @@
+import Menu from "../components/Menu/Menu";
+
 function Home() {
-	return <h1>Home</h1>;
+	return (
+		<>
+			<Menu />
+		</>
+	);
 }
 
 export default Home;

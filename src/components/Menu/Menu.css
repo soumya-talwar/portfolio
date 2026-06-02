@@ -1,0 +1,37 @@
+#menu {
+	width: 100%;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	padding: 4rem 4rem;
+	display: flex;
+	gap: 2rem;
+}
+
+button {
+	background: none;
+	border: none;
+	padding: 0;
+	font: inherit;
+}
+
+button,
+a {
+	font-size: var(--font-size-regular);
+	line-height: var(--line-height-regular);
+	letter-spacing: var(--letter-spacing-regular);
+	text-underline-offset: 0.5rem;
+	cursor: pointer;
+}
+
+button:hover,
+a:hover {
+	text-decoration: underline;
+	text-underline-offset: 0.5rem;
+}
+
+#home {
+	margin-right: auto;
+	text-underline-offset: 0.5rem;
+}
