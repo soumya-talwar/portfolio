@@ -2,6 +2,12 @@
 	--font-heading: "Cera";
 	--font-body: "Inter";
 
+	--font-size-largest: 3.5rem;
+	--letter-spacing-largest: 4px;
+
+	--font-size-large: 2.5rem;
+	--line-height-large: 3.5rem;
+
 	--font-size-regular: 0.75rem;
 	--line-height-regular: 1.5rem;
 	--letter-spacing-regular: 1.8px;
