@@ -1,11 +1,25 @@
+import { useRef, useEffect } from "react";
 import Menu from "../components/Menu/Menu";
 import Slide from "../components/Slide/Slide";
+import TextScramble from "../utils/TextScramble";
 import { projects } from "../data/projects";
 import "./Home.css";
 import "../components/Slide/Slide.css";
 
 function Home() {
-	console.log(projects);
+	const roleRef = useRef(null);
+	useEffect(() => {
+		const phrases = ["PROGRAMMER", "DESIGNER", "WRITER", "ARTIST"];
+		const text = new TextScramble(roleRef.current);
+		let counter = 0;
+		function start() {
+			text.next(phrases[counter]).then(() => {
+				setTimeout(start, 800);
+			});
+			counter = (counter + 1) % phrases.length;
+		}
+		start();
+	}, []);
 	return (
 		<>
 			<Menu />
@@ -14,7 +28,10 @@ function Home() {
 					<div className="snap">
 						<h1>
 							<span id="name">SOUMYA TALWAR</span> [{" "}
-							<span id="role">PROGRAMMER</span> ]
+							<span id="role" ref={roleRef}>
+								PROGRAMMER
+							</span>{" "}
+							]
 						</h1>
 						<h2 id="bio">
 							&gt; TALKING PLANTS, GAMES TO WIN A DATE WITH ME, AUTOMATED
