@@ -1,7 +1,6 @@
 import "./Slide.css";
 
 function Slide({ index, title, year, hook, slideRefs }) {
-	console.log(index);
 	return (
 		<div
 			className="snap"

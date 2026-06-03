@@ -35,6 +35,7 @@ function Home() {
 			},
 		);
 		slideRefs.current.forEach((slide) => observer.observe(slide));
+		return () => observer.disconnect();
 	}, []);
 	return (
 		<>
