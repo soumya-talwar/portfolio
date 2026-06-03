@@ -1,8 +1,8 @@
 import { useRef, useEffect } from "react";
-import Menu from "../components/Menu/Menu";
-import Slide from "../components/Slide/Slide";
-import TextScramble from "../utils/TextScramble";
-import { projects } from "../data/projects";
+import Menu from "../../components/Menu/Menu";
+import Slide from "../../components/Slide/Slide";
+import TextScramble from "../../utils/TextScramble";
+import { projects } from "../../data/projects";
 import "./Home.css";
 import "../components/Slide/Slide.css";
 
@@ -44,6 +44,7 @@ function Home() {
 					</div>
 					{projects.map((project) => (
 						<Slide
+							key={project.route}
 							title={project.title}
 							year={project.year}
 							hook={project.hook}
