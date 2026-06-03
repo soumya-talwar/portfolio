@@ -1,0 +1,22 @@
+.folder {
+	min-width: -moz-fit-content;
+	min-width: fit-content;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	gap: 0.5rem;
+}
+
+.folder img {
+	width: 3rem;
+	height: auto;
+	cursor: pointer;
+}
+
+.folder small {
+	margin-top: 0.5rem;
+	font-size: var(--font-size-small);
+	letter-spacing: var(--letter-spacing-regular);
+	line-height: 1rem;
+}

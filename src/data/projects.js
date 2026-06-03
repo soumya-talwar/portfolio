@@ -1,8 +1,9 @@
 export const projects = [
 	{
-		route: "jimin",
+		id: "jimin",
 		title: "Jimin",
 		hook: "I built myself my ideal kind of husband",
+		url: "jimin",
 		year: 2022,
 		headline: "Meet my money plant husband who's been programmed to love me",
 		tools: [
@@ -74,6 +75,7 @@ export const projects = [
 		route: "dokidoki",
 		title: "Doki-doki",
 		hook: "Win this game to win a date with me",
+		url: "dokidoki",
 		year: 2025,
 		headline:
 			"Play my otome game: give the right answers and win a date with me",
@@ -108,6 +110,7 @@ export const projects = [
 		route: "odit",
 		title: "Odit",
 		hook: "My expense tracker insults me when I spend money",
+		url: "odit",
 		year: 2026,
 		headline: "Meet my expense tracker that takes issue with my expenses",
 		tools: [
@@ -159,6 +162,7 @@ export const projects = [
 		route: "11may",
 		title: "11-May",
 		hook: "A whatsapp bot to compliment me every hour on my birthday",
+		url: "11may",
 		year: 2025,
 		headline: "Say hi to this cute bot that won't stop complimenting me",
 		tools: ["Node.js", "Twilio API", "OpenAI API"],
@@ -186,6 +190,7 @@ export const projects = [
 		route: "taegificbot",
 		title: "@Taegificbot",
 		hook: "I released a BTS fanfiction recommendation API",
+		url: "taegificbot",
 		year: 2020,
 		headline: "Get smart fanfiction recommendations from my API",
 		tools: [
@@ -238,6 +243,7 @@ export const projects = [
 		route: "fairy",
 		title: "Fairy",
 		hook: "A fairy dust sound plays when my manager is near",
+		url: "fairy",
 		year: 2025,
 		headline: "Download this app that plays sparkles when my manager is near",
 		tools: ["Node.JS", "Capacitor.JS", "Firestore Database"],
@@ -273,6 +279,7 @@ export const projects = [
 		route: "grays",
 		title: "Grays",
 		hook: "An advocacy of 128 non-binary genders",
+		url: "grays",
 		year: 2018,
 		headline:
 			"Explore a mathematical model that plots 128 genders in a three-dimensional space",
@@ -313,6 +320,7 @@ export const projects = [
 		route: "hominidae",
 		title: "Hominidae",
 		hook: "Exploring sexual violence among great apes with art",
+		url: "hominidae",
 		year: 2020,
 		headline: "View artworks that model sexual aggression in apes",
 		tools: ["HTML", "CSS", "Javascript", "P5.JS"],

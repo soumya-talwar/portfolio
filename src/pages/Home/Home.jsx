@@ -1,12 +1,13 @@
 import { useState, useRef, useEffect } from "react";
 import Menu from "../../components/Menu/Menu";
 import Slide from "../../components/Slide/Slide";
+import Dialog from "../../components/Dialog/Dialog";
 import TextScramble from "../../utils/TextScramble";
 import { projects } from "../../data/projects";
 import "./Home.css";
 import "../../components/Slide/Slide.css";
 
-function Home() {
+function Home({ dialogs, setDialogs }) {
 	const roleRef = useRef(null);
 	const slideRefs = useRef([]);
 	const [count, setCount] = useState(0);
@@ -39,7 +40,9 @@ function Home() {
 	}, []);
 	return (
 		<>
-			<Menu />
+			<Menu dialogs={dialogs} setDialogs={setDialogs} />
+			<Dialog dialogs={dialogs} setDialogs={setDialogs} type="projects" />
+			<Dialog dialogs={dialogs} setDialogs={setDialogs} type="experiments" />
 			<div id="snapper">
 				<div>
 					<div
@@ -65,7 +68,7 @@ function Home() {
 					{projects.map((project, index) => (
 						<Slide
 							index={index + 1}
-							key={project.route}
+							key={project.id}
 							title={project.title}
 							year={project.year}
 							hook={project.hook}
