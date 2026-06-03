@@ -26,10 +26,8 @@ function Home() {
 		let observer = new IntersectionObserver(
 			(entries) => {
 				entries.forEach((entry) => {
-					if (entry.isIntersecting) {
-						const index = slideRefs.current.indexOf(entry.target);
-						setCount(index);
-					}
+					if (entry.isIntersecting)
+						setCount(Number(entry.target.dataset.index));
 				});
 			},
 			{
@@ -37,13 +35,16 @@ function Home() {
 			},
 		);
 		slideRefs.current.forEach((slide) => observer.observe(slide));
-	});
+	}, []);
 	return (
 		<>
 			<Menu />
 			<div id="snapper">
 				<div>
-					<div className="snap" ref={(slide) => (slideRefs.current[0] = slide)}>
+					<div
+						className="snap"
+						data-index="0"
+						ref={(slide) => (slideRefs.current[0] = slide)}>
 						<h1>
 							<span id="name">SOUMYA TALWAR</span> [{" "}
 							<span id="role" ref={roleRef}>
