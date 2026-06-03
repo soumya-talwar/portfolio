@@ -78,3 +78,21 @@
 	row-gap: 3rem;
 	margin-bottom: 3rem;
 }
+
+.tooltip {
+	visibility: hidden;
+	position: fixed;
+	padding: 1rem 2rem 1rem 1rem;
+	font-size: var(--font-size-small);
+	letter-spacing: var(--letter-spacing-regular);
+	line-height: var(--line-height-small);
+	background-color: var(--color-background);
+	border: 1.25px solid var(--color-text);
+	border-radius: 15px;
+	width: 16rem;
+	z-index: 4;
+}
+
+.tooltip.visible {
+	visibility: visible;
+}

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Folder from "../Folder/Folder";
 import { projects } from "../../data/projects";
 import { experiments } from "../../data/experiments";
@@ -8,6 +9,12 @@ function Dialog({ dialogs, setDialogs, type }) {
 		projects,
 		experiments,
 	};
+	const [tooltip, setTooltip] = useState({
+		visible: false,
+		left: 0,
+		top: 0,
+		text: "hello i am a test tooltip",
+	});
 	return (
 		<>
 			<div className={`screen ${dialogs[type] ? "visible" : ""}`}></div>
@@ -34,10 +41,20 @@ function Dialog({ dialogs, setDialogs, type }) {
 								route={work.url}
 								title={work.title}
 								hook={work.hook}
+								tooltip={tooltip}
+								setTooltip={setTooltip}
 							/>
 						))}
 					</div>
 				</div>
+			</div>
+			<div
+				className={`tooltip ${tooltip.visible ? "visible" : ""}`}
+				style={{
+					left: `${tooltip.left}px`,
+					top: `${tooltip.top}px`,
+				}}>
+				<span>{tooltip.text}</span>
 			</div>
 		</>
 	);
