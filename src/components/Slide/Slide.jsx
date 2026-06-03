@@ -1,8 +1,9 @@
 import "./Slide.css";
 
-function Slide({ title, year, hook }) {
+function Slide({ index, title, year, hook, slideRefs }) {
+	console.log(index);
 	return (
-		<div className="snap">
+		<div className="snap" ref={(slide) => (slideRefs.current[index] = slide)}>
 			<h1>
 				{title.toUpperCase()} — {year}
 			</h1>

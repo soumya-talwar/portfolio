@@ -42,3 +42,17 @@
 		opacity: 0;
 	}
 }
+
+#pagination {
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	padding: 0 3rem 2rem 3rem;
+	display: flex;
+}
+
+#count {
+	font-size: var(--font-size-regular);
+	letter-spacing: var(--letter-spacing-regular);
+}

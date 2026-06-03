@@ -1,13 +1,15 @@
-import { useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import Menu from "../../components/Menu/Menu";
 import Slide from "../../components/Slide/Slide";
 import TextScramble from "../../utils/TextScramble";
 import { projects } from "../../data/projects";
 import "./Home.css";
-import "../components/Slide/Slide.css";
+import "../../components/Slide/Slide.css";
 
 function Home() {
 	const roleRef = useRef(null);
+	const slideRefs = useRef([]);
+	const [count, setCount] = useState(0);
 	useEffect(() => {
 		const phrases = ["PROGRAMMER", "DESIGNER", "WRITER", "ARTIST"];
 		const text = new TextScramble(roleRef.current);
@@ -20,12 +22,28 @@ function Home() {
 		}
 		start();
 	}, []);
+	useEffect(() => {
+		let observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						const index = slideRefs.current.indexOf(entry.target);
+						setCount(index);
+					}
+				});
+			},
+			{
+				threshold: 0.5,
+			},
+		);
+		slideRefs.current.forEach((slide) => observer.observe(slide));
+	});
 	return (
 		<>
 			<Menu />
 			<div id="snapper">
 				<div>
-					<div className="snap">
+					<div className="snap" ref={(slide) => (slideRefs.current[0] = slide)}>
 						<h1>
 							<span id="name">SOUMYA TALWAR</span> [{" "}
 							<span id="role" ref={roleRef}>
@@ -42,15 +60,22 @@ function Home() {
 							</span>
 						</h2>
 					</div>
-					{projects.map((project) => (
+					{projects.map((project, index) => (
 						<Slide
+							index={index + 1}
 							key={project.route}
 							title={project.title}
 							year={project.year}
 							hook={project.hook}
+							slideRefs={slideRefs}
 						/>
 					))}
 				</div>
+			</div>
+			<div id="pagination">
+				<span id="count">
+					{count > 0 ? `${count} / ${projects.length}` : ""}
+				</span>
 			</div>
 		</>
 	);
