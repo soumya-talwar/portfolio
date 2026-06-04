@@ -4,6 +4,7 @@ import Home from "./pages/Home/Home";
 import Contact from "./pages/Contact/Contact";
 import Project from "./pages/Project/Project";
 import Canvas from "./components/Canvas/Canvas";
+import Kaomoji from "./components/Kaomoji/Kaomoji";
 
 function App() {
 	const [dialogs, setDialogs] = useState({
@@ -11,13 +12,22 @@ function App() {
 		experiments: false,
 		compliment: false,
 	});
+	const [transition, setTransition] = useState(false);
 	return (
 		<>
 			<Canvas />
+			<Kaomoji transition={transition} />
 			<Routes>
 				<Route
 					path="/"
-					element={<Home dialogs={dialogs} setDialogs={setDialogs} />}
+					element={
+						<Home
+							dialogs={dialogs}
+							setDialogs={setDialogs}
+							transition={transition}
+							setTransition={setTransition}
+						/>
+					}
 				/>
 				<Route path="/contact" element={<Contact />} />
 				<Route path="/projects/:slug" element={<Project />} />

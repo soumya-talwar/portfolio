@@ -6,8 +6,9 @@ import TextScramble from "../../utils/TextScramble";
 import { projects } from "../../data/projects";
 import "./Home.css";
 import "../../components/Slide/Slide.css";
+import Kaomoji from "../../components/Kaomoji/Kaomoji";
 
-function Home({ dialogs, setDialogs }) {
+function Home({ dialogs, setDialogs, setTransition }) {
 	const roleRef = useRef(null);
 	const slideRefs = useRef([]);
 	const [count, setCount] = useState(0);
@@ -41,8 +42,18 @@ function Home({ dialogs, setDialogs }) {
 	return (
 		<>
 			<Menu dialogs={dialogs} setDialogs={setDialogs} />
-			<Dialog dialogs={dialogs} setDialogs={setDialogs} type="projects" />
-			<Dialog dialogs={dialogs} setDialogs={setDialogs} type="experiments" />
+			<Dialog
+				dialogs={dialogs}
+				setDialogs={setDialogs}
+				type="projects"
+				setTransition={setTransition}
+			/>
+			<Dialog
+				dialogs={dialogs}
+				setDialogs={setDialogs}
+				type="experiments"
+				setTransition={setTransition}
+			/>
 			<div id="snapper">
 				<div>
 					<div

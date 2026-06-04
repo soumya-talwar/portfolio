@@ -4,7 +4,7 @@ import { projects } from "../../data/projects";
 import { experiments } from "../../data/experiments";
 import "./Dialog.css";
 
-function Dialog({ dialogs, setDialogs, type }) {
+function Dialog({ dialogs, setDialogs, type, setTransition }) {
 	const data = {
 		projects,
 		experiments,
@@ -44,6 +44,7 @@ function Dialog({ dialogs, setDialogs, type }) {
 								type={type}
 								tooltip={tooltip}
 								setTooltip={setTooltip}
+								setTransition={setTransition}
 							/>
 						))}
 					</div>

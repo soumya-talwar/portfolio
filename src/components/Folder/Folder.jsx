@@ -1,12 +1,20 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import usePageTransition from "../../hooks/usePageTransition";
 import "./Folder.css";
 import folderInactive from "../../assets/images/folder-1.png";
 import folderActive from "../../assets/images/folder-2.png";
 
-function Folder({ route, title, hook, type, tooltip, setTooltip }) {
+function Folder({
+	route,
+	title,
+	hook,
+	type,
+	tooltip,
+	setTooltip,
+	setTransition,
+}) {
 	const [folder, setFolder] = useState(false);
-	const navigate = useNavigate();
+	const pageTransition = usePageTransition(setTransition);
 	return (
 		<div
 			className="folder"
@@ -25,8 +33,9 @@ function Folder({ route, title, hook, type, tooltip, setTooltip }) {
 				setTooltip((prev) => ({ ...prev, visible: false }));
 			}}
 			onClick={() => {
-				if (type == "projects") navigate(`/projects/${route}`);
-				else window.open(route, "_blank", "noopener, noreferrer");
+				if (type === "projects") {
+					pageTransition(`projects/${route}`);
+				} else window.open(route, "_blank", "noopener, noreferrer");
 			}}>
 			<img
 				src={folder ? folderActive : folderInactive}
