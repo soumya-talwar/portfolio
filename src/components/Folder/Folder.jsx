@@ -1,10 +1,12 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Folder.css";
 import folderInactive from "../../assets/images/folder-1.png";
 import folderActive from "../../assets/images/folder-2.png";
 
-function Folder({ route, title, hook, tooltip, setTooltip }) {
+function Folder({ route, title, hook, type, tooltip, setTooltip }) {
 	const [folder, setFolder] = useState(false);
+	const navigate = useNavigate();
 	return (
 		<div
 			className="folder"
@@ -21,6 +23,10 @@ function Folder({ route, title, hook, tooltip, setTooltip }) {
 			onMouseLeave={() => {
 				setFolder(false);
 				setTooltip((prev) => ({ ...prev, visible: false }));
+			}}
+			onClick={() => {
+				if (type == "projects") navigate(`/projects/${route}`);
+				else window.open(route, "_blank", "noopener, noreferrer");
 			}}>
 			<img
 				src={folder ? folderActive : folderInactive}

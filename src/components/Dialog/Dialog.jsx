@@ -41,6 +41,7 @@ function Dialog({ dialogs, setDialogs, type }) {
 								route={work.url}
 								title={work.title}
 								hook={work.hook}
+								type={type}
 								tooltip={tooltip}
 								setTooltip={setTooltip}
 							/>

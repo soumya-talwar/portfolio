@@ -9,21 +9,16 @@ function Menu({ dialogs, setDialogs }) {
 			</Link>
 			<button
 				type="button"
-				id="works"
 				onClick={() => setDialogs({ ...dialogs, projects: true })}>
 				i made these, be impressed
 			</button>
 			/
 			<button
 				type="button"
-				id="games"
 				onClick={() => setDialogs({ ...dialogs, experiments: true })}>
 				some experiments
 			</button>
-			/
-			<button type="button" id="contact">
-				let's be friends
-			</button>
+			/<button type="button">let's be friends</button>
 		</div>
 	);
 }
