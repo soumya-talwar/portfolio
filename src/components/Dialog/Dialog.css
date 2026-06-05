@@ -67,8 +67,8 @@
 .close h3 {
 	font-size: var(--font-size-bigger);
 	font-weight: 600;
-	margin-left: auto;
 	cursor: pointer;
+	margin-left: auto;
 }
 
 .folders {

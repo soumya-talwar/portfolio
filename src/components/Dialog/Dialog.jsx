@@ -45,6 +45,7 @@ function Dialog({ dialogs, setDialogs, type, setTransition }) {
 								tooltip={tooltip}
 								setTooltip={setTooltip}
 								setTransition={setTransition}
+								setDialogs={setDialogs}
 							/>
 						))}
 					</div>

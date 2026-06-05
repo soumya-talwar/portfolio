@@ -18,7 +18,12 @@ function Menu({ dialogs, setDialogs }) {
 				onClick={() => setDialogs({ ...dialogs, experiments: true })}>
 				some experiments
 			</button>
-			/<button type="button">let's be friends</button>
+			/
+			<button
+				type="button"
+				onClick={() => setDialogs({ ...dialogs, compliment: true })}>
+				let's be friends
+			</button>
 		</div>
 	);
 }

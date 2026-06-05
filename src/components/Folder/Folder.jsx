@@ -12,6 +12,7 @@ function Folder({
 	tooltip,
 	setTooltip,
 	setTransition,
+	setDialogs,
 }) {
 	const [folder, setFolder] = useState(false);
 	const pageTransition = usePageTransition(setTransition);
@@ -35,6 +36,11 @@ function Folder({
 			onClick={() => {
 				if (type === "projects") {
 					pageTransition(`projects/${route}`);
+					setDialogs({
+						projects: false,
+						experiments: false,
+						compliment: false,
+					});
 				} else window.open(route, "_blank", "noopener, noreferrer");
 			}}>
 			<img
