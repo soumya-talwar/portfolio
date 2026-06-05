@@ -22,16 +22,16 @@ h2 {
 	letter-spacing: var(--letter-spacing-largest);
 }
 
-#captcha input::-moz-placeholder {
-	color: #dddddd;
-}
-
 #captcha input::placeholder {
-	color: #dddddd;
+	color: var(--color-lightgray);
 }
 
 small {
 	font-size: var(--font-size-regular);
 	letter-spacing: var(--letter-spacing-regular);
 	line-height: var(--line-height-bigger);
+}
+
+.gray {
+	color: var(--color-darkgray);
 }
