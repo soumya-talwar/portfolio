@@ -1,8 +1,8 @@
 import { useState } from "react";
 import usePageTransition from "../../hooks/usePageTransition";
 import "./Folder.css";
-import folderInactive from "../../assets/images/folder-1.png";
-import folderActive from "../../assets/images/folder-2.png";
+import folderInactive from "../../assets/images/misc/folder-1.png";
+import folderActive from "../../assets/images/misc/folder-2.png";
 
 function Folder({
 	route,

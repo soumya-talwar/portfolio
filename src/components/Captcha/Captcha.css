@@ -1,12 +1,3 @@
-h2 {
-	font-family: var(--font-heading);
-	font-size: var(--font-size-large);
-	line-height: var(--line-height-large);
-	letter-spacing: var(--letter-spacing-largest);
-	font-weight: 400;
-	margin: 0;
-}
-
 .dialog {
 	width: 35%;
 	padding-bottom: 3rem;

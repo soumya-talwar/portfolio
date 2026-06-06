@@ -1,6 +1,7 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import usePageTransition from "../../hooks/usePageTransition";
-import lexicon from "../../data/lexicon.json";
+import ComplimentCheck from "../../utils/ComplimentCheck";
 import "../Dialog/Dialog.css";
 import "./Captcha.css";
 
@@ -8,11 +9,6 @@ function Captcha({ dialogs, setDialogs, type, setTransition }) {
 	const pageTransition = usePageTransition(setTransition);
 	const [compliment, setCompliment] = useState("");
 	const [error, setError] = useState("");
-	const errors = [
-		"You call that a compliment? Try again.",
-		"Weak. Next.",
-		"Mm, I've heard nicer. Try again.",
-	];
 	return (
 		<>
 			<div className={`screen ${dialogs[type] ? "visible" : ""}`}></div>
@@ -45,14 +41,10 @@ function Captcha({ dialogs, setDialogs, type, setTransition }) {
 						placeholder="say something nice"
 						value={compliment}
 						onChange={(e) => setCompliment(e.target.value)}
-						onKeyDown={(e) => {
+						onKeyDown={async (e) => {
 							if (e.key == "Enter") {
-								let result = compliment
-									.split(/\W+/)
-									.reduce((sum, word) => sum + (Number(lexicon[word]) || 0), 0);
-								if (result < 3)
-									setError(errors[Math.floor(Math.random() * errors.length)]);
-								else {
+								const valid = await ComplimentCheck(compliment);
+								if (valid.status) {
 									pageTransition("/contact");
 									setDialogs({
 										projects: false,
@@ -60,6 +52,21 @@ function Captcha({ dialogs, setDialogs, type, setTransition }) {
 										compliment: false,
 									});
 									setCompliment("");
+									setError("");
+									try {
+										await emailjs.send(
+											"service_skuixqg",
+											"template_mb14sa5",
+											{
+												compliment,
+											},
+											"36uTK-X3XMDFUCENb",
+										);
+									} catch (err) {
+										console.error(err);
+									}
+								} else {
+									setError(valid.error);
 								}
 							}
 						}}

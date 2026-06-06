@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Contact from "./pages/Contact/Contact";
 import Project from "./pages/Project/Project";
@@ -16,9 +16,11 @@ function App() {
 		compliment: false,
 	});
 	const [transition, setTransition] = useState(false);
+	const location = useLocation();
+	const showTrail = location.pathname !== "/contact";
 	return (
 		<>
-			<Canvas />
+			<Canvas showTrail={showTrail} />
 			<Menu dialogs={dialogs} setDialogs={setDialogs} />
 			<Dialog
 				dialogs={dialogs}

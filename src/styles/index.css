@@ -32,3 +32,27 @@ a {
 	text-decoration: none;
 	color: inherit;
 }
+
+h1 {
+	font-family: var(--font-heading);
+	font-size: var(--font-size-largest);
+	letter-spacing: var(--letter-spacing-largest);
+	font-weight: 400;
+	margin: 0;
+}
+
+h2 {
+	font-family: var(--font-heading);
+	font-size: var(--font-size-large);
+	line-height: var(--line-height-large);
+	letter-spacing: var(--letter-spacing-largest);
+	font-weight: 400;
+	margin: 0;
+}
+
+h3 {
+	font-family: var(--font-heading);
+	font-size: var(--font-size-bigger);
+	line-height: var(--line-height-bigger);
+	letter-spacing: var(--letter-spacing-largest);
+}

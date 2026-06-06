@@ -2,7 +2,7 @@ import p5 from "p5";
 import { useRef, useEffect } from "react";
 import "./Canvas.css";
 
-function Canvas() {
+function Canvas({ showTrail }) {
 	const canvasRef = useRef(null);
 	useEffect(() => {
 		let x = [];
@@ -45,7 +45,12 @@ function Canvas() {
 			instance.remove();
 		};
 	}, []);
-	return <div id="canvas" ref={canvasRef}></div>;
+	return (
+		<div
+			id="canvas"
+			className={showTrail ? "" : "invisible"}
+			ref={canvasRef}></div>
+	);
 }
 
 export default Canvas;
