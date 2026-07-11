@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import Doodle from "../../components/Doodle/Doodle";
 import "./Contact.css";
 import hello1 from "../../assets/audio/hellos/1.m4a";
 import hello2 from "../../assets/audio/hellos/2.m4a";
@@ -19,7 +20,11 @@ function Contact() {
 		index: 0,
 	});
 	const [copy, setCopy] = useState("COPY EMAIL");
-	const [instruction, setInstruction] = useState("send me a doodle");
+	const [instruction, setInstruction] = useState({
+		text: "send me a doodle",
+		visible: true,
+	});
+	const drawRef = useRef(null);
 	return (
 		<div id="contact">
 			<div id="social">
@@ -78,7 +83,7 @@ function Contact() {
 						</a>
 					</h3>
 					<h3>
-						&gt;
+						&gt;{" "}
 						<a href="https://ebichu-ten.vercel.app/" target="_blank">
 							SPEAK TO MY AI MANAGER
 						</a>
@@ -87,9 +92,19 @@ function Contact() {
 			</div>
 			<div
 				id="draw"
-				onMouseEnter={() => setInstruction("drag the mouse to draw")}
-				onMouseLeave={() => setInstruction("send me a doodle")}>
-				<small id="instruction">{instruction}</small>
+				ref={drawRef}
+				onMouseEnter={() =>
+					setInstruction({ ...instruction, text: "drag the mouse to draw" })
+				}
+				onMouseLeave={() =>
+					setInstruction({ ...instruction, text: "send me a doodle" })
+				}>
+				<small
+					id="instruction"
+					className={instruction.visible ? "" : "invisible"}>
+					{instruction.text}
+				</small>
+				{<Doodle drawRef={drawRef} setInstruction={setInstruction} />}
 			</div>
 			<img
 				id="selfie"

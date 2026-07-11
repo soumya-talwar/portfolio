@@ -11,12 +11,12 @@
 }
 
 #social {
-	width: 50%;
+	width: 40%;
 	height: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	padding-right: 8%;
+	/* padding-right: 8%; */
 	gap: 2rem;
 }
 
@@ -46,13 +46,24 @@ h3 a {
 }
 
 #draw {
-	width: 50%;
+	position: relative;
+	width: 60%;
 	height: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	text-align: center;
 	color: #aaaaaa;
+}
+
+#instruction {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+}
+
+#instruction.invisible {
+	display: none;
 }
 
 #selfie {
