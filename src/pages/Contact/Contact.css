@@ -16,7 +16,6 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	/* padding-right: 8%; */
 	gap: 2rem;
 }
 
@@ -45,27 +44,6 @@ h3 a {
 	font-size: inherit !important;
 }
 
-#draw {
-	position: relative;
-	width: 60%;
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	text-align: center;
-	color: #aaaaaa;
-}
-
-#instruction {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-}
-
-#instruction.invisible {
-	display: none;
-}
-
 #selfie {
 	position: absolute;
 	height: 50vh;
@@ -74,61 +52,4 @@ h3 a {
 
 #selfie.invisible {
 	display: none;
-}
-
-#tooltip2 {
-	position: absolute;
-	display: flex;
-	flex-direction: column;
-}
-
-#send,
-#erase {
-	position: relative;
-	padding: 1rem 2rem 1rem 1rem;
-	font-size: 0.8rem;
-	cursor: pointer;
-	background-color: #ffffff;
-	border: 1.25px solid #000000;
-	min-width: 15rem;
-}
-
-#send {
-	border-radius: 15px 15px 0 0;
-	overflow: hidden;
-}
-
-#send span {
-	position: relative;
-	z-index: 1;
-}
-
-#overlay {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 0%;
-	background: #eeeeee;
-	z-index: 0;
-}
-
-#erase {
-	border-radius: 0 0 15px 15px;
-	border-top: none;
-}
-
-#send:hover,
-#erase:hover {
-	background-color: #f7f7f7;
-}
-
-#popup {
-	position: absolute;
-	pointer-events: none;
-}
-
-#popup > img {
-	height: 50vh;
-	box-shadow: -5px 5px 20px #e8e8e8;
 }

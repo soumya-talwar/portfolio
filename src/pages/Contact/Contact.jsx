@@ -20,11 +20,6 @@ function Contact() {
 		index: 0,
 	});
 	const [copy, setCopy] = useState("COPY EMAIL");
-	const [instruction, setInstruction] = useState({
-		text: "send me a doodle",
-		visible: true,
-	});
-	const drawRef = useRef(null);
 	return (
 		<div id="contact">
 			<div id="social">
@@ -90,22 +85,7 @@ function Contact() {
 					</h3>
 				</div>
 			</div>
-			<div
-				id="draw"
-				ref={drawRef}
-				onMouseEnter={() =>
-					setInstruction({ ...instruction, text: "drag the mouse to draw" })
-				}
-				onMouseLeave={() =>
-					setInstruction({ ...instruction, text: "send me a doodle" })
-				}>
-				<small
-					id="instruction"
-					className={instruction.visible ? "" : "invisible"}>
-					{instruction.text}
-				</small>
-				{<Doodle drawRef={drawRef} setInstruction={setInstruction} />}
-			</div>
+			<Doodle />
 			<img
 				id="selfie"
 				src={selfies[selfie.index % 3]}
