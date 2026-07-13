@@ -1,0 +1,179 @@
+html,
+body {
+	height: 100%;
+	overflow: hidden;
+}
+
+#main {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 0 4rem;
+	gap: 4rem;
+	overflow: hidden;
+}
+
+#hook {
+	min-width: 35%;
+	max-width: 35%;
+	flex-grow: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	padding-top: 15%;
+	padding-bottom: 5%;
+	overflow-y: scroll;
+}
+
+h3 {
+	line-height: 3rem;
+}
+
+#tools {
+	color: var(--color-darkgray);
+	margin-top: 0.5rem;
+	margin-bottom: 1rem;
+	line-height: 1.75rem;
+}
+
+#date {
+	margin-bottom: 3.5rem;
+}
+
+#audio {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+#playback {
+	width: 2.5rem;
+	height: 2.5rem;
+}
+
+#playback img {
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+
+#audio h4 {
+	font-weight: 400;
+	margin: 0;
+}
+
+#transcript {
+	margin-top: 2rem;
+	margin-bottom: 1rem;
+	color: var(--color-darkgray);
+	cursor: pointer;
+}
+
+#transcript:hover {
+	text-decoration: underline;
+	text-underline-offset: 0.5rem;
+}
+
+#script {
+	display: block;
+	font-size: 0.7rem;
+	letter-spacing: 0.9px;
+	line-height: 1.5rem;
+}
+
+#script.invisible {
+	display: none;
+}
+
+#gallery {
+	flex-grow: 1;
+	height: 100%;
+	padding-top: 10%;
+	padding-bottom: 20%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 4rem;
+	overflow-y: scroll;
+}
+
+#gallery .image {
+	width: 100%;
+	height: auto;
+	position: relative;
+}
+
+.image img {
+	width: 100%;
+	height: auto;
+}
+
+.caption {
+	position: absolute;
+	top: calc(100% - 1.5rem);
+	left: 5%;
+	padding: 0.75rem 1rem 0.75rem 1rem;
+	font-size: 0.75rem;
+	line-height: 1.2rem;
+	background-color: #ffffff;
+	border: 1.25px solid #000000;
+	border-radius: 15px;
+	width: -moz-fit-content;
+	width: fit-content;
+}
+
+.caption p {
+	margin: 0;
+	padding: 0;
+	font-size: 0.75rem;
+	letter-spacing: 1.2px;
+}
+
+.video {
+	position: relative;
+	width: 100%;
+}
+
+.video video {
+	width: 100%;
+	height: auto;
+}
+
+.playback {
+	background-color: rgba(255, 255, 255, 0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.playback img {
+	width: 3rem;
+	height: 3rem;
+	display: block;
+	cursor: pointer;
+}
+
+.playback.invisible {
+	display: none;
+}
+
+img.border {
+	border: 1px solid #eaeaea !important;
+}
+
+#links {
+	min-width: 10%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 4rem;
+}

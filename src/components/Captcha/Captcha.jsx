@@ -16,13 +16,15 @@ function Captcha({ dialogs, setDialogs, type, setTransition }) {
 				<div className="dialog">
 					<div className="close">
 						<h3
-							onClick={() =>
+							onClick={() => {
 								setDialogs({
 									projects: false,
 									experiments: false,
 									compliment: false,
-								})
-							}>
+								});
+								setCompliment("");
+								setError("");
+							}}>
 							x
 						</h3>
 					</div>

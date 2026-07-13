@@ -23,6 +23,10 @@ body {
 	color: var(--color-text);
 }
 
+::-webkit-scrollbar {
+	display: none;
+}
+
 img {
 	max-width: 100%;
 	display: block;
@@ -55,4 +59,11 @@ h3 {
 	font-size: var(--font-size-bigger);
 	line-height: var(--line-height-bigger);
 	letter-spacing: var(--letter-spacing-largest);
+}
+
+h4 {
+	font-family: var(--font-heading);
+	font-size: var(--font-size-big);
+	line-height: var(--line-height-big);
+	letter-spacing: var(--letter-spacing-big);
 }

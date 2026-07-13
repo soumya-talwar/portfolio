@@ -1,6 +1,6 @@
 export const projects = [
 	{
-		id: "jimin",
+		route: "jimin",
 		title: "Jimin",
 		hook: "I built myself my ideal kind of husband",
 		url: "jimin",
@@ -22,42 +22,33 @@ export const projects = [
 		gallery: [
 			{
 				type: "image",
-				caption: false,
 			},
 			{
 				type: "image",
-				caption: false,
 			},
 			{
 				type: "image",
-				caption: false,
 			},
 			{
 				type: "video",
-				caption: true,
-				text: "He's supposed to be Korean, ignore the accent",
+				caption: "He's supposed to be Korean, ignore the accent",
 			},
 			{
 				type: "image",
-				caption: true,
-				text: "Why stop at one when you can have two husbands?",
+				caption: "Why stop at one when you can have two husbands?",
 			},
 			{
 				type: "image",
-				caption: false,
 			},
 			{
 				type: "video",
-				caption: true,
-				text: "Plot twist: also British",
+				caption: "Plot twist: also British",
 			},
 			{
 				type: "image",
-				caption: false,
 			},
 			{
 				type: "image",
-				caption: false,
 			},
 		],
 		links: [
@@ -86,13 +77,11 @@ export const projects = [
 		gallery: [
 			{
 				type: "image",
-				caption: true,
-				text: "A friend testing the game",
+				caption: "A friend testing the game",
 			},
 			{
 				type: "image",
-				caption: true,
-				text: "Spoiler: she didn't get the date",
+				caption: "Spoiler: she didn't get the date",
 			},
 		],
 		links: [
@@ -128,27 +117,21 @@ export const projects = [
 		gallery: [
 			{
 				type: "image",
-				caption: false,
 			},
 			{
 				type: "video",
-				caption: false,
 			},
 			{
 				type: "video",
-				caption: false,
+			},
+			{
+				type: "image",
 			},
 			{
 				type: "video",
-				caption: false,
 			},
 			{
 				type: "video",
-				caption: false,
-			},
-			{
-				type: "video",
-				caption: false,
 			},
 		],
 		links: [
@@ -172,11 +155,9 @@ export const projects = [
 		gallery: [
 			{
 				type: "image",
-				caption: false,
 			},
 			{
 				type: "image",
-				caption: false,
 			},
 		],
 		links: [
@@ -208,24 +189,19 @@ export const projects = [
 		gallery: [
 			{
 				type: "video",
-				caption: false,
 			},
 			{
 				type: "image",
-				caption: false,
 			},
 			{
 				type: "image",
-				caption: false,
 			},
 			{
 				type: "image",
-				caption: true,
-				text: "The older Twitter bot",
+				caption: "The older Twitter bot",
 			},
 			{
 				type: "image",
-				caption: false,
 			},
 		],
 		links: [
@@ -253,15 +229,12 @@ export const projects = [
 		gallery: [
 			{
 				type: "image",
-				caption: false,
 			},
 			{
 				type: "image",
-				caption: false,
 			},
 			{
 				type: "video",
-				caption: false,
 			},
 		],
 		links: [
@@ -290,19 +263,15 @@ export const projects = [
 		gallery: [
 			{
 				type: "image",
-				caption: false,
 			},
 			{
 				type: "image",
-				caption: false,
 			},
 			{
 				type: "image",
-				caption: false,
 			},
 			{
 				type: "image",
-				caption: false,
 			},
 		],
 		links: [
@@ -330,39 +299,30 @@ export const projects = [
 		gallery: [
 			{
 				type: "image",
-				caption: false,
 			},
 			{
 				type: "image",
-				caption: false,
 			},
 			{
 				type: "image",
-				caption: false,
 			},
 			{
 				type: "image",
-				caption: false,
 			},
 			{
 				type: "image",
-				caption: false,
 			},
 			{
 				type: "image",
-				caption: false,
 			},
 			{
 				type: "image",
-				caption: false,
 			},
 			{
 				type: "image",
-				caption: false,
 			},
 			{
 				type: "image",
-				caption: false,
 			},
 		],
 		links: [
