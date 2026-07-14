@@ -47,7 +47,7 @@ function Contact() {
 					</span>
 					. I ANSWER EMAILS AND I LOVE COMPLIMENTS.
 				</h2>
-				<div id="links">
+				<div id="actions">
 					<h3>
 						&gt; [{" "}
 						<span

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Contact from "./pages/Contact/Contact";
@@ -8,8 +8,28 @@ import Menu from "./components/Menu/Menu";
 import Dialog from "./components/Dialog/Dialog";
 import Captcha from "./components/Captcha/Captcha";
 import Kaomoji from "./components/Kaomoji/Kaomoji";
+import dino from "./assets/images/misc/dino.png";
 
 function App() {
+	const [desktop, setDesktop] = useState(window.innerWidth >= 1024);
+	useEffect(() => {
+		const resize = () => {
+			setDesktop(window.innerWidth >= 1024);
+		};
+		window.addEventListener("resize", resize);
+		return () => window.removeEventListener("resize", resize);
+	}, []);
+	if (!desktop) {
+		return (
+			<div id="mobile">
+				<h2>Tiny screen detected!</h2>
+				<p>
+					Please visit on a desktop. My projects need a little more leg room.
+				</p>
+				<img src={dino}></img>
+			</div>
+		);
+	}
 	const [dialogs, setDialogs] = useState({
 		projects: false,
 		experiments: false,
