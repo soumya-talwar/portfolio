@@ -150,54 +150,6 @@ export const projects = [
 		],
 	},
 	{
-		route: "taegificbot",
-		title: "@Taegificbot",
-		hook: "I released a BTS fanfiction recommendation API",
-		url: "taegificbot",
-		year: 2020,
-		headline: "Get smart fanfiction recommendations from my API",
-		tools: [
-			"Node.JS",
-			"Supabase",
-			"Pgvector",
-			"Gemini Embeddings",
-			"Puppeteer",
-			"Cheerio",
-			"Vercel",
-		],
-		date: "Built in 2020 / Reengeneered in 2026",
-		audio: "taegificbot",
-		transcript: `At some point, I realized that I was spending more time searching for good queer BTS fanfiction than actually reading it. So I built a solution. I started by collaborating with a couple of other fanfic readers to put together a large subset of stories that we loved. For context, Archive of Our Own—or AO3—is a massive online fanfiction repository but since it doesn’t have a public API, I wrote a scraper to extract metadata from each fanfiction—things like tags, word counts, warnings, and summaries—and stored everything inside a database.<br /><br /> On top of that, I built a Twitter bot. You could tag this bot in a tweet and mention what you were looking for—specific tropes, lengths, or pairings—and it would reply with recommendations. It worked really well, but I eventually took it down when I stepped away from social media for personal reasons.<br /><br />In 2026, I revisited the project with a different goal. Instead of tying it to a platform, I wanted to rebuild it as a standalone system that anyone could use or build on top of. So I re-engineered it as an API.<br /><br />The core idea was to move beyond simple filters and build something that could understand natural language queries. I generated embeddings for each story using Gemini, stored them in a vector database using pgvector on Supabase, and implemented semantic search to retrieve the most relevant results. On top of that, I added a custom ranking layer that combines vector similarity with structured metadata like tags, length, and completion status—so the results feel more intentional and tailored.<br /><br />The final system lets you send a natural language query and get back a curated set of fanfiction recommendations. Even though the original bot no longer exists, this version makes the underlying system reusable—and opens it up for other interfaces or experiments in the future.`,
-		gallery: [
-			{
-				type: "video",
-			},
-			{
-				type: "image",
-			},
-			{
-				type: "image",
-			},
-			{
-				type: "image",
-				caption: "The older Twitter bot",
-			},
-			{
-				type: "image",
-			},
-		],
-		links: [
-			{
-				cta: "API demo",
-				url: "https://taegificbot.vercel.app/api/recommend?query=long angsty slow burn",
-			},
-			{
-				cta: "Github repo",
-				url: "https://github.com/soumya-talwar/taegificbot",
-			},
-		],
-	},
-	{
 		route: "fairy",
 		title: "Fairy",
 		hook: "A fairy dust sound plays when my manager is near",
