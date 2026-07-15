@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import "./Reel.css";
 
 function Reel({ url }) {
 	useEffect(() => {
