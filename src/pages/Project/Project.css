@@ -38,14 +38,11 @@ h3 {
 	line-height: 1.75rem;
 }
 
-#date {
-	margin-bottom: 3.5rem;
-}
-
 #audio {
 	display: flex;
 	align-items: center;
 	gap: 1rem;
+	margin-top: 3.5rem;
 }
 
 #playback {

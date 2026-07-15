@@ -72,16 +72,10 @@ export const projects = [
 			"Play my otome game: give the right answers and win a date with me",
 		tools: ["HTML", "CSS", "Javascript", "Email.JS"],
 		date: "Built in 2025",
-		audio: "dokidoki",
-		transcript: `I can't possibly date everyone who wants to, so I built a game instead! Because I'm just that nice.<br /><br /> So doki-doki is an otome game where men get to have the virtual experience of going on a date with me, and if they give the right answers, they get the chance to win an actual date with me. For anybody unfamiliar—in a gaming industry that predominantly caters to men, otome games stand out as a popular exception in Japan that are marketed to young women. These games are story-based dating simulators that use dialogue-based progression and typically feature a female protagonist who can develop a romantic relationship with one of the male supporting characters.<br /><br /> Except in my version, all the dateable characters are me. And there’s a fun origin story behind it. "Soumya" is actually my fourth name. My third name was supposed to be "Simar" which means "to pray" in Hindi, but at that there was no internet and my parents reached out to the closest English-speaking relative to confirm how my name should be spelt in English. This person opened the Oxford Dictionary and gave my parents the spelling for "Simmer" (which means "boiling" in English). Added to that was my surname "Talwar" which means "sword" in Hindi, and it didn't help that I had a bad temper to compliment my name. My grandparents blamed my name, and so it was changed to "Soumya" which means "calm" or “cool” in Hindi. In short, I used to be a hot sword, and now I am a cool sword.<br /><br /> Why this is relevant is because all dateable characters in the game have been given my names and the personalities that I had when I held those names. You progress in the game by conversing with me like we would be on a regular date, and if you give the right answers, your contact details will be shared with me over mail and I can ask you out on a real date.`,
 		gallery: [
 			{
-				type: "image",
-				caption: "A friend testing the game",
-			},
-			{
-				type: "image",
-				caption: "Spoiler: she didn't get the date",
+				type: "reel",
+				url: "https://www.instagram.com/p/DZcZSUnzk5j/",
 			},
 		],
 		links: [
@@ -112,26 +106,14 @@ export const projects = [
 			"Vercel",
 		],
 		date: "Built in 2026",
-		audio: "odit",
-		transcript: `I built an expense tracker that insults me every time I spend money. The idea was simple — I wanted to build something very customized that actually made me more aware of my behavior.<br /><br /> I built a voice-interface system using Apple Shortcuts. I can just say something like “I spent 400 on lunch,” and that speech input goes through my Node.js API running on Vercel. It is sent to Gemini, which classifies the expense into a category and subcategory based on a taxonomy that I’ve predefined because I want my expenses to be categorized in a particular way that would help generate insights that are relevant for me.<br /><br /> Once that’s done, the expense gets logged into Google Sheets, which acts as both the database and the analytics layer. I’ve set up a separate sheet to compute totals, and another one that functions as a full dashboard with metrics and visualizations.<br /><br /> After logging the expense, I pass the updated totals back into Gemini again — but this time to generate a response. That’s where the personality comes in. It gives me a short and sarcastic remark based on my spending patterns, which is then read out loud through text-to-speech on the Apple shortcut.<br /><br /> There’s also an approval flow, where I can ask if I should spend money on something, and it gives me a judgmental yes or no based on my current financial state.<br /><br /> And finally, there’s a weekly summary that gets sent to my email, highlighting patterns in my spending along with an observation, a verdict, and a piece of advice.<br /><br /> The whole system is lightweight, but it brings together voice interaction, AI decision-making, and structured data tracking in a way that feels a lot more personal than a typical expense tracker.<br /><br /> It started as a small idea, but it ended up becoming a full system that I actually use day to day.`,
 		gallery: [
 			{
-				type: "image",
+				type: "reel",
+				url: "https://www.instagram.com/p/DX8yd9-zIMl/",
 			},
 			{
-				type: "video",
-			},
-			{
-				type: "video",
-			},
-			{
-				type: "image",
-			},
-			{
-				type: "video",
-			},
-			{
-				type: "video",
+				type: "reel",
+				url: "https://www.instagram.com/p/DYm6L6fT5jJ/",
 			},
 		],
 		links: [

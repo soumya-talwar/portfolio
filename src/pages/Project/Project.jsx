@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useState, useRef } from "react";
+import Reel from "../../components/Reel/Reel";
 import { projects } from "../../data/projects";
 import "./Project.css";
 const visuals = import.meta.glob("../../assets/images/**/*", {
@@ -32,43 +33,50 @@ function Project() {
 				<h3>{project.headline.toUpperCase()}</h3>
 				<small id="tools">{project.tools.join(" / ")}</small>
 				<small id="date">{project.date}</small>
-				<div id="audio">
-					<div id="playback">
-						<img
-							id="play"
-							src={voiceover ? pause : play}
-							onClick={() => {
-								if (voiceover) {
-									setVoiceover(false);
-									voiceRef.current.pause();
-								} else {
-									setVoiceover(true);
-									voiceRef.current.play();
-								}
-							}}
-						/>
-					</div>
-					<h4>Let me explain</h4>
-				</div>
-				<small
-					id="transcript"
-					onClick={() =>
-						setTranscript((prev) => ({
-							text: prev.visible ? "View transcript" : "Hide transcript",
-							visible: !prev.visible,
-						}))
-					}>
-					{transcript.text}
-				</small>
-				<small
-					id="script"
-					className={transcript.visible ? "" : "invisible"}
-					dangerouslySetInnerHTML={{ __html: project.transcript }}></small>
+				{project.audio ? (
+					<>
+						<div id="audio">
+							<div id="playback">
+								<img
+									id="play"
+									src={voiceover ? pause : play}
+									onClick={() => {
+										if (voiceover) {
+											setVoiceover(false);
+											voiceRef.current.pause();
+										} else {
+											setVoiceover(true);
+											voiceRef.current.play();
+										}
+									}}
+								/>
+							</div>
+							<h4>Let me explain</h4>
+						</div>
+						<small
+							id="transcript"
+							onClick={() =>
+								setTranscript((prev) => ({
+									text: prev.visible ? "View transcript" : "Hide transcript",
+									visible: !prev.visible,
+								}))
+							}>
+							{transcript.text}
+						</small>
+						<small
+							id="script"
+							className={transcript.visible ? "" : "invisible"}
+							dangerouslySetInnerHTML={{ __html: project.transcript }}></small>
+					</>
+				) : (
+					<></>
+				)}
 			</div>
 			<div id="gallery">
 				{project.gallery.map((item, index) => {
 					const path = `../../assets/images/${project.route}/${index + 1}`;
-					if (item.type == "image")
+					if (item.type == "reel") return <Reel url={item.url} />;
+					else if (item.type == "image")
 						return (
 							<div className="image">
 								<img
@@ -99,7 +107,7 @@ function Project() {
 									/>
 									<source
 										key={project.route + index + "2"}
-										src={visuals[`${path}.webm`]}
+										src={visuals[`${path}.mp4`]}
 										type={"video/mp4"}
 									/>
 								</video>
