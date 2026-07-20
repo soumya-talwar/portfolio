@@ -64,7 +64,10 @@ function App() {
 			<Routes>
 				<Route path="/" element={<Home setTransition={setTransition} />} />
 				<Route path="/contact" element={<Contact />} />
-				<Route path="/projects/:slug" element={<Project />} />
+				<Route
+					path="/projects/:slug"
+					element={<Project key={location.pathname} />}
+				/>
 			</Routes>
 		</>
 	);
