@@ -5,7 +5,7 @@ import { projects } from "../../data/projects";
 import "./Home.css";
 import "../../components/Slide/Slide.css";
 
-function Home() {
+function Home({ setTransition }) {
 	const roleRef = useRef(null);
 	const slideRefs = useRef([]);
 	const [count, setCount] = useState(0);
@@ -66,8 +66,10 @@ function Home() {
 							key={project.id}
 							title={project.title}
 							year={project.year}
+							route={project.route}
 							hook={project.hook}
 							slideRefs={slideRefs}
+							setTransition={setTransition}
 						/>
 					))}
 				</div>

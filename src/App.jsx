@@ -62,7 +62,7 @@ function App() {
 			/>
 			<Kaomoji transition={transition} />
 			<Routes>
-				<Route path="/" element={<Home />} />
+				<Route path="/" element={<Home setTransition={setTransition} />} />
 				<Route path="/contact" element={<Contact />} />
 				<Route path="/projects/:slug" element={<Project />} />
 			</Routes>

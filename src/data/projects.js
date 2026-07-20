@@ -1,5 +1,39 @@
 export const projects = [
 	{
+		route: "odit",
+		title: "Odit",
+		hook: "My expense tracker insults me when I spend money",
+		url: "odit",
+		year: 2026,
+		headline: "Watch my expense tracker insult me and my financial choices",
+		tools: [
+			"Apple Shortcuts",
+			"Node.js",
+			"Gemini API",
+			"Google Sheets",
+			"Google Sheets API",
+			"Resend",
+			"Vercel",
+		],
+		date: "Built in 2026",
+		gallery: [
+			{
+				type: "reel",
+				url: "https://www.instagram.com/p/DX8yd9-zIMl/",
+			},
+			{
+				type: "reel",
+				url: "https://www.instagram.com/p/DYm6L6fT5jJ/",
+			},
+		],
+		links: [
+			{
+				cta: "Github repo",
+				url: "https://github.com/soumya-talwar/odit",
+			},
+		],
+	},
+	{
 		route: "jimin",
 		title: "Jimin",
 		hook: "I built myself my ideal kind of husband",
@@ -63,6 +97,35 @@ export const projects = [
 		],
 	},
 	{
+		route: "park",
+		title: "Park",
+		hook: "My car sings every time I find parking in Bangalore",
+		url: "park",
+		year: 2026,
+		headline:
+			"Listen to my car break into a punjabi song every time I find a parking spot",
+		tools: [
+			"Apple Shortcuts",
+			"Carplay",
+			"Accelerometer",
+			"Vercel",
+			"Gemini Lyria API",
+		],
+		date: "Built in 2026",
+		gallery: [
+			{
+				type: "reel",
+				url: "https://www.instagram.com/p/Da7N8z_zU7M/",
+			},
+		],
+		links: [
+			{
+				cta: "Github repo",
+				url: "https://github.com/soumya-talwar/park",
+			},
+		],
+	},
+	{
 		route: "dokidoki",
 		title: "Doki-doki",
 		hook: "Win this game to win a date with me",
@@ -86,40 +149,6 @@ export const projects = [
 			{
 				cta: "Github repo",
 				url: "https://github.com/soumya-talwar/dokidoki",
-			},
-		],
-	},
-	{
-		route: "odit",
-		title: "Odit",
-		hook: "My expense tracker insults me when I spend money",
-		url: "odit",
-		year: 2026,
-		headline: "Meet my expense tracker that takes issue with my expenses",
-		tools: [
-			"Apple Shortcuts",
-			"Node.js",
-			"Gemini API",
-			"Google Sheets",
-			"Google Sheets API",
-			"Resend",
-			"Vercel",
-		],
-		date: "Built in 2026",
-		gallery: [
-			{
-				type: "reel",
-				url: "https://www.instagram.com/p/DX8yd9-zIMl/",
-			},
-			{
-				type: "reel",
-				url: "https://www.instagram.com/p/DYm6L6fT5jJ/",
-			},
-		],
-		links: [
-			{
-				cta: "Github repo",
-				url: "https://github.com/soumya-talwar/odit",
 			},
 		],
 	},
