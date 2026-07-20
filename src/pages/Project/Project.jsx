@@ -75,7 +75,8 @@ function Project() {
 			<div id="gallery">
 				{project.gallery.map((item, index) => {
 					const path = `../../assets/images/${project.route}/${index + 1}`;
-					if (item.type == "reel") return <Reel url={item.url} />;
+					if (item.type == "reel")
+						return <Reel key={item.url} url={item.url} />;
 					else if (item.type == "image")
 						return (
 							<div className="image">

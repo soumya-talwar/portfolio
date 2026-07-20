@@ -11,7 +11,7 @@ function Reel({ url }) {
 		script.async = true;
 		script.onload = () => window.instgrm?.Embeds.process();
 		document.body.appendChild(script);
-	}, []);
+	}, [url]);
 
 	return (
 		<blockquote
