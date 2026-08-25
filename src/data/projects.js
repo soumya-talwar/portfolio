@@ -126,6 +126,35 @@ export const projects = [
 		],
 	},
 	{
+		route: "eek",
+		title: "Eek!",
+		hook: "A talisman to protect me from talks of marriage",
+		url: "eek",
+		year: 2026,
+		headline:
+			'Hear my talisman scream everytime someone says "marriage" around me',
+		tools: [
+			"ESP32",
+			"Audio Amplifier",
+			"Speaker",
+			"Keyword Spotting",
+			"Edge Impulse",
+		],
+		date: "Built in 2026",
+		gallery: [
+			{
+				type: "reel",
+				url: "https://www.instagram.com/p/Dcabzhkz_oc/",
+			},
+		],
+		links: [
+			{
+				cta: "Github repo",
+				url: "https://github.com/soumya-talwar/eek",
+			},
+		],
+	},
+	{
 		route: "dokidoki",
 		title: "Doki-doki",
 		hook: "Win this game to win a date with me",
@@ -208,102 +237,6 @@ export const projects = [
 			{
 				cta: "Github repo",
 				url: "https://github.com/soumya-talwar/fairy",
-			},
-		],
-	},
-	{
-		route: "grays",
-		title: "Grays",
-		hook: "An advocacy of 128 non-binary genders",
-		url: "grays",
-		year: 2018,
-		headline:
-			"Explore a mathematical model that plots 128 genders in a three-dimensional space",
-		tools: ["HTML", "CSS", "Javascript", "X3dom"],
-		date: "Built in 2018",
-		audio: "grays",
-		transcript: `I thought it would be an interesting irony to advocate for the existence of non-binary genders by using the most binary system of all—0’s and 1’s—and to prove it all mathematically.<br /><br /> Our society isn’t binary: man or woman, male or female, masculine or feminine, no—real variation exists in every measurable attribute used to assign those categories. Facial hair, voice pitch, hormone levels, reproductive organs, external genitalia, as well as people who are intersex all prove that ‘biology’ is not a clear-cut basis for the gender binary. It is imperative to separate a person’s gender from their biological sex.<br /><br /> A person’s sex refers to their anatomy—their reproductive system and secondary sex characteristics—but their gender identity is their internal, deeply held sense of their gender. When those two do not align, the person may identify themselves as transgender, non-binary, or gender-nonconforming.<br /><br /> During the course of this study, I looked into 128 different kinds of non-binary genders. I gave each one a binary encoding and plotted them in a multi-dimensional space where each gender has a mathematical relationship with another. The resulting visualization suggests that gender is neither binary nor a linear spectrum—but an expansive field of endless identities and expressions.`,
-		gallery: [
-			{
-				type: "image",
-			},
-			{
-				type: "image",
-			},
-			{
-				type: "image",
-			},
-			{
-				type: "image",
-			},
-		],
-		links: [
-			{
-				cta: "Visit site",
-				url: "https://soumya-talwar.github.io/grays/",
-			},
-			{
-				cta: "Github repo",
-				url: "https://github.com/soumya-talwar/grays",
-			},
-		],
-	},
-	{
-		route: "hominidae",
-		title: "Hominidae",
-		hook: "Exploring sexual violence among great apes with art",
-		url: "hominidae",
-		year: 2020,
-		headline: "View artworks that model sexual aggression in apes",
-		tools: ["HTML", "CSS", "Javascript", "P5.JS"],
-		date: "Built in 2020",
-		audio: "hominidae",
-		transcript: `Hominidae is a series of interactive autonomous artworks that illustrate sexual violence and aggression seen in the Great Apes.<br /><br /> However, at no point do I try to justify sexual violence as “good” or “correct” simply because similar behaviour is seen in non-human animals and is therefore natural. Just because something is a certain way that it ought to remain the same way is a flawed argument. The fact of the matter is sex and reproduction is unfair. It wasn’t always the case. The first organisms to evolve were in the sea, unable to move. They’d spew out millions of gametes into the ocean with the hope that they’d meet. But that was hardly an efficient mechanism of reproduction, and eventually evolution separated the two sexes. The female built an egg with sufficient nutrients in it and the male worked to go find that egg.<br /><br /> But once evolution proceeds, the whole animal can walk over and find a mate. If the eggs are already laid, the male simply needs to lay the sperms right on top of them, an act that hardly requires the amount of energy that the female is putting into her eggs. That’s where we start seeing an inequality between the two sexes. Females make a few eggs, and her eggs are very expensive and rare, but males still make many, many sperms, and his sperms are plentiful and cheap. Once they take these two different evolutionary routes, different reproductive strategies come into play for the both of them.<br /><br /> Males compete with each other for dominance and use that dominant status to mate with the female. And females try to find the male with the best genes for their offspring, and in species where males fight for dominance, females choose the winners. The male that wins possesses some genes which allow him to win these fights—he's big and strong and has sharp teeth. And the female will choose the most violent male to father her children because then her offsprings will also become these big, violent & successful males.<br /><br /> What happens then is that both the male and female reproductive strategies collude in increasing the`,
-		gallery: [
-			{
-				type: "image",
-			},
-			{
-				type: "image",
-			},
-			{
-				type: "image",
-			},
-			{
-				type: "image",
-			},
-			{
-				type: "image",
-			},
-			{
-				type: "image",
-			},
-			{
-				type: "image",
-			},
-			{
-				type: "image",
-			},
-			{
-				type: "image",
-			},
-		],
-		links: [
-			{
-				cta: "View pongo",
-				url: "https://soumya-talwar.github.io/hominidae/pongo/",
-			},
-			{
-				cta: "View gorilla",
-				url: "https://soumya-talwar.github.io/hominidae/gorilla/",
-			},
-			{
-				cta: "View pan",
-				url: "https://soumya-talwar.github.io/hominidae/pan/",
-			},
-			{
-				cta: "Github repo",
-				url: "https://github.com/soumya-talwar/hominidae",
 			},
 		],
 	},
