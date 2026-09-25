@@ -173,7 +173,7 @@ export const projects = [
 		links: [
 			{
 				cta: "Play game",
-				url: "https://soumya-talwar.github.io/dokidoki/",
+				url: "https://dokidoki-nine.vercel.app/",
 			},
 			{
 				cta: "Github repo",
