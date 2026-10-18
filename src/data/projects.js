@@ -87,10 +87,6 @@ export const projects = [
 		],
 		links: [
 			{
-				cta: "Behind the scenes",
-				url: "https://soumya-talwar.notion.site/JIMIN-2022-dea73efc74d6413eaf682ff30224cf96",
-			},
-			{
 				cta: "Github repo",
 				url: "https://github.com/soumya-talwar/jimin",
 			},
