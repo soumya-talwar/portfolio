@@ -203,37 +203,4 @@ export const projects = [
 			},
 		],
 	},
-	{
-		route: "fairy",
-		title: "Fairy",
-		hook: "A fairy dust sound plays when my manager is near",
-		url: "fairy",
-		year: 2025,
-		headline: "Download this app that plays sparkles when my manager is near",
-		tools: ["Node.JS", "Capacitor.JS", "Firestore Database"],
-		date: "Built in 2025",
-		audio: "fairy",
-		transcript: `The joke started when my manager took some work off my plate after noticing that I was stressed—I called her my fairy godmother, and the gag just took off from there.<br /><br /> I built an app using Node.js and Capacitor.js, and installed it on both our phones. The app tracks my manager’s real-time geolocation and stores it in Firestore. My phone fetches her latest location, compares it with mine, and whenever we’re within five meters of each other, it plays a sparkly fairy dust sound.`,
-		gallery: [
-			{
-				type: "image",
-			},
-			{
-				type: "image",
-			},
-			{
-				type: "video",
-			},
-		],
-		links: [
-			{
-				cta: "Download APK",
-				url: "https://github.com/soumya-talwar/fairy/raw/refs/heads/main/android/app/release/app-release.apk",
-			},
-			{
-				cta: "Github repo",
-				url: "https://github.com/soumya-talwar/fairy",
-			},
-		],
-	},
 ];
