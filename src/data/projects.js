@@ -8,7 +8,7 @@ export const projects = [
 		headline: "Watch my expense tracker insult me and my financial choices",
 		tools: [
 			"Apple Shortcuts",
-			"Node.js",
+			"Node.JS",
 			"Gemini API",
 			"Google Sheets",
 			"Google Sheets API",
@@ -158,7 +158,7 @@ export const projects = [
 		year: 2025,
 		headline:
 			"Play my otome game: give the right answers and win a date with me",
-		tools: ["HTML", "CSS", "Javascript", "Email.JS"],
+		tools: ["React", "Node.JS", "Email.JS", "Vercel"],
 		date: "Built in 2025",
 		gallery: [
 			{
@@ -184,7 +184,7 @@ export const projects = [
 		url: "11may",
 		year: 2025,
 		headline: "Say hi to this cute bot that won't stop complimenting me",
-		tools: ["Node.js", "Twilio API", "OpenAI API"],
+		tools: ["Node.JS", "Twilio API", "OpenAI API"],
 		date: "Built in 2025",
 		audio: "11may",
 		transcript: `A day before my birthday, I decided to build a WhatsApp bot that would send me a compliment every hour on the day. <br /><br /> I built this using a Node.js script, scheduled with GitHub Actions to run every hour. Each run picks a random entry from a list of personal achievements I put together and sends it to the Gemini API to generate a compliment. The compliment is then delivered it to me via WhatsApp using Twilio. <br /><br /> To make it more amusing, I paired some of the achievements with images, so I’d get a message that included both the compliment and a photo tied to that moment. <br /><br /> If you’re curious to build one of your own, the code is up on my GitHub.`,
